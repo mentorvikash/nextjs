@@ -138,7 +138,7 @@ export default function Home() {
           <div className="flex justify-center pb-4">
             <button
               type="button"
-              className=" align-middle text-black bg-amber-200 text-xl p-2 font-bold border-2 border-gray-700"
+              className=" align-middle text-black bg-white text-xl p-2 font-bold border-2 border-gray-700"
               onClick={handleSubmit}
             >
               Submit
