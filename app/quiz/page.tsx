@@ -101,12 +101,12 @@ export default function Home() {
           {quizQuestion.map((que, index) => (
             <div className="my-6" key={index}>
               <p
-                className={`text-xl text-black ${
+                className={`text-xl text-gray-800 ${
                   finalResult.length && finalResult[index] === "W"
                     ? "text-red-600"
                     : finalResult[index] === "R"
                     ? "text-sky-600"
-                    : "text-black"
+                    : "text-gray-800"
                 } `}
               >
                 {" "}
@@ -122,7 +122,7 @@ export default function Home() {
                       name={`radioGroup${index}`}
                       value={option}
                       disabled={isSubmit}
-                      className="text-gray-700 text-xl mr-1.5"
+                      className="text-gray-800 text-xl mr-1.5"
                       // checked={selectedValue === option.value}
                       onChange={(event: any) => handleChange(event, index)}
                     />
