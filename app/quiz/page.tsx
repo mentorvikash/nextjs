@@ -122,7 +122,7 @@ export default function Home() {
                       name={`radioGroup${index}`}
                       value={option}
                       disabled={isSubmit}
-                      className="text-gray-800 text-xl mr-1.5"
+                      className=" text-xl mr-1.5"
                       // checked={selectedValue === option.value}
                       onChange={(event: any) => handleChange(event, index)}
                     />
