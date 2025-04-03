@@ -126,7 +126,9 @@ export default function Home() {
                       // checked={selectedValue === option.value}
                       onChange={(event: any) => handleChange(event, index)}
                     />
-                    <label htmlFor={option}>{option}</label>
+                    <label className=" text-gray-700  text-xl" htmlFor={option}>
+                      {option}
+                    </label>
                   </div>
                 ))}
               </ol>
