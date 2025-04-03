@@ -101,12 +101,12 @@ export default function Home() {
           {quizQuestion.map((que, index) => (
             <div className="my-6" key={index}>
               <p
-                className={`text-xl text-gray-900 ${
+                className={`text-xl text-black ${
                   finalResult.length && finalResult[index] === "W"
                     ? "text-red-600"
                     : finalResult[index] === "R"
                     ? "text-sky-600"
-                    : "text-gray-800"
+                    : "text-black"
                 } `}
               >
                 {" "}
@@ -138,7 +138,7 @@ export default function Home() {
           <div className="flex justify-center pb-4">
             <button
               type="button"
-              className=" align-middle text-xl p-2 font-bold border-2 border-gray-700"
+              className=" align-middle text-black bg-amber-200 text-xl p-2 font-bold border-2 border-gray-700"
               onClick={handleSubmit}
             >
               Submit
