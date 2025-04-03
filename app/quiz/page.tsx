@@ -273,9 +273,9 @@ export default function Home() {
           {quizQuestion.map((que, index) => (
             <div className="mb-3" key={index}>
               <p
-                className={`text-xl ${
+                className={`text-xl text-orange-600 ${
                   finalResult.length && finalResult[index] === "W"
-                    ? "text-red-800"
+                    ? "text-red-900"
                     : finalResult[index] === "R"
                     ? "text-sky-600"
                     : "text-orange-600"
