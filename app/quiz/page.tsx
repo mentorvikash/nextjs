@@ -278,7 +278,7 @@ export default function Home() {
                     ? "text-red-800"
                     : finalResult[index] === "R"
                     ? "text-sky-600"
-                    : "text-white"
+                    : "text-orange-600"
                 } `}
               >
                 {" "}
