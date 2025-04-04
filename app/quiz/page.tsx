@@ -50,7 +50,6 @@ export default function Home() {
   }, []);
 
   const { infectionAndImmunizationBioQuestion: quizQuestion } = quiz;
-  console.log("count: ", quizQuestion.length);
 
   const [selectedAnswers1, setSelectedAnswers1] = useState(
     Array(quizQuestion.length).fill("")
@@ -65,14 +64,7 @@ export default function Home() {
 
   function handleChange(event: ChangeEvent<HTMLInputElement>, index: any) {
     event.stopPropagation();
-    // event.preventDefault();
-
-    const newSelectedAnswers = [...selectedAnswers1];
-    newSelectedAnswers[index] = event.target.value;
-    setSelectedAnswers1(newSelectedAnswers);
-    console.log(selectedAnswers1);
-
-    console.log({ event });
+    // console.log({ event });
     const value = event.target.value;
     const currentQuestion = `Q${index}`;
     selectedAnswers;
@@ -84,7 +76,11 @@ export default function Home() {
       };
       setSelectedAnswers(selectedAnswers);
     } else {
-      selectedAnswers[currentQuestion].value = value;
+      if (selectedAnswers[currentQuestion].value === value) {
+        delete selectedAnswers[currentQuestion];
+      } else {
+        selectedAnswers[currentQuestion].value = value;
+      }
       setSelectedAnswers(selectedAnswers);
     }
     console.log(selectedAnswers);
@@ -122,7 +118,6 @@ export default function Home() {
 
   const evalueation = () => {
     const final: string[] = [];
-    const totalQue = quizQuestion.length;
     let correctAns = 0;
     let wrongAns = 0;
     quizQuestion.forEach((que, index) => {
@@ -165,11 +160,9 @@ export default function Home() {
   const style: React.CSSProperties = {
     position: "fixed",
     top: "20px", // Adjust as needed
-    // right: "10%", // Adjust as needed
     right: "20px",
-    // textAlign: "center",
     backgroundColor: "rgba(255, 255, 255, 0.2)", // Semi-transparent white
-    padding: "10px 15px",
+    padding: "10px 19px",
     borderRadius: "5px",
     boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
     zIndex: 1000, // Ensure it stays on top
@@ -228,18 +221,16 @@ export default function Home() {
               </p>
               <ol>
                 {que.options.map((option, i) => (
-                  // <li key={i}>{option}</li>
                   <div key={`${index}Opt${i}`} className="ml-6 mt-2">
                     <input
-                      // type="checkbox"
-                      type="radio"
+                      type="checkbox"
                       id={option}
                       name={`radioGroup${index}`}
                       value={option}
                       disabled={isSubmit || !timerRunning}
                       className=" text-xl mr-1.5"
                       // checked={selectedValue === option.value}
-                      checked={selectedAnswers1[index] === option}
+                      checked={selectedAnswers[`Q${[index]}`]?.value === option}
                       onChange={(event: any) => handleChange(event, index)}
                     />
                     <label className=" text-gray-700  text-xl" htmlFor={option}>
