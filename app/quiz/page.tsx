@@ -49,7 +49,7 @@ export default function Home() {
     return () => clearInterval(intervalRef.current as NodeJS.Timeout);
   }, []);
 
-  const { BabarMugalQuestion: quizQuestion } = quiz;
+  const { infectionAndImmunizationBioQuestion: quizQuestion } = quiz;
   console.log("count: ", quizQuestion.length);
 
   const [selectedAnswers1, setSelectedAnswers1] = useState(
@@ -208,7 +208,7 @@ export default function Home() {
       <main className="flex flex-col row-start-2 items-center sm:items-start">
         <div className="">
           <p className="pb-0 w-full text-2xl text-center text-amber-900 ">
-            Mugal (Babar) | {quizQuestion.length} Question
+            Infection & Immuization | {quizQuestion.length} Question
           </p>
         </div>
         <div>
