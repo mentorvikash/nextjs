@@ -247,7 +247,7 @@ export default function Home() {
                 ))}
               </ol>
               {isSubmit && (
-                <p className="text-green-600 font-bold">{que.answer}</p>
+                <p className=" pt-2 text-green-600 font-bold">{que.answer}</p>
               )}
             </div>
           ))}
