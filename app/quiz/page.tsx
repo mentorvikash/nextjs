@@ -42,7 +42,7 @@ export default function Home() {
   });
 
   const calculateTime = (): number => {
-    return Math.round(((60 * 60 * 1000) / 100) * quizQuestion.length); // in milliseconds
+    return Math.round(((30 * 60 * 1000) / 100) * quizQuestion.length); // in milliseconds
   };
 
   useEffect(() => {
@@ -70,6 +70,7 @@ export default function Home() {
     const newSelectedAnswers = [...selectedAnswers1];
     newSelectedAnswers[index] = event.target.value;
     setSelectedAnswers1(newSelectedAnswers);
+    console.log(selectedAnswers1);
 
     console.log({ event });
     const value = event.target.value;
@@ -164,8 +165,9 @@ export default function Home() {
   const style: React.CSSProperties = {
     position: "fixed",
     top: "20px", // Adjust as needed
-    // right: "50%", // Adjust as needed
-    textAlign: "center",
+    // right: "10%", // Adjust as needed
+    right: "20px",
+    // textAlign: "center",
     backgroundColor: "rgba(255, 255, 255, 0.2)", // Semi-transparent white
     padding: "10px 15px",
     borderRadius: "5px",
@@ -247,7 +249,7 @@ export default function Home() {
                 ))}
               </ol>
               {isSubmit && (
-                <p className=" pt-2 text-green-600 font-bold">{que.answer}</p>
+                <p className=" pt-2q text-green-600 font-bold">{que.answer}</p>
               )}
             </div>
           ))}
