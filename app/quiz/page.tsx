@@ -46,15 +46,24 @@ export default function Home() {
   };
 
   useEffect(() => {
-    return () => clearInterval(intervalRef.current as NodeJS.Timeout);
+    const handleRightClick = (event: MouseEvent) => {
+      event.preventDefault();
+    };
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "F12" || (e.ctrlKey && (e.key === "I" || e.key === "U"))) {
+        e.preventDefault();
+      }
+    };
+    document.addEventListener("contextmenu", handleRightClick);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("contextmenu", handleRightClick);
+      clearInterval(intervalRef.current as NodeJS.Timeout);
+    };
   }, []);
 
   const { infectionAndImmunizationBioQuestion: quizQuestion } = quiz;
-
-  const [selectedAnswers1, setSelectedAnswers1] = useState(
-    Array(quizQuestion.length).fill("")
-  );
-
   const [finalResult, setFinalResult] = useState<string[]>([]);
 
   function handleSubmit() {
@@ -83,7 +92,7 @@ export default function Home() {
       }
       setSelectedAnswers(selectedAnswers);
     }
-    console.log(selectedAnswers);
+    // console.log(selectedAnswers);
   }
 
   useEffect(() => {
@@ -155,6 +164,9 @@ export default function Home() {
     setSelectedAnswers({});
     setReport(scoreCardDefault);
     setIsSubmit(false);
+    setTimerRunning(false);
+    setFinalResult([]);
+    clearInterval(intervalRef.current as NodeJS.Timeout);
   };
 
   const style: React.CSSProperties = {
@@ -169,6 +181,8 @@ export default function Home() {
     fontSize: "0.9rem",
     fontWeight: "bold",
     color: "green",
+    textAlign: "center",
+    width: "180px",
   };
 
   return (
@@ -228,8 +242,7 @@ export default function Home() {
                       name={`radioGroup${index}`}
                       value={option}
                       disabled={isSubmit || !timerRunning}
-                      className=" text-xl mr-1.5"
-                      // checked={selectedValue === option.value}
+                      className=" text-4xl mr-3 scale-150"
                       checked={selectedAnswers[`Q${[index]}`]?.value === option}
                       onChange={(event: any) => handleChange(event, index)}
                     />
@@ -254,25 +267,25 @@ export default function Home() {
                 Submit
               </button>
             ) : (
-              // <button
-              //   type="button"
-              //   className=" align-middle text-black bg-white text-xl px-4 py-2 border-1 font-bold rounded-xl shadow-xl hover:border-0"
-              //   onClick={handleReset}
-              // >
-              //   Try Again
-              // </button>
-              <button
-                type="button"
-                className=" align-middle text-black bg-white text-xl px-4 py-2 border-1 font-bold rounded-xl shadow-xl hover:border-0"
-              >
-                <a
-                  className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-700"
-                  href="/"
-                  rel="noopener noreferrer"
+              <div className="flex w-1/3 justify-between">
+                <button
+                  type="button"
+                  className=" align-middle text-black bg-white text-xl px-4 py-2 border-1 font-bold rounded-xl shadow-xl hover:border-0"
                 >
-                  {`Home`}
-                </a>
-              </button>
+                  <a className="" href="/" rel="noopener noreferrer">
+                    {`Home`}
+                  </a>
+                </button>
+                {isSubmit && (
+                  <button
+                    type="button"
+                    className=" align-middle text-black bg-white text-xl px-4 py-2 border-1 font-bold rounded-xl shadow-xl hover:border-0"
+                    onClick={handleReset}
+                  >
+                    Try Again
+                  </button>
+                )}
+              </div>
             )}
           </div>
         </div>

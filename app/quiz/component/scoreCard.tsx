@@ -27,11 +27,12 @@ const FloatingScoreCard: React.FC<FloatingScoreCardProps> = ({
     fontSize: "1.2em",
     fontWeight: "bold",
     color: "#333",
+    width: "180px",
   };
 
   return (
     <div style={style}>
-      <p>
+      <p className="text-center">
         Score: {score}/{total}
       </p>
       <p className="flex text-center justify-evenly px-2.5">
