@@ -150,7 +150,7 @@ export default function Home() {
           {quizQuestion.map((que, index) => (
             <div className="my-6" key={index}>
               <p
-                className={`text-xl text-gray-800 ${
+                className={`text-xl text-gray-800 font-semibold ${
                   finalResult.length && finalResult[index] === "W"
                     ? "text-red-600"
                     : finalResult[index] === "R"
