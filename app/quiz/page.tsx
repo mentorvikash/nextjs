@@ -14,17 +14,35 @@ interface Answer {
   value: string;
 }
 
-interface selectedAnswers {
+interface SelectedAnswers {
   [key: string]: Answer;
 }
 
-export default function Home() {
-  const [selectedAnswers, setSelectedAnswers] = useState<selectedAnswers>({});
-  const [isSubmit, setIsSubmit] = useState(false);
-  const [score, setScore] = useState(0);
+interface Report {
+  notAttented: number;
+  rightAnswer: number;
+  score: number;
+  total: number;
+  wrongAnswer: number;
+}
 
-  const { quizQuestion } = quiz;
+export default function Home() {
+  const [selectedAnswers, setSelectedAnswers] = useState<SelectedAnswers>({});
+  const [isSubmit, setIsSubmit] = useState(false);
+  const [report, setReport] = useState<Report>({
+    notAttented: 0,
+    rightAnswer: 0,
+    score: 0,
+    total: 0,
+    wrongAnswer: 0,
+  });
+
+  const { BabarMugalQuestion: quizQuestion } = quiz;
   console.log("count: ", quizQuestion.length);
+
+  const [selectedAnswers1, setSelectedAnswers1] = useState(
+    Array(quizQuestion.length).fill("")
+  );
 
   const [finalResult, setFinalResult] = useState<string[]>([]);
 
@@ -35,6 +53,13 @@ export default function Home() {
   }
 
   function handleChange(event: ChangeEvent<HTMLInputElement>, index: any) {
+    event.stopPropagation();
+    // event.preventDefault();
+
+    const newSelectedAnswers = [...selectedAnswers1];
+    newSelectedAnswers[index] = event.target.value;
+    setSelectedAnswers1(newSelectedAnswers);
+
     console.log({ event });
     const value = event.target.value;
     const currentQuestion = `Q${index}`;
@@ -77,10 +102,28 @@ export default function Home() {
       }
     });
 
-    setScore(correctAns - 0.5 * wrongAns);
-    console.log({ final });
-
+    const scoreCard = {
+      notAttented: quizQuestion.length - (correctAns + wrongAns),
+      rightAnswer: correctAns,
+      score: correctAns - 0.5 * wrongAns,
+      total: quizQuestion.length,
+      wrongAnswer: wrongAns,
+    };
     setFinalResult(final);
+    setReport(scoreCard);
+  };
+
+  const handleReset = () => {
+    const scoreCardDefault = {
+      notAttented: 0,
+      rightAnswer: 0,
+      score: 0,
+      total: 0,
+      wrongAnswer: 0,
+    };
+    setSelectedAnswers({});
+    setReport(scoreCardDefault);
+    setIsSubmit(false);
   };
 
   return (
@@ -89,12 +132,18 @@ export default function Home() {
       className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]"
     >
       {isSubmit && (
-        <FloatingScoreCard score={score} total={quizQuestion.length} />
+        <FloatingScoreCard
+          notAttended={report.notAttented}
+          rightAnswer={report.rightAnswer}
+          score={report.score}
+          total={report.total}
+          wrongAnswer={report.wrongAnswer}
+        />
       )}
       <main className="flex flex-col row-start-2 items-center sm:items-start">
         <div className="">
           <p className="pb-0 w-full text-2xl text-center text-amber-900 ">
-            Lodi Dynasty | {quizQuestion.length} Question
+            Mugal (Babar) | {quizQuestion.length} Question
           </p>
         </div>
         <div>
@@ -115,8 +164,9 @@ export default function Home() {
               <ol>
                 {que.options.map((option, i) => (
                   // <li key={i}>{option}</li>
-                  <div key={i} className="ml-6 mt-2">
+                  <div key={`${index}Opt${i}`} className="ml-6 mt-2">
                     <input
+                      // type="checkbox"
                       type="radio"
                       id={option}
                       name={`radioGroup${index}`}
@@ -124,6 +174,7 @@ export default function Home() {
                       disabled={isSubmit}
                       className=" text-xl mr-1.5"
                       // checked={selectedValue === option.value}
+                      checked={selectedAnswers1[index] === option}
                       onChange={(event: any) => handleChange(event, index)}
                     />
                     <label className=" text-gray-700  text-xl" htmlFor={option}>
@@ -138,13 +189,35 @@ export default function Home() {
             </div>
           ))}
           <div className="flex justify-center pb-4">
-            <button
-              type="button"
-              className=" align-middle text-black bg-white text-xl p-2 font-bold border-2 border-gray-700"
-              onClick={handleSubmit}
-            >
-              Submit
-            </button>
+            {!isSubmit ? (
+              <button
+                type="button"
+                className=" align-middle text-black bg-white text-xl px-4 py-2 font-bold border-1 border-gray-700 rounded-xl shadow-xl hover:border-0"
+                onClick={handleSubmit}
+              >
+                Submit
+              </button>
+            ) : (
+              // <button
+              //   type="button"
+              //   className=" align-middle text-black bg-white text-xl px-4 py-2 border-1 font-bold rounded-xl shadow-xl hover:border-0"
+              //   onClick={handleReset}
+              // >
+              //   Try Again
+              // </button>
+              <button
+                type="button"
+                className=" align-middle text-black bg-white text-xl px-4 py-2 border-1 font-bold rounded-xl shadow-xl hover:border-0"
+              >
+                <a
+                  className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-gray-700"
+                  href="/"
+                  rel="noopener noreferrer"
+                >
+                  {`Home`}
+                </a>
+              </button>
+            )}
           </div>
         </div>
       </main>
