@@ -66,7 +66,7 @@ export default function Home() {
     };
   }, []);
 
-  const { infectionAndImmunizationBioQuestion: quizQuestion } = quiz;
+  const { HumayuQuestion: quizQuestion } = quiz;
   const [finalResult, setFinalResult] = useState<string[]>([]);
 
   function handleSubmit() {
@@ -184,10 +184,7 @@ export default function Home() {
         <TimerCard timeLeft={timeLeft} />
       )}
       <main className="flex flex-col row-start-2 items-center sm:items-start">
-        <QuizHeading
-          title="Infection & Immuization"
-          totalQuestion={quizQuestion.length}
-        />
+        <QuizHeading title="Humayu" totalQuestion={quizQuestion.length} />
         <div>
           {quizQuestion.map((que, index) => (
             <div className="my-6" key={index}>
