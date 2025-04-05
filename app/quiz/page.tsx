@@ -2,7 +2,10 @@
 
 import { useState, useRef, ChangeEvent, useEffect } from "react";
 import quiz from "./../_utils/question";
-import FloatingScoreCard from "./component/scoreCard";
+import ScoreCard from "./component/scoreCard";
+import QuizHeading from "./component/quizHeading";
+import TimerCard from "./component/timerCard";
+import QuizSelector from "./component/quizSelector";
 
 interface RadioOption {
   index: string;
@@ -116,15 +119,6 @@ export default function Home() {
     }, 1000);
   };
 
-  const formatTime = (milliseconds: number): string => {
-    const totalSeconds = Math.floor(milliseconds / 1000);
-    const minutes = Math.floor(totalSeconds / 60);
-    const seconds = totalSeconds % 60;
-    return `${minutes.toString().padStart(2, "0")}:${seconds
-      .toString()
-      .padStart(2, "0")}`;
-  };
-
   const evalueation = () => {
     const final: string[] = [];
     let correctAns = 0;
@@ -167,22 +161,7 @@ export default function Home() {
     setTimerRunning(false);
     setFinalResult([]);
     clearInterval(intervalRef.current as NodeJS.Timeout);
-  };
-
-  const style: React.CSSProperties = {
-    position: "fixed",
-    top: "20px", // Adjust as needed
-    right: "20px",
-    backgroundColor: "rgba(255, 255, 255, 0.2)", // Semi-transparent white
-    padding: "10px 19px",
-    borderRadius: "5px",
-    boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
-    zIndex: 1000, // Ensure it stays on top
-    fontSize: "0.9rem",
-    fontWeight: "bold",
-    color: "green",
-    textAlign: "center",
-    width: "180px",
+    startTimer();
   };
 
   return (
@@ -191,7 +170,7 @@ export default function Home() {
       className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]"
     >
       {isSubmit && (
-        <FloatingScoreCard
+        <ScoreCard
           notAttended={report.notAttented}
           rightAnswer={report.rightAnswer}
           score={report.score}
@@ -199,25 +178,16 @@ export default function Home() {
           wrongAnswer={report.wrongAnswer}
         />
       )}
-      {!timerRunning && (
-        <button
-          onClick={startTimer}
-          className="p-2 bg-blue-500 text-white rounded"
-        >
-          Start Quiz
-        </button>
-      )}
-      {timerRunning && (
-        <p style={style} className=" text-amber-900">
-          Time Left: {formatTime(timeLeft)}
-        </p>
+      {!timerRunning ? (
+        <QuizSelector startTimer={startTimer} />
+      ) : (
+        <TimerCard timeLeft={timeLeft} />
       )}
       <main className="flex flex-col row-start-2 items-center sm:items-start">
-        <div className="">
-          <p className="pb-0 w-full text-2xl text-center text-amber-900 ">
-            Infection & Immuization | {quizQuestion.length} Question
-          </p>
-        </div>
+        <QuizHeading
+          title="Infection & Immuization"
+          totalQuestion={quizQuestion.length}
+        />
         <div>
           {quizQuestion.map((que, index) => (
             <div className="my-6" key={index}>
@@ -267,7 +237,7 @@ export default function Home() {
                 Submit
               </button>
             ) : (
-              <div className="flex w-1/3 sm:w-1/2 justify-between">
+              <div className="flex w-1/3 sm:w-1/2 justify-center gap-3">
                 <button
                   type="button"
                   className=" align-middle text-black bg-white md:text-xl px-4 py-2 border-1 font-bold rounded-xl shadow-xl hover:border-0 sm:text-xs"
@@ -292,7 +262,7 @@ export default function Home() {
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-black"
           href="/"
           target="_blank"
           rel="noopener noreferrer"

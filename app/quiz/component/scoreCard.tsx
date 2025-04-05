@@ -1,14 +1,6 @@
-"use client";
+import { ScoreCardProps } from "../interface";
 
-interface FloatingScoreCardProps {
-  notAttended: number;
-  rightAnswer: number;
-  score: number;
-  total: number;
-  wrongAnswer: number;
-}
-
-const FloatingScoreCard: React.FC<FloatingScoreCardProps> = ({
+const ScoreCard: React.FC<ScoreCardProps> = ({
   notAttended,
   rightAnswer,
   score,
@@ -33,9 +25,15 @@ const FloatingScoreCard: React.FC<FloatingScoreCardProps> = ({
   return (
     <div style={style}>
       <p className="text-center">
-        Score: {score}/{total}
+        Score:{" "}
+        {score < 0 ? (
+          <span className="text-red-500"> {score}</span>
+        ) : (
+          <span className="text-green-600">{score}</span>
+        )}
+        /{total}
       </p>
-      <p className="flex text-center justify-evenly px-2.5">
+      <p className="flex text-center justify-center gap-2 px-2.5">
         {" "}
         <span className=" text-sky-600">{rightAnswer}</span> |{" "}
         <span className=" text-red-600">{wrongAnswer}</span> |{" "}
@@ -45,4 +43,4 @@ const FloatingScoreCard: React.FC<FloatingScoreCardProps> = ({
   );
 };
 
-export default FloatingScoreCard;
+export default ScoreCard;
