@@ -41,7 +41,7 @@ const RuleBook: React.FC<RuleBookProps> = () => {
           (if available).
         </li>
       </ul>
-      <p className="mt-4 text-sm text-gray-600">
+      <p className="mt-4 text-sm text-red-500">
         Please read these instructions carefully before starting the quiz. Good
         luck!
       </p>
