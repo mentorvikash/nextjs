@@ -44,6 +44,7 @@ export default function Home() {
     wrongAnswer: 0,
   });
 
+  const { GulamAndMugalQuestion: quizQuestion } = quiz;
   const calculateTime = (): number => {
     return Math.round(((30 * 60 * 1000) / 100) * quizQuestion.length); // in milliseconds
   };
@@ -66,7 +67,6 @@ export default function Home() {
     };
   }, []);
 
-  const { HumayuQuestion: quizQuestion } = quiz;
   const [finalResult, setFinalResult] = useState<string[]>([]);
 
   function handleSubmit() {
@@ -184,7 +184,10 @@ export default function Home() {
         <TimerCard timeLeft={timeLeft} />
       )}
       <main className="flex flex-col row-start-2 items-center sm:items-start">
-        <QuizHeading title="Humayu" totalQuestion={quizQuestion.length} />
+        <QuizHeading
+          title="Mugal and Gulam"
+          totalQuestion={quizQuestion.length}
+        />
         <div>
           {quizQuestion.map((que, index) => (
             <div className="my-6" key={index}>
