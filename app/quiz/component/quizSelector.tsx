@@ -25,13 +25,13 @@ const QuizSelector = ({
   };
 
   return (
-    <div className=" flex bg-gray-700 w-full flex-col border-8 p-5 gap-2 ">
+    <div className=" flex bg-gray-700 w-full flex-col border-8 p-5 sm:p-2 gap-2 ">
       <RuleBook />
       <div className="flex w-full  justify-center ">
         <select
           name=""
           id=""
-          className=" w-2/6 text-center border-1 p-1"
+          className=" w-2/6 sm:w-full text-center border-1 p-1"
           onChange={handleChange}
         >
           <option value="">-- Select Your Quiz --</option>
