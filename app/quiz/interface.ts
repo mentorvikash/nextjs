@@ -1,6 +1,9 @@
 // Component Props
 interface QuizSelectorProps {
   startTimer: () => void;
+  setQuizQuestion: (question: Quiz) => void;
+  setSelectedOption: (selectedOption: string) => void;
+  selectedOption: string;
 }
 
 interface ScoreCardProps {
@@ -16,10 +19,36 @@ interface TimerCardProps {
 }
 
 // Common Typs
-interface QuizQuestion {
+interface Question {
   answer: string;
-  options: string[];
+  options: [string, string, string, string];
   question: string;
 }
 
-export type { QuizSelectorProps, ScoreCardProps, TimerCardProps, QuizQuestion };
+interface Report {
+  notAttented: number;
+  rightAnswer: number;
+  score: number;
+  total: number;
+  wrongAnswer: number;
+}
+
+interface Answer {
+  index: string;
+  value: string;
+}
+
+interface SelectedAnswers {
+  [key: string]: Answer;
+}
+
+interface Quiz extends Array<Question> {}
+
+export type {
+  QuizSelectorProps,
+  ScoreCardProps,
+  TimerCardProps,
+  Quiz,
+  Report,
+  SelectedAnswers,
+};

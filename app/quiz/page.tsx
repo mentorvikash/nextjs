@@ -1,38 +1,16 @@
 "use client";
 
 import { useState, useRef, ChangeEvent, useEffect } from "react";
-import quiz from "./../_utils/question";
 import ScoreCard from "./component/scoreCard";
 import QuizHeading from "./component/quizHeading";
 import TimerCard from "./component/timerCard";
 import QuizSelector from "./component/quizSelector";
-
-interface RadioOption {
-  index: string;
-  value: string;
-}
-
-interface Answer {
-  index: string;
-  value: string;
-}
-
-interface SelectedAnswers {
-  [key: string]: Answer;
-}
-
-interface Report {
-  notAttented: number;
-  rightAnswer: number;
-  score: number;
-  total: number;
-  wrongAnswer: number;
-}
+import { Quiz, Report, SelectedAnswers } from "./interface";
+import { getQuestion } from "../_utils/question";
 
 export default function Home() {
   const [selectedAnswers, setSelectedAnswers] = useState<SelectedAnswers>({});
   const [isSubmit, setIsSubmit] = useState(false);
-  // timer state
   const [timeLeft, setTimeLeft] = useState(0);
   const [timerRunning, setTimerRunning] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -43,8 +21,9 @@ export default function Home() {
     total: 0,
     wrongAnswer: 0,
   });
+  const [quizQuestion, setQuizQuestion] = useState<Quiz>([]);
+  const [selectedOption, setSelectedOption] = useState("");
 
-  const { GulamAndMugalQuestion: quizQuestion } = quiz;
   const calculateTime = (): number => {
     return Math.round(((30 * 60 * 1000) / 100) * quizQuestion.length); // in milliseconds
   };
@@ -61,11 +40,16 @@ export default function Home() {
     document.addEventListener("contextmenu", handleRightClick);
     window.addEventListener("keydown", handleKeyDown);
     return () => {
+      clearInterval(intervalRef.current as NodeJS.Timeout);
       window.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("contextmenu", handleRightClick);
-      clearInterval(intervalRef.current as NodeJS.Timeout);
     };
   }, []);
+
+  useEffect(() => {
+    const question: Quiz = getQuestion(selectedOption);
+    setQuizQuestion(question);
+  }, [selectedOption]);
 
   const [finalResult, setFinalResult] = useState<string[]>([]);
 
@@ -167,7 +151,7 @@ export default function Home() {
   return (
     <div
       style={{ backgroundColor: "#F7F7F7" }}
-      className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]"
+      className="grid grid-col-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]"
     >
       {isSubmit && (
         <ScoreCard
@@ -178,88 +162,105 @@ export default function Home() {
           wrongAnswer={report.wrongAnswer}
         />
       )}
-      {!timerRunning ? (
-        <QuizSelector startTimer={startTimer} />
-      ) : (
-        <TimerCard timeLeft={timeLeft} />
-      )}
-      <main className="flex flex-col row-start-2 items-center sm:items-start">
-        <QuizHeading
-          title="Mugal and Gulam"
-          totalQuestion={quizQuestion.length}
+      {!timerRunning && (
+        <QuizSelector
+          startTimer={startTimer}
+          setQuizQuestion={setQuizQuestion}
+          selectedOption={selectedOption}
+          setSelectedOption={setSelectedOption}
         />
-        <div>
-          {quizQuestion.map((que, index) => (
-            <div className="my-6" key={index}>
-              <p
-                className={`text-xl text-gray-800 font-semibold ${
-                  finalResult.length && finalResult[index] === "W"
-                    ? "text-red-600"
-                    : finalResult[index] === "R"
-                    ? "text-sky-600"
-                    : "text-gray-800"
-                } `}
-              >
-                {" "}
-                {`${index + 1} ${que.question}`}
-              </p>
-              <ol>
-                {que.options.map((option, i) => (
-                  <div key={`${index}Opt${i}`} className="ml-6 mt-2">
-                    <input
-                      type="checkbox"
-                      id={option}
-                      name={`radioGroup${index}`}
-                      value={option}
-                      disabled={isSubmit || !timerRunning}
-                      className=" text-4xl mr-3 scale-150"
-                      checked={selectedAnswers[`Q${[index]}`]?.value === option}
-                      onChange={(event: any) => handleChange(event, index)}
-                    />
-                    <label className=" text-gray-700  text-xl" htmlFor={option}>
-                      {option}
-                    </label>
-                  </div>
-                ))}
-              </ol>
-              {isSubmit && (
-                <p className=" pt-2 text-green-600 font-bold">{que.answer}</p>
-              )}
-            </div>
-          ))}
-          <div className="flex justify-center pb-4">
-            {timerRunning && !isSubmit ? (
-              <button
-                type="button"
-                className=" align-middle text-black bg-white md:text-xl px-4 py-2 font-bold border-1 border-gray-700 rounded-xl shadow-xl hover:border-0"
-                onClick={handleSubmit}
-              >
-                Submit
-              </button>
-            ) : (
-              <div className="flex w-1/3 sm:w-1/2 justify-center gap-3">
-                <button
-                  type="button"
-                  className=" align-middle text-black bg-white md:text-xl px-4 py-2 border-1 font-bold rounded-xl shadow-xl hover:border-0 sm:text-xs"
-                >
-                  <a className="" href="/" rel="noopener noreferrer">
-                    {`Home`}
-                  </a>
-                </button>
-                {isSubmit && (
+      )}
+      {timerRunning && (
+        <>
+          <TimerCard timeLeft={timeLeft} />
+          <main className="flex flex-col row-start-0 items-center sm:items-start">
+            <QuizHeading
+              title={selectedOption || "Sample"}
+              totalQuestion={quizQuestion.length}
+            />
+            <div>
+              {quizQuestion.map((que, index) => (
+                <div className="my-6" key={index}>
+                  <p
+                    className={`text-xl text-gray-800 font-semibold ${
+                      finalResult.length && finalResult[index] === "W"
+                        ? "text-red-600"
+                        : finalResult[index] === "R"
+                        ? "text-sky-600"
+                        : "text-gray-800"
+                    } `}
+                  >
+                    {" "}
+                    {`${index + 1} ${que.question}`}
+                  </p>
+                  <ol>
+                    {que.options.map((option, i) => (
+                      <div key={`${index}Opt${i}`} className="ml-6 mt-2">
+                        <input
+                          type="checkbox"
+                          id={option}
+                          name={`radioGroup${index}`}
+                          value={option}
+                          disabled={isSubmit || !timerRunning}
+                          className=" text-4xl mr-3 scale-150"
+                          checked={
+                            selectedAnswers[`Q${[index]}`]?.value === option
+                          }
+                          onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                            handleChange(event, index)
+                          }
+                        />
+                        <label
+                          className=" text-gray-700  text-xl"
+                          htmlFor={option}
+                        >
+                          {option}
+                        </label>
+                      </div>
+                    ))}
+                  </ol>
+                  {isSubmit && (
+                    <p className=" pt-2 text-green-600 font-bold">
+                      {que.answer}
+                    </p>
+                  )}
+                </div>
+              ))}
+              <div className="flex justify-center pb-4">
+                {timerRunning && !isSubmit ? (
                   <button
                     type="button"
-                    className=" align-middle text-black bg-white md:text-xl px-4 py-2 border-1 font-bold rounded-xl shadow-xl hover:border-0 sm:text-xs"
-                    onClick={handleReset}
+                    className=" align-middle text-black bg-white md:text-xl px-4 py-2 font-bold border-1 border-gray-700 rounded-xl shadow-xl hover:border-0"
+                    onClick={handleSubmit}
                   >
-                    Try Again
+                    Submit
                   </button>
+                ) : (
+                  <div className="flex w-1/3 sm:w-1/2 justify-center gap-3">
+                    <button
+                      type="button"
+                      className=" align-middle text-black bg-white md:text-xl px-4 py-2 border-1 font-bold rounded-xl shadow-xl hover:border-0 sm:text-xs"
+                    >
+                      <a className="" href="/" rel="noopener noreferrer">
+                        {`Home`}
+                      </a>
+                    </button>
+                    {isSubmit && (
+                      <button
+                        type="button"
+                        className=" align-middle text-black bg-white md:text-xl px-4 py-2 border-1 font-bold rounded-xl shadow-xl hover:border-0 sm:text-xs"
+                        onClick={handleReset}
+                      >
+                        Try Again
+                      </button>
+                    )}
+                  </div>
                 )}
               </div>
-            )}
-          </div>
-        </div>
-      </main>
+            </div>
+          </main>
+        </>
+      )}
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-black"
