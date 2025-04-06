@@ -151,7 +151,7 @@ export default function Home() {
   return (
     <div
       style={{ backgroundColor: "#F7F7F7" }}
-      className="grid grid-col-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]"
+      className="grid grid-col-[20px_1fr_20px] items-center justify-items-center min-h-screen px-4 py-8 pb-20 gap-16 sm:px-4 sm:py-8 font-[family-name:var(--font-geist-sans)]"
     >
       {isSubmit && (
         <ScoreCard

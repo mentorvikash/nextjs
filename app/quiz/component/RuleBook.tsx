@@ -4,7 +4,7 @@ interface RuleBookProps {}
 
 const RuleBook: React.FC<RuleBookProps> = () => {
   return (
-    <div className="bg-gray-100 p-6: sm:p-2 rounded-md shadow-md">
+    <div className="bg-gray-100 p-6: sm:p-3 rounded-md shadow-md">
       <h2 className="text-xl font-semibold mb-4 text-gray-800">
         Quiz Instructions
       </h2>
