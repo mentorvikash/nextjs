@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -8,10 +9,9 @@ export default function Home() {
           <p className="mb-2 text-6xl tracking-[-.01em]">SSC QUIZ APP</p>
         </ol>
         <div className="flex gap-4 flex-col sm:flex-row">
-          <a
+          <Link
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
             href="/quiz"
-            rel="noopener noreferrer"
           >
             <Image
               className="dark:invert"
@@ -21,29 +21,13 @@ export default function Home() {
               height={20}
             />
             Click Here
-          </a>
+          </Link>
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href=""
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          back
-        </a>
-        <a
+        <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="/quiz"
-          rel="noopener noreferrer"
         >
           <Image
             aria-hidden
@@ -53,7 +37,7 @@ export default function Home() {
             height={16}
           />
           Go to SSC Quiz →
-        </a>
+        </Link>
       </footer>
     </div>
   );

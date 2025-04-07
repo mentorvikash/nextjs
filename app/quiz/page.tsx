@@ -7,6 +7,8 @@ import TimerCard from "./component/timerCard";
 import QuizSelector from "./component/quizSelector";
 import { Quiz, Report, SelectedAnswers } from "./interface";
 import { getQuestion } from "../_utils/question";
+import Link from "next/link";
+import QuestionNavigator from "./component/QuestionNavigator";
 
 export default function Home() {
   const [selectedAnswers, setSelectedAnswers] = useState<SelectedAnswers>({});
@@ -131,7 +133,7 @@ export default function Home() {
     setReport(scoreCard);
   };
 
-  const handleReset = () => {
+  const handleReset = (type: string) => {
     const scoreCardDefault = {
       notAttented: 0,
       rightAnswer: 0,
@@ -145,7 +147,9 @@ export default function Home() {
     setTimerRunning(false);
     setFinalResult([]);
     clearInterval(intervalRef.current as NodeJS.Timeout);
-    startTimer();
+    if (type === "tryAgain") {
+      startTimer();
+    }
   };
 
   return (
@@ -178,9 +182,10 @@ export default function Home() {
               title={selectedOption || "Sample"}
               totalQuestion={quizQuestion.length}
             />
+            {/* <QuestionNavigator totalQuestion={quizQuestion.length} /> */}
             <div>
               {quizQuestion.map((que, index) => (
-                <div className="my-6" key={index}>
+                <div id={`que${index}`} className="my-6" key={index}>
                   <p
                     className={`text-xl text-gray-800 font-semibold ${
                       finalResult.length && finalResult[index] === "W"
@@ -241,15 +246,22 @@ export default function Home() {
                       type="button"
                       className=" align-middle text-black bg-white md:text-xl px-4 py-2 border-1 font-bold rounded-xl shadow-xl hover:border-0 sm:text-xs"
                     >
-                      <a className="" href="/" rel="noopener noreferrer">
+                      <Link className="" href="/">
                         {`Home`}
-                      </a>
+                      </Link>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleReset("selectAgain")}
+                      className=" align-middle text-black bg-white md:text-xl px-4 py-2 border-1 font-bold rounded-xl shadow-xl hover:border-0 sm:text-xs"
+                    >
+                      Select Again
                     </button>
                     {isSubmit && (
                       <button
                         type="button"
                         className=" align-middle text-black bg-white md:text-xl px-4 py-2 border-1 font-bold rounded-xl shadow-xl hover:border-0 sm:text-xs"
-                        onClick={handleReset}
+                        onClick={() => handleReset("tryAgain")}
                       >
                         Try Again
                       </button>
@@ -261,16 +273,6 @@ export default function Home() {
           </main>
         </>
       )}
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-black"
-          href="/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {`<-- back`}
-        </a>
-      </footer>
     </div>
   );
 }

@@ -18,6 +18,10 @@ interface TimerCardProps {
   timeLeft: number;
 }
 
+interface QuestionNavigatorProps {
+  totalQuestion: number;
+}
+
 // Common Typs
 interface Question {
   answer: string;
@@ -45,6 +49,7 @@ interface SelectedAnswers {
 interface Quiz extends Array<Question> {}
 
 export type {
+  QuestionNavigatorProps,
   QuizSelectorProps,
   ScoreCardProps,
   TimerCardProps,
