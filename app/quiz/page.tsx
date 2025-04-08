@@ -28,8 +28,18 @@ export default function Home() {
   const [selectedOption, setSelectedOption] = useState("");
   const [finalResult, setFinalResult] = useState<string[]>([]);
 
+  function checkStartMatch(str: string, target: string) {
+    // Create a case-insensitive regular expression
+    const regex = new RegExp(`^${target}`, "i");
+    // Test if the string starts with the target (case-insensitive)
+    return regex.test(str);
+  }
+
   const calculateTime = (): number => {
-    return Math.round(((30 * 60 * 1000) / 100) * quizQuestion.length); // in milliseconds
+    const isMatched = checkStartMatch(selectedOption, "math");
+    return Math.round(
+      (((isMatched ? 100 : 30) * 60 * 1000) / 100) * quizQuestion.length
+    ); // in milliseconds
   };
 
   useEffect(() => {

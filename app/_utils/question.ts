@@ -6330,39 +6330,20 @@ const questionType: Record<QuestionType, string> = {
   MATH_FRACTION: "Math Fraction",
 };
 
-const getQuestion = (slectedOption: string): Quiz => {
-  switch (slectedOption) {
-    case questionType.LODI_WANS:
-      return LodiDinesty;
-      break;
-    case questionType.HUMAYU_WANS:
-      return HumayuDinesty;
-      break;
-    case questionType.BABAR_WANS:
-      return BabarDinesty;
-      break;
-    case questionType.GULAM_AND_MUGAL:
-      return GulamAndMugal;
-      break;
-    case questionType.INFECTION_AND_IMMUNIZATION:
-      return infectionAndImmunizationBio;
-      break;
-    case questionType.SHERSAH_SURI:
-      return ShersahSuri;
-      break;
-    case questionType.AKBAR:
-      return akbar;
-      break;
-    case questionType.MATH_PERCENT:
-      return MathPercentage;
-      break;
-    case questionType.MATH_FRACTION:
-      return MathFraction;
-      break;
-    default:
-      return sample;
-      break;
-  }
+const questionData: Record<string, Quiz> = {
+  [questionType.LODI_WANS]: LodiDinesty,
+  [questionType.HUMAYU_WANS]: HumayuDinesty,
+  [questionType.BABAR_WANS]: BabarDinesty,
+  [questionType.GULAM_AND_MUGAL]: GulamAndMugal,
+  [questionType.INFECTION_AND_IMMUNIZATION]: infectionAndImmunizationBio,
+  [questionType.SHERSAH_SURI]: ShersahSuri,
+  [questionType.AKBAR]: akbar,
+  [questionType.MATH_PERCENT]: MathPercentage,
+  [questionType.MATH_FRACTION]: MathFraction,
+};
+
+const getQuestion = (selectedOption: string): Quiz => {
+  return questionData[selectedOption] || sample;
 };
 
 // I am preparing for SSC CGL examination, give me 30 Question related to topic I mention, in given format (also include the previous years question), try not to repeate question and nature of question should be dynamic
