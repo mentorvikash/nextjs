@@ -7,7 +7,6 @@ import TimerCard from "./component/timerCard";
 import QuizSelector from "./component/quizSelector";
 import { Quiz, Report, SelectedAnswers } from "./interface";
 import { getQuestion } from "../_utils/question";
-import Link from "next/link";
 import QuestionNavigator from "./component/QuestionNavigator";
 import QuizBoard from "./component/QuizBoard";
 import QuizFooter from "./component/QuizFooter";
@@ -27,6 +26,7 @@ export default function Home() {
   });
   const [quizQuestion, setQuizQuestion] = useState<Quiz>([]);
   const [selectedOption, setSelectedOption] = useState("");
+  const [finalResult, setFinalResult] = useState<string[]>([]);
 
   const calculateTime = (): number => {
     return Math.round(((30 * 60 * 1000) / 100) * quizQuestion.length); // in milliseconds
@@ -55,7 +55,11 @@ export default function Home() {
     setQuizQuestion(question);
   }, [selectedOption]);
 
-  const [finalResult, setFinalResult] = useState<string[]>([]);
+  useEffect(() => {
+    if (isSubmit === true) {
+      evalueation();
+    }
+  }, [isSubmit]);
 
   function handleSubmit() {
     clearInterval(intervalRef.current as NodeJS.Timeout);
@@ -84,12 +88,6 @@ export default function Home() {
     }
     // console.log(selectedAnswers);
   }
-
-  useEffect(() => {
-    if (isSubmit === true) {
-      evalueation();
-    }
-  }, [isSubmit]);
 
   const startTimer = (): void => {
     setTimeLeft(calculateTime());
