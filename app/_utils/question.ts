@@ -5696,7 +5696,8 @@ export type QuestionType =
   | "INFECTION_AND_IMMUNIZATION"
   | "GULAM_AND_MUGAL"
   | "SHERSAH_SURI"
-  | "AKBAR";
+  | "AKBAR"
+  | "MATH_PERCENT";
 
 const questionType: Record<QuestionType, string> = {
   //   GULAM_WANS: "Gulam Wans",
@@ -5711,6 +5712,7 @@ const questionType: Record<QuestionType, string> = {
   GULAM_AND_MUGAL: "Gulam And Mugal",
   SHERSAH_SURI: "Shersah Suri",
   AKBAR: "Akbar",
+  MATH_PERCENT: "Math Percentage",
 };
 
 const getQuestion = (slectedOption: string): Quiz => {
@@ -5734,7 +5736,7 @@ const getQuestion = (slectedOption: string): Quiz => {
       return ShersahSuri;
       break;
     case questionType.AKBAR:
-      return ShersahSuri;
+      return akbar;
       break;
     default:
       return sample;
