@@ -22,7 +22,7 @@ function QuizBoard({
   return (
     <>
       {quizQuestion.map((que, index) => (
-        <div id={`que${index}`} className="my-6 mr-7" key={index}>
+        <div id={`que${index}`} className="my-6 mr-3" key={index}>
           <p
             className={`text-xl text-gray-800 font-semibold ${
               finalResult.length && finalResult[index] === "W"
