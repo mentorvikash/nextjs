@@ -16,7 +16,7 @@ const QuestionNavigator: React.FC<QuestionNavigatorProps> = ({
     position: "fixed",
     top: "0", // Adjust as needed
     right: "0", // Adjust as needed
-    backgroundColor: "rgba(255, 255, 255, 0.8)", // Semi-transparent white
+    backgroundColor: "rgba(255, 255, 255, 0.2)", // Semi-transparent white
     padding: "10px 5px",
     // borderRadius: "5px",
     fontSize: "0.7rem",
@@ -34,7 +34,11 @@ const QuestionNavigator: React.FC<QuestionNavigatorProps> = ({
     if (hash) {
       const element = document.getElementById(hash.substring(1)); // Remove the '#'
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "center", // Scroll to the center vertically
+          inline: "center", // Optional: Scroll to the center horizontally (if needed)
+        });
       }
     }
   }, [pathname, searchParams]); // Re-run effect on path or query changes
