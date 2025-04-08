@@ -38,7 +38,7 @@ interface Report {
 }
 
 interface Answer {
-  index: string;
+  index: number;
   value: string;
 }
 

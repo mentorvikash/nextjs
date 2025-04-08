@@ -1,11 +1,16 @@
 import Link from "next/link";
 import { QuestionNavigatorProps } from "../interface";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const QuestionNavigator: React.FC<QuestionNavigatorProps> = ({
   totalQuestion,
 }) => {
+  const navigatorRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
   const style: React.CSSProperties = {
     position: "fixed",
     top: "75px", // Adjust as needed
@@ -21,12 +26,8 @@ const QuestionNavigator: React.FC<QuestionNavigatorProps> = ({
     width: "180px",
     height: "300px",
     overflowY: "scroll",
-    scrollBehavior: "smooth",
+    scrollBehavior: "smooth", // Smooth scrolling for the navigator itself
   };
-
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -44,6 +45,8 @@ const QuestionNavigator: React.FC<QuestionNavigatorProps> = ({
         searchParams.toString() ? `?${searchParams.toString()}` : ""
       }#${id}`
     );
+    // No need to manually scroll the navigator here, the browser will handle it
+    // based on the style's scrollBehavior.
   };
 
   const ScrollBar = () => {
@@ -60,7 +63,7 @@ const QuestionNavigator: React.FC<QuestionNavigatorProps> = ({
   // `que${index}`
 
   return (
-    <div style={style}>
+    <div style={style} ref={navigatorRef}>
       <ol>
         <ScrollBar />
       </ol>
