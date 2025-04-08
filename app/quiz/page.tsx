@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, ChangeEvent, useEffect } from "react";
+import { useState, useRef, ChangeEvent, useEffect, Suspense } from "react";
 import ScoreCard from "./component/scoreCard";
 import QuizHeading from "./component/quizHeading";
 import TimerCard from "./component/timerCard";
@@ -186,11 +186,13 @@ export default function Home() {
           setSelectedOption={setSelectedOption}
         />
       )}
-      <QuestionNavigator
-        totalQuestion={quizQuestion.length}
-        selectedAnswers={selectedAnswers}
-        finalResult={finalResult}
-      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <QuestionNavigator
+          totalQuestion={quizQuestion.length}
+          selectedAnswers={selectedAnswers}
+          finalResult={finalResult}
+        />
+      </Suspense>
       {timerRunning && (
         <>
           <TimerCard timeLeft={timeLeft} />

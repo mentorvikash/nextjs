@@ -1,6 +1,3 @@
-"use client";
-
-import Link from "next/link";
 import { QuestionNavigatorProps } from "../interface";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useRef } from "react";
