@@ -159,6 +159,9 @@ export default function Home() {
     if (type === "tryAgain") {
       startTimer();
     }
+    if (type === "selectAgain") {
+      setSelectedOption("");
+    }
   };
 
   return (
@@ -183,7 +186,11 @@ export default function Home() {
           setSelectedOption={setSelectedOption}
         />
       )}
-      {/* <QuestionNavigator totalQuestion={quizQuestion.length} /> */}
+      <QuestionNavigator
+        totalQuestion={quizQuestion.length}
+        selectedAnswers={selectedAnswers}
+        finalResult={finalResult}
+      />
       {timerRunning && (
         <>
           <TimerCard timeLeft={timeLeft} />

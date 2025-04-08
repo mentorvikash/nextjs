@@ -20,6 +20,8 @@ interface TimerCardProps {
 
 interface QuestionNavigatorProps {
   totalQuestion: number;
+  selectedAnswers: SelectedAnswers;
+  finalResult: string[];
 }
 
 // Common Typs

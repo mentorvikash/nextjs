@@ -4,7 +4,7 @@ import { TimerCardProps } from "../interface";
 const timerCss: React.CSSProperties = {
   position: "fixed",
   top: "20px", // Adjust as needed
-  right: "20px",
+  right: "45px",
   backgroundColor: "rgba(255, 255, 255, 0.2)", // Semi-transparent white
   padding: "10px 19px",
   borderRadius: "5px",
@@ -14,7 +14,7 @@ const timerCss: React.CSSProperties = {
   fontWeight: "bold",
   color: "green",
   textAlign: "center",
-  width: "180px",
+  width: "160px",
 };
 
 export default function TimerCard({ timeLeft }: TimerCardProps) {
