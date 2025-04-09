@@ -28,7 +28,7 @@ function QuizBoard({
           key={index}
         >
           <p
-            className={`text-md px-3.5 pt-1  ${
+            className={`text-lg px-3.5 pt-1  ${
               finalResult.length && finalResult[index] === "W"
                 ? "text-red-600"
                 : finalResult[index] === "R"
@@ -44,7 +44,7 @@ function QuizBoard({
             {que.options.map((option, i) => (
               <div
                 key={`${index}Opt${i}`}
-                className=" p-3  border-1 border-gray-400 rounded-md  "
+                className=" p-3  border-1 border-gray-400 rounded-md bg-white  "
               >
                 <input
                   type="checkbox"
