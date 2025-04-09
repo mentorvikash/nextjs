@@ -14,7 +14,7 @@ function QuizFooter({
   timerRunning,
 }: QuizFooterProps) {
   return (
-    <div className="flex justify-center pb-4">
+    <div className="flex justify-center p-4">
       {timerRunning && !isSubmit ? (
         <button
           type="button"

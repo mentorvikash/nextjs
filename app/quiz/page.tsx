@@ -186,15 +186,16 @@ export default function Home() {
           setSelectedOption={setSelectedOption}
         />
       )}
-      <Suspense fallback={<div>Loading...</div>}>
-        <QuestionNavigator
-          totalQuestion={quizQuestion.length}
-          selectedAnswers={selectedAnswers}
-          finalResult={finalResult}
-        />
-      </Suspense>
+
       {timerRunning && (
         <>
+          <Suspense fallback={<div>Loading...</div>}>
+            <QuestionNavigator
+              totalQuestion={quizQuestion.length}
+              selectedAnswers={selectedAnswers}
+              finalResult={finalResult}
+            />
+          </Suspense>
           <TimerCard timeLeft={timeLeft} />
           <main className="flex flex-col">
             <QuizHeading
