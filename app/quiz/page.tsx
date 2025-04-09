@@ -167,7 +167,7 @@ export default function Home() {
   return (
     <div
       style={{ backgroundColor: "#F7F7F7" }}
-      className="grid grid-col-[20px_1fr_20px] items-center justify-items-center min-h-screen px-4 py-8 pb-20 gap-16 sm:px-4 sm:py-8 font-[family-name:var(--font-geist-sans)]"
+      className=" sm:mx-6 md:mx-15 min-h-screen px-8 py-8 pb-20 gap-16 sm:px-4 sm:py-8 font-[family-name:var(--font-geist-sans)]"
     >
       {isSubmit && (
         <ScoreCard
@@ -196,7 +196,7 @@ export default function Home() {
       {timerRunning && (
         <>
           <TimerCard timeLeft={timeLeft} />
-          <main className="flex flex-col row-start-0 items-center sm:items-start">
+          <main className="flex flex-col">
             <QuizHeading
               title={selectedOption || "Sample"}
               totalQuestion={quizQuestion.length}

@@ -20,11 +20,15 @@ function QuizBoard({
   selectedAnswers,
 }: QuizBoardProps) {
   return (
-    <>
+    <div className="flex flex-col gap-4 my-3  ">
       {quizQuestion.map((que, index) => (
-        <div id={`que${index}`} className="my-6 mr-3" key={index}>
+        <div
+          id={`que${index}`}
+          className=" py-3 border-1 border-gray-400"
+          key={index}
+        >
           <p
-            className={`text-xl text-gray-800 font-semibold ${
+            className={`text-md px-3.5 pt-1  ${
               finalResult.length && finalResult[index] === "W"
                 ? "text-red-600"
                 : finalResult[index] === "R"
@@ -35,33 +39,39 @@ function QuizBoard({
             {" "}
             {`${index + 1} ${que.question}`}
           </p>
-          <ol>
+          <hr className="border-gray-400 border-0.5 my-3.5 " />
+          <ol className="flex flex-col gap-2.5 mx-4">
             {que.options.map((option, i) => (
-              <div key={`${index}Opt${i}`} className="ml-6 mt-2">
+              <div
+                key={`${index}Opt${i}`}
+                className=" p-3  border-1 border-gray-400 rounded-md  "
+              >
                 <input
                   type="checkbox"
                   id={option}
                   name={`radioGroup${index}`}
                   value={option}
                   disabled={isSubmit || !timerRunning}
-                  className=" text-4xl mr-3 scale-150"
+                  className=" text-lg mx-2 scale-125"
                   checked={selectedAnswers[`Q${[index]}`]?.value === option}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     handleChange(event, index)
                   }
                 />
-                <label className=" text-gray-700  text-xl" htmlFor={option}>
+                <label className=" text-gray-700 text-md" htmlFor={option}>
                   {option}
                 </label>
               </div>
             ))}
           </ol>
           {isSubmit && (
-            <p className=" pt-2 text-green-600 font-bold">{que.answer}</p>
+            <p className=" pt-3 px-3 text-green-600 font-semibold">
+              {que.answer}
+            </p>
           )}
         </div>
       ))}
-    </>
+    </div>
   );
 }
 
