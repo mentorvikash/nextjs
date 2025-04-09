@@ -20,7 +20,7 @@ function QuizBoard({
   selectedAnswers,
 }: QuizBoardProps) {
   return (
-    <div className="flex flex-col gap-4 my-3 border-2  ">
+    <div className="flex flex-col gap-4 my-3 border-2 ml-1 mr-9  ">
       {quizQuestion.map((que, index) => (
         <div
           id={`que${index}`}

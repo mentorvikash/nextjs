@@ -43,20 +43,20 @@ export default function Home() {
   };
 
   useEffect(() => {
-    // const handleRightClick = (event: MouseEvent) => {
-    //   event.preventDefault();
-    // };
-    // const handleKeyDown = (e: KeyboardEvent) => {
-    //   if (e.key === "F12" || (e.ctrlKey && (e.key === "I" || e.key === "U"))) {
-    //     e.preventDefault();
-    //   }
-    // };
-    // document.addEventListener("contextmenu", handleRightClick);
-    // window.addEventListener("keydown", handleKeyDown);
+    const handleRightClick = (event: MouseEvent) => {
+      event.preventDefault();
+    };
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "F12" || (e.ctrlKey && (e.key === "I" || e.key === "U"))) {
+        e.preventDefault();
+      }
+    };
+    document.addEventListener("contextmenu", handleRightClick);
+    window.addEventListener("keydown", handleKeyDown);
     return () => {
       clearInterval(intervalRef.current as NodeJS.Timeout);
-      // window.removeEventListener("keydown", handleKeyDown);
-      // document.removeEventListener("contextmenu", handleRightClick);
+      window.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("contextmenu", handleRightClick);
     };
   }, []);
 
@@ -167,7 +167,7 @@ export default function Home() {
   return (
     <div
       style={{ backgroundColor: "#F7F7F7" }}
-      className=" min-h-screen ml-1 mr-9 sm:py-8  md:mx-20  font-[family-name:var(--font-geist-sans)]"
+      className=" min-h-screen sm:py-8  md:mx-20  font-[family-name:var(--font-geist-sans)]"
     >
       {isSubmit && (
         <ScoreCard
