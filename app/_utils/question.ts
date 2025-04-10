@@ -6297,6 +6297,317 @@ const MathFraction: Quiz = [
   },
 ];
 
+const ReactQue: Quiz = [
+  {
+    question: "What is JSX?",
+    options: [
+      "(a) JavaScript Extension",
+      "(b) JavaScript XML",
+      "(c) JavaScript Syntax",
+      "(d) JSON XML",
+    ],
+    answer: "(b) JavaScript XML",
+  },
+  {
+    question: "What are React Components?",
+    options: [
+      "(a) Reusable UI elements",
+      "(b) JavaScript functions",
+      "(c) HTML tags",
+      "(d) CSS selectors",
+    ],
+    answer: "(a) Reusable UI elements",
+  },
+  {
+    question:
+      "What is the primary difference between Functional and Class Components?",
+    options: [
+      "(a) Functional components can have state, class components cannot",
+      "(b) Class components are simpler than functional components",
+      "(c) Functional components are primarily for presentation, class components can handle state and lifecycle",
+      "(d) There is no significant difference",
+    ],
+    answer:
+      "(c) Functional components are primarily for presentation, class components can handle state and lifecycle",
+  },
+  {
+    question: "What are Props in React?",
+    options: [
+      "(a) State variables within a component",
+      "(b) Read-only arguments passed from parent to child",
+      "(c) Functions used for event handling",
+      "(d) References to DOM elements",
+    ],
+    answer: "(b) Read-only arguments passed from parent to child",
+  },
+  {
+    question: "What is State in React?",
+    options: [
+      "(a) Data passed from parent to child",
+      "(b) Read-only properties of a component",
+      "(c) Mutable data managed within a component",
+      "(d) Global variables in a React application",
+    ],
+    answer: "(c) Mutable data managed within a component",
+  },
+  {
+    question: "What is the purpose of the Virtual DOM in React?",
+    options: [
+      "(a) To directly manipulate the browser's DOM",
+      "(b) To create a virtual representation of the UI for efficient updates",
+      "(c) To handle routing in a React application",
+      "(d) To manage the state of React components",
+    ],
+    answer:
+      "(b) To create a virtual representation of the UI for efficient updates",
+  },
+  {
+    question: "What is the significance of 'Keys' in React lists?",
+    options: [
+      "(a) They provide styling to list items",
+      "(b) They uniquely identify list items, helping React track changes",
+      "(c) They are used for event handling in lists",
+      "(d) They define the order of items in a list",
+    ],
+    answer:
+      "(b) They uniquely identify list items, helping React track changes",
+  },
+  {
+    question: "Which of the following is NOT a common React Hook?",
+    options: [
+      "(a) useState",
+      "(b) useEffect",
+      "(c) useReducer",
+      "(d) useComponent",
+    ],
+    answer: "(d) useComponent",
+  },
+  {
+    question: "What does the `useState` Hook return?",
+    options: [
+      "(a) Only the current state value",
+      "(b) Only the function to update the state",
+      "(c) An array containing the current state value and a function to update it",
+      "(d) An object containing the state and update function",
+    ],
+    answer:
+      "(c) An array containing the current state value and a function to update it",
+  },
+  {
+    question: "What is the primary use case for the `useEffect` Hook?",
+    options: [
+      "(a) Defining the state of a component",
+      "(b) Performing side effects like data fetching or subscriptions",
+      "(c) Optimizing component rendering",
+      "(d) Creating reusable logic between components",
+    ],
+    answer: "(b) Performing side effects like data fetching or subscriptions",
+  },
+  {
+    question: "What problem does the Context API solve in React?",
+    options: [
+      "(a) Managing complex component state",
+      "(b) Handling asynchronous operations",
+      "(c) Sharing data deeply without prop drilling",
+      "(d) Defining routes in a single-page application",
+    ],
+    answer: "(c) Sharing data deeply without prop drilling",
+  },
+  {
+    question: "Which library is commonly used for routing in React?",
+    options: [
+      "(a) Axios",
+      "(b) Redux",
+      "(c) React Router",
+      "(d) Styled Components",
+    ],
+    answer: "(c) React Router",
+  },
+  {
+    question:
+      "What is the core principle of Redux regarding state modification?",
+    options: [
+      "(a) State can be directly modified within components",
+      "(b) State is modified through actions and reducers",
+      "(c) State changes are handled by middleware",
+      "(d) State is stored locally in each component",
+    ],
+    answer: "(b) State is modified through actions and reducers",
+  },
+  {
+    question: "In Redux, what is an Action?",
+    options: [
+      "(a) A function that modifies the state",
+      "(b) A plain JavaScript object describing an event",
+      "(c) A middleware that intercepts dispatched events",
+      "(d) A way to select data from the store",
+    ],
+    answer: "(b) A plain JavaScript object describing an event",
+  },
+  {
+    question: "What is the role of Middleware in Redux?",
+    options: [
+      "(a) To connect React components to the Redux store",
+      "(b) To handle asynchronous operations and other side effects before actions reach reducers",
+      "(c) To define how the state should be updated",
+      "(d) To select specific data from the Redux store",
+    ],
+    answer:
+      "(b) To handle asynchronous operations and other side effects before actions reach reducers",
+  },
+  {
+    question: "What are Selectors used for in Redux?",
+    options: [
+      "(a) Dispatching actions to the store",
+      "(b) Defining the initial state of the application",
+      "(c) Extracting and deriving data from the store's state",
+      "(d) Connecting components to the store",
+    ],
+    answer: "(c) Extracting and deriving data from the store's state",
+  },
+  {
+    question:
+      "Which lifecycle method is invoked after a component is inserted into the DOM?",
+    options: [
+      "(a) componentDidUpdate",
+      "(b) componentWillUnmount",
+      "(c) componentDidMount",
+      "(d) render",
+    ],
+    answer: "(c) componentDidMount",
+  },
+  {
+    question: "How does React handle events in JSX?",
+    options: [
+      "(a) Using inline HTML event attributes",
+      "(b) Using synthetic events that are cross-browser wrappers",
+      "(c) Directly using native browser event listeners",
+      "(d) Through a separate event handling library",
+    ],
+    answer: "(b) Using synthetic events that are cross-browser wrappers",
+  },
+  {
+    question: "In React, what is a 'controlled component'?",
+    options: [
+      "(a) A component whose state is managed by a parent component",
+      "(b) A component that controls the state of other components",
+      "(c) A form element whose value is controlled by React state",
+      "(d) A component that only renders based on props",
+    ],
+    answer: "(c) A form element whose value is controlled by React state",
+  },
+  {
+    question: "What are 'Refs' used for in React?",
+    options: [
+      "(a) Defining relationships between components",
+      "(b) Accessing DOM nodes or React elements directly",
+      "(c) Passing data down the component tree",
+      "(d) Handling events in a declarative way",
+    ],
+    answer: "(b) Accessing DOM nodes or React elements directly",
+  },
+  {
+    question: "What is Lazy Loading in React primarily used for?",
+    options: [
+      "(a) Improving the performance of state updates",
+      "(b) Reducing the initial load time of the application",
+      "(c) Simplifying component rendering logic",
+      "(d) Managing asynchronous API calls",
+    ],
+    answer: "(b) Reducing the initial load time of the application",
+  },
+  {
+    question: "Which React Hook is used for memoizing expensive computations?",
+    options: ["(a) useCallback", "(b) useMemo", "(c) useRef", "(d) useState"],
+    answer: "(b) useMemo",
+  },
+  {
+    question: "What is the main benefit of Code Splitting in React?",
+    options: [
+      "(a) Improved server-side rendering",
+      "(b) Reduced initial bundle size and faster load times",
+      "(c) Easier debugging of React applications",
+      "(d) Enhanced SEO for single-page applications",
+    ],
+    answer: "(b) Reduced initial bundle size and faster load times",
+  },
+  {
+    question: "What is a Higher-Order Component (HOC) in React?",
+    options: [
+      "(a) A component that renders other components",
+      "(b) A function that takes a component and returns an enhanced component",
+      "(c) A component that is used for higher-level logic",
+      "(d) A way to pass data deeply into the component tree",
+    ],
+    answer:
+      "(b) A function that takes a component and returns an enhanced component",
+  },
+  {
+    question: "What is a 'Render Prop' in React?",
+    options: [
+      "(a) A prop used for styling components",
+      "(b) A prop whose value is a function that a component calls to render content",
+      "(c) A prop that determines whether a component should render",
+      "(d) A prop used for passing data to child components",
+    ],
+    answer:
+      "(b) A prop whose value is a function that a component calls to render content",
+  },
+  {
+    question: "What is the purpose of React Fragments?",
+    options: [
+      "(a) To add comments in JSX",
+      "(b) To group children without adding extra DOM nodes",
+      "(c) To define reusable UI patterns",
+      "(d) To handle events on multiple elements",
+    ],
+    answer: "(b) To group children without adding extra DOM nodes",
+  },
+  {
+    question: "What are Synthetic Events in React?",
+    options: [
+      "(a) Events triggered by user interactions outside the browser",
+      "(b) Browser-native events used directly in React",
+      "(c) Cross-browser wrappers around native events for consistency",
+      "(d) Events specific to React component lifecycle",
+    ],
+    answer: "(c) Cross-browser wrappers around native events for consistency",
+  },
+  {
+    question: "How can you handle errors that occur during rendering in React?",
+    options: [
+      "(a) Using try-catch blocks within the render method",
+      "(b) Using Error Boundaries to catch errors in their child tree",
+      "(c) By ignoring errors and letting the application crash",
+      "(d) Through global error handlers in JavaScript",
+    ],
+    answer: "(b) Using Error Boundaries to catch errors in their child tree",
+  },
+  {
+    question:
+      "Which library is a popular choice for making API calls in React?",
+    options: [
+      "(a) Redux Thunk",
+      "(b) React Router",
+      "(c) Axios",
+      "(d) Styled Components",
+    ],
+    answer: "(c) Axios",
+  },
+  {
+    question:
+      "What is the primary benefit of using a state management library like Redux?",
+    options: [
+      "(a) Faster component rendering",
+      "(b) Simplified routing implementation",
+      "(c) Centralized and predictable state management for complex applications",
+      "(d) Easier styling of React components",
+    ],
+    answer:
+      "(c) Centralized and predictable state management for complex applications",
+  },
+];
+
 export type QuestionType =
   //   | "GULAM_WANS"
   //   | "TUGLAK_WANS"
@@ -6311,7 +6622,8 @@ export type QuestionType =
   | "SHERSAH_SURI"
   | "AKBAR"
   | "MATH_PERCENT"
-  | "MATH_FRACTION";
+  | "MATH_FRACTION"
+  | "REACT";
 
 const questionType: Record<QuestionType, string> = {
   //   GULAM_WANS: "Gulam Wans",
@@ -6328,6 +6640,7 @@ const questionType: Record<QuestionType, string> = {
   AKBAR: "Akbar",
   MATH_PERCENT: "Math Percentage",
   MATH_FRACTION: "Math Fraction",
+  REACT: "react",
 };
 
 const questionData: Record<string, Quiz> = {
@@ -6340,6 +6653,7 @@ const questionData: Record<string, Quiz> = {
   [questionType.AKBAR]: akbar,
   [questionType.MATH_PERCENT]: MathPercentage,
   [questionType.MATH_FRACTION]: MathFraction,
+  [questionType.REACT]: ReactQue,
 };
 
 const getQuestion = (selectedOption: string): Quiz => {
@@ -6350,6 +6664,8 @@ const getQuestion = (selectedOption: string): Quiz => {
 // Topic => Mugal Samrajya (Babar)
 // I am preparing for BPSC GNM AND ANM examination, give me 30 Question related to topic I mention, in given format (also include the previous years question)
 // Topic => infection and immunization
+// I am preparing for React Interview, give me 30 Question related to topic I mention, in given format (most asked interview question) (in English)
+// Topic => react frontend
 
 const sample: Quiz = [
   {

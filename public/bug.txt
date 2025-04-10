@@ -1,9 +1,10 @@
 ------  Bug ----------
 - Align box and input (Done)
-- change score card poistion
+- change score card poistion (Done)
 
 
 
 ---------- Features ---------------
 - add timer as sticky elemit instea do fixed (donw)
+- add 30 react question for interview prep.
 
