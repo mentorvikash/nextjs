@@ -52,13 +52,16 @@ function QuizBoard({
                   name={`radioGroup${index}`}
                   value={option}
                   disabled={isSubmit || !timerRunning}
-                  className=" text-lg mx-2 scale-125"
+                  className=" text-lg mx-2 scale-125 align-middle"
                   checked={selectedAnswers[`Q${[index]}`]?.value === option}
                   onChange={(event: ChangeEvent<HTMLInputElement>) =>
                     handleChange(event, index)
                   }
                 />
-                <label className=" text-gray-700 text-md" htmlFor={option}>
+                <label
+                  className=" text-gray-700 text-md align-middle"
+                  htmlFor={option}
+                >
                   {option}
                 </label>
               </div>

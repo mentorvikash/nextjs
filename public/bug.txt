@@ -1,0 +1,9 @@
+------  Bug ----------
+- Align box and input (Done)
+- 
+
+
+
+
+---------- Features ---------------
+- Ass timer as sticky elemit instea do fixed
