@@ -1,9 +1,9 @@
 ------  Bug ----------
 - Align box and input (Done)
-- 
-
+- change score card poistion
 
 
 
 ---------- Features ---------------
-- add timer as sticky elemit instea do fixed
+- add timer as sticky elemit instea do fixed (donw)
+
