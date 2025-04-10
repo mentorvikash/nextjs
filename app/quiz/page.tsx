@@ -196,7 +196,6 @@ export default function Home() {
               finalResult={finalResult}
             />
           </Suspense>
-          <TimerCard timeLeft={timeLeft} />
           <main className="flex flex-col">
             <QuizHeading
               title={selectedOption || "Sample"}
@@ -210,6 +209,7 @@ export default function Home() {
                 quizQuestion={quizQuestion}
                 selectedAnswers={selectedAnswers}
                 timerRunning={timerRunning}
+                timeLeft={timeLeft}
               />
               <QuizFooter
                 handleReset={handleReset}

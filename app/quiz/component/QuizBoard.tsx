@@ -1,6 +1,7 @@
 import { ChangeEvent } from "react";
 import { Quiz } from "../interface";
 import { SelectedAnswers } from "../interface";
+import TimerCard from "./timerCard";
 
 interface QuizBoardProps {
   quizQuestion: Quiz;
@@ -9,6 +10,7 @@ interface QuizBoardProps {
   timerRunning: boolean;
   handleChange: (event: ChangeEvent<HTMLInputElement>, index: number) => void;
   selectedAnswers: SelectedAnswers;
+  timeLeft: number;
 }
 
 function QuizBoard({
@@ -18,9 +20,11 @@ function QuizBoard({
   timerRunning,
   handleChange,
   selectedAnswers,
+  timeLeft,
 }: QuizBoardProps) {
   return (
-    <div className="flex flex-col gap-4 my-3 border-2 ml-1 mr-9  ">
+    <div className="flex flex-col gap-4 my-3 ml-1 mr-9  ">
+      <TimerCard timeLeft={timeLeft} />
       {quizQuestion.map((que, index) => (
         <div
           id={`que${index}`}

@@ -6,4 +6,4 @@
 
 
 ---------- Features ---------------
-- Ass timer as sticky elemit instea do fixed
+- add timer as sticky elemit instea do fixed
