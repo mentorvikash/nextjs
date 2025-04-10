@@ -2,9 +2,13 @@
 - Align box and input (Done)
 - change score card poistion (Done)
 
-
-
 ---------- Features ---------------
-- add timer as sticky elemit instea do fixed (donw)
-- add 30 react question for interview prep.
+- add timer as sticky elemit instea do fixed (done)
+- add 30 react question for interview prep (done)
+- add login functionalty to give personlise experience
+- add dashboard to track the progess
+- save all question data in mongodb
+- create api to save new question in data base.
+- Create api to generaate random quetion on any topic
+- give abity to select no question in a quiz caped with max qustion that is 100 [10,30,50,80,100]
 
