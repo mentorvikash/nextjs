@@ -29,6 +29,8 @@ interface Question {
   answer: string;
   options: [string, string, string, string];
   question: string;
+  topic?: string;
+  know_more?: string | undefined;
 }
 
 interface Report {

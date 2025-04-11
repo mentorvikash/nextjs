@@ -6608,6 +6608,298 @@ const ReactQue: Quiz = [
   },
 ];
 
+const moreDescriptiveQuiz: Quiz = [
+  {
+    question: "What is JSX?",
+    options: [
+      "(a) JavaScript Extension",
+      "(b) JavaScript XML",
+      "(c) JavaScript Syntax",
+      "(d) JSON XML",
+    ],
+    answer: "(b) JavaScript XML",
+    topic: "core concepts",
+    know_more:
+      "Think of JSX as a way to write HTML-like code directly within your JavaScript. Instead of writing separate HTML files and then trying to manipulate them with JavaScript, JSX lets you create your UI structure right inside your JavaScript code. Behind the scenes, React takes this JSX and transforms it into regular JavaScript instructions that the browser understands to create the actual HTML elements on the page.",
+  },
+  {
+    question: "What are React Components?",
+    options: [
+      "(a) Reusable UI elements",
+      "(b) JavaScript functions",
+      "(c) HTML tags",
+      "(d) CSS selectors",
+    ],
+    answer: "(a) Reusable UI elements",
+    topic: "core concepts",
+    know_more:
+      "Imagine building with LEGO bricks. Each React component is like a LEGO brick – it's a self-contained piece of your UI that has its own look and behavior. You can use these components over and over again in different parts of your application, making your code more organized and easier to manage. They can be as small as a button or as large as an entire webpage section.",
+  },
+  {
+    question:
+      "What is the primary difference between Functional and Class Components?",
+    options: [
+      "(a) Functional components can have state, class components cannot",
+      "(b) Class components are simpler than functional components",
+      "(c) Functional components are primarily for presentation, class components can handle state and lifecycle",
+      "(d) There is no significant difference",
+    ],
+    answer:
+      "(c) Functional components are primarily for presentation, class components can handle state and lifecycle",
+    topic: "components",
+    know_more:
+      "Think of Functional Components as simple recipes – they take in ingredients (props) and produce a dish (UI). They're like regular JavaScript functions. Class Components, on the other hand, are like more complex machines. They can remember things (state) and have different stages in their operation (lifecycle methods) that let you do things when the component is created, updated, or removed from the page. Modern React development leans heavily towards functional components using Hooks to manage state and side effects.",
+  },
+  {
+    question: "What are Props in React?",
+    options: [
+      "(a) State variables within a component",
+      "(b) Read-only arguments passed from parent to child",
+      "(c) Functions used for event handling",
+      "(d) References to DOM elements",
+    ],
+    answer: "(b) Read-only arguments passed from parent to child",
+    topic: "props",
+    know_more:
+      "Props are like gifts that a parent component gives to its children. They are a way for a parent to send information down the component tree. Once a child component receives props, it cannot change them directly – they are read-only. If a child needs to communicate back to the parent or change something based on the props, it usually does so by calling a function that was also passed down as a prop.",
+  },
+  {
+    question: "What is State in React?",
+    options: [
+      "(a) Data passed from parent to child",
+      "(b) Read-only properties of a component",
+      "(c) Mutable data managed within a component",
+      "(d) Global variables in a React application",
+    ],
+    answer: "(c) Mutable data managed within a component",
+    topic: "state",
+    know_more:
+      "State is like a component's internal memory. It's data that the component itself manages and can change over time due to user interactions or other events. When a component's state changes, React knows that the UI needs to be updated to reflect this new data. In functional components, you manage state using the `useState` Hook.",
+  },
+  {
+    question: "What is the purpose of the Virtual DOM in React?",
+    options: [
+      "(a) To directly manipulate the browser's DOM",
+      "(b) To create a virtual representation of the UI for efficient updates",
+      "(c) To handle routing in a React application",
+      "(d) To manage the state of React components",
+    ],
+    answer:
+      "(b) To create a virtual representation of the UI for efficient updates",
+    topic: "performance",
+    know_more:
+      "Imagine having a blueprint of your webpage (the Virtual DOM) in addition to the actual webpage (the real DOM). When something changes in your React app, React first updates the blueprint. Then, it compares the old blueprint with the new one to figure out exactly what changed. Finally, it only updates those specific changes in the real webpage, making the updates much faster than directly manipulating the entire webpage every time.",
+  },
+  {
+    question: "What is the significance of 'Keys' in React lists?",
+    options: [
+      "(a) They provide styling to list items",
+      "(b) They uniquely identify list items, helping React track changes",
+      "(c) They are used for event handling in lists",
+      "(d) They define the order of items in a list",
+    ],
+    answer:
+      "(b) They uniquely identify list items, helping React track changes",
+    topic: "lists and keys",
+    know_more:
+      "When you're rendering a list of items, React needs a way to keep track of each item so it can efficiently update, reorder, or delete them. 'Keys' are like unique IDs you give to each item in the list. This helps React understand which item is which, even if their order changes. Without stable and unique keys, React might re-render the entire list unnecessarily, which can hurt performance.",
+  },
+  {
+    question: "Which of the following is NOT a common React Hook?",
+    options: [
+      "(a) useState",
+      "(b) useEffect",
+      "(c) useReducer",
+      "(d) useComponent",
+    ],
+    answer: "(d) useComponent",
+    topic: "hooks",
+    know_more:
+      "React Hooks are special functions that let you 'hook into' React features (like state and lifecycle) from functional components. `useState`, `useEffect`, and `useReducer` are all built-in Hooks. `useComponent` is not a standard React Hook.",
+  },
+  {
+    question: "What does the `useState` Hook return?",
+    options: [
+      "(a) Only the current state value",
+      "(b) Only the function to update the state",
+      "(c) An array containing the current state value and a function to update it",
+      "(d) An object containing the state and update function",
+    ],
+    answer:
+      "(c) An array containing the current state value and a function to update it",
+    topic: "hooks",
+    know_more:
+      "When you use `useState(initialValue)`, it gives you back an array with exactly two things: the first element is the current value of your state variable, and the second element is a function that you can call to update that state value. When you call the update function, React will re-render your component with the new state.",
+  },
+  {
+    question: "What is the primary use case for the `useEffect` Hook?",
+    options: [
+      "(a) Defining the state of a component",
+      "(b) Performing side effects like data fetching or subscriptions",
+      "(c) Optimizing component rendering",
+      "(d) Creating reusable logic between components",
+    ],
+    answer: "(b) Performing side effects like data fetching or subscriptions",
+    topic: "hooks",
+    know_more:
+      "`useEffect` is your go-to Hook for handling 'side effects' in functional components. Side effects are actions that interact with the outside world, like fetching data from an API, setting up a timer, or subscribing to an event. `useEffect` lets you perform these actions after React has rendered your component.",
+  },
+  {
+    question: "What problem does the Context API solve in React?",
+    options: [
+      "(a) Managing complex component state",
+      "(b) Handling asynchronous operations",
+      "(c) Sharing data deeply without prop drilling",
+      "(d) Defining routes in a single-page application",
+    ],
+    answer: "(c) Sharing data deeply without prop drilling",
+    topic: "context api",
+    know_more:
+      "Imagine you need to pass down some data (like a user's theme preference) to many nested components. Without Context API, you'd have to pass it down through each level of the component tree, even if some intermediate components don't need it – this is called 'prop drilling'. Context API provides a way to make certain data available to a whole tree of React components, no matter how deeply they are nested, without manually passing props at each level.",
+  },
+  {
+    question: "Which library is commonly used for routing in React?",
+    options: [
+      "(a) Axios",
+      "(b) Redux",
+      "(c) React Router",
+      "(d) Styled Components",
+    ],
+    answer: "(c) React Router",
+    topic: "routing",
+    know_more:
+      "For building single-page applications (SPAs) with multiple views, you need a way to manage navigation. React Router is the most popular library for this. It provides components that allow you to define different routes (URLs) in your application and specify which React components should be rendered for each route. This lets users navigate between different 'pages' within your app without the browser having to reload the entire page.",
+  },
+  {
+    question:
+      "What is the core principle of Redux regarding state modification?",
+    options: [
+      "(a) State can be directly modified within components",
+      "(b) State is modified through actions and reducers",
+      "(c) State changes are handled by middleware",
+      "(d) State is stored locally in each component",
+    ],
+    answer: "(b) State is modified through actions and reducers",
+    topic: "redux",
+    know_more:
+      "Redux follows a strict unidirectional data flow. The only way to change the state in your Redux store is by dispatching an 'action' – a plain JavaScript object that describes what happened. Then, 'reducers' – pure functions – take the previous state and the action, and return a new state based on that action. This makes state changes predictable and easier to debug.",
+  },
+  {
+    question: "In Redux, what is an Action?",
+    options: [
+      "(a) A function that modifies the state",
+      "(b) A plain JavaScript object describing an event",
+      "(c) A middleware that intercepts dispatched events",
+      "(d) A way to select data from the store",
+    ],
+    answer: "(b) A plain JavaScript object describing an event",
+    topic: "redux",
+    know_more:
+      "Think of an action in Redux as a message that tells the store something has happened or something needs to change. It's a simple JavaScript object that usually has a `type` property (to identify the action) and might also contain some `payload` (additional data related to the action). Components dispatch actions to the store to trigger state updates.",
+  },
+  {
+    question: "What is the role of Middleware in Redux?",
+    options: [
+      "(a) To connect React components to the Redux store",
+      "(b) To handle asynchronous operations and other side effects before actions reach reducers",
+      "(c) To define how the state should be updated",
+      "(d) To select specific data from the Redux store",
+    ],
+    answer:
+      "(b) To handle asynchronous operations and other side effects before actions reach reducers",
+    topic: "redux",
+    know_more:
+      "Middleware in Redux provides a way to intercept actions as they are dispatched and before they reach the reducer. This allows you to perform various tasks like logging, handling asynchronous operations (like API calls using libraries like Redux Thunk or Redux Saga), or modifying actions. It's like a set of checkpoints in the action dispatch process.",
+  },
+  {
+    question: "What are Selectors used for in Redux?",
+    options: [
+      "(a) Dispatching actions to the store",
+      "(b) Defining the initial state of the application",
+      "(c) Extracting and deriving data from the store's state",
+      "(d) Connecting components to the store",
+    ],
+    answer: "(c) Extracting and deriving data from the store's state",
+    topic: "redux",
+    know_more:
+      "Selectors in Redux are functions that know how to read specific parts of your Redux store's state. They are useful because they can encapsulate the structure of your state, making your components less dependent on the exact way the state is organized. Selectors can also be memoized to optimize performance by preventing unnecessary re-renders if the relevant part of the state hasn't changed.",
+  },
+  {
+    question:
+      "Which lifecycle method is invoked after a component is inserted into the DOM?",
+    options: [
+      "(a) componentDidUpdate",
+      "(b) componentWillUnmount",
+      "(c) componentDidMount",
+      "(d) render",
+    ],
+    answer: "(c) componentDidMount",
+    topic: "lifecycle",
+    know_more:
+      "In class components, `componentDidMount` is a lifecycle method that gets called only once, right after the component has been rendered to the browser's DOM for the first time. It's a good place to perform initial setup tasks like fetching data from an API or setting up subscriptions.",
+  },
+  {
+    question: "How does React handle events in JSX?",
+    options: [
+      "(a) Using inline HTML event attributes",
+      "(b) Using synthetic events that are cross-browser wrappers",
+      "(c) Directly using native browser event listeners",
+      "(d) Through a separate event handling library",
+    ],
+    answer: "(b) Using synthetic events that are cross-browser wrappers",
+    topic: "event handling",
+    know_more:
+      "React doesn't use the browser's native event system directly. Instead, it creates its own system called Synthetic Events. These are objects that act as a consistent, cross-browser interface to the browser's events. This provides better performance and ensures that your event handling logic works the same way in all browsers.",
+  },
+  {
+    question: "In React, what is a 'controlled component'?",
+    options: [
+      "(a) A component whose state is managed by a parent component",
+      "(b) A component that controls the state of other components",
+      "(c) A form element whose value is controlled by React state",
+      "(d) A component that only renders based on props",
+    ],
+    answer: "(c) A form element whose value is controlled by React state",
+    topic: "forms",
+    know_more:
+      "In a controlled component, the value of a form element (like an input field) is tied to the React component's state. When the user types something into the input, an event handler updates the component's state, and React re-renders the component with the new value. This makes React the single source of truth for the form data, making it easier to manage and validate.",
+  },
+  {
+    question: "What are 'Refs' used for in React?",
+    options: [
+      "(a) Defining relationships between components",
+      "(b) Accessing DOM nodes or React elements directly",
+      "(c) Passing data down the component tree",
+      "(d) Handling events on multiple elements",
+    ],
+    answer: "(b) Accessing DOM nodes or React elements directly",
+    topic: "refs",
+    know_more:
+      "Refs provide a way to get direct access to a DOM element or a React component instance. You might need this in specific situations, like focusing an input field when a component mounts, triggering an animation on a DOM element, or accessing a method on a child component. However, you should generally avoid using refs excessively as they can make your code less declarative.",
+  },
+  {
+    question: "What is Lazy Loading in React primarily used for?",
+    options: [
+      "(a) Improving the performance of state updates",
+      "(b) Reducing the initial load time of the application",
+      "(c) Simplifying component rendering logic",
+      "(d) Managing asynchronous API calls",
+    ],
+    answer: "(b) Reducing the initial load time of the application",
+    topic: "performance",
+    know_more:
+      "Lazy loading is a technique where you delay the loading of certain parts of your application (like components or images) until they are actually needed by the user. This significantly reduces the size of the initial code that the browser has to download, leading to a faster initial load and a better user experience, especially for large applications.",
+  },
+  {
+    question: "Which React Hook is used for memoizing expensive computations?",
+    options: ["(a) useCallback", "(b) useMemo", "(c) useRef", "(d) useState"],
+    answer: "(b) useMemo",
+    topic: "hooks",
+    know_more:
+      "`useMemo` is a Hook that lets you memoize the result of a calculation. If the dependencies you provide to `useMemo` haven't changed since the last render, it will return the cached result instead of re-running the expensive computation. This can significantly improve performance, especially for complex calculations that depend on props or state that don't change frequently.",
+  },
+];
+
 export type QuestionType =
   //   | "GULAM_WANS"
   //   | "TUGLAK_WANS"
@@ -6653,7 +6945,7 @@ const questionData: Record<string, Quiz> = {
   [questionType.AKBAR]: akbar,
   [questionType.MATH_PERCENT]: MathPercentage,
   [questionType.MATH_FRACTION]: MathFraction,
-  [questionType.REACT]: ReactQue,
+  [questionType.REACT]: moreDescriptiveQuiz,
 };
 
 const getQuestion = (selectedOption: string): Quiz => {
@@ -6691,3 +6983,65 @@ const sample: Quiz = [
 ];
 
 export { getQuestion, questionType };
+
+const reactBroadCategory = [
+  "Core Concepts",
+  "Components (Functional & Class)",
+  "Props",
+  "State Management (useState, Class State)",
+  "Lifecycle Methods (Class Components)",
+  "Hooks (useState, useEffect, useContext, useReducer, useCallback, useMemo, useRef, Custom Hooks)",
+  "Event Handling",
+  "Conditional Rendering",
+  "Lists and Keys",
+  "Forms (Controlled & Uncontrolled Components)",
+  "Refs",
+  "Routing (React Router)",
+  "State Management Libraries (Redux, Zustand, Recoil, Context API)",
+  "Asynchronous Operations (Promises, Async/Await)",
+  "API Calls (Fetch, Axios)",
+  "Component Composition",
+  "Higher-Order Components (HOCs)",
+  "Render Props",
+  "Error Handling (Error Boundaries)",
+  "Performance Optimization (Memoization, Lazy Loading, Code Splitting)",
+  "Styling (CSS Modules, Styled Components, Emotion, Tailwind CSS, Material UI, Chakra UI)",
+  "Testing (Unit, Integration, E2E with Jest, React Testing Library, Cypress)",
+  "Deployment",
+  "Server-Side Rendering (SSR) / Next.js",
+  "Static Site Generation (SSG) / Next.js",
+  "TypeScript with React",
+  "Accessibility (A11y)",
+  "Security in React",
+  "Build Tools (Webpack, Parcel, Vite)",
+  "State Persistence (Local Storage, Session Storage)",
+];
+
+const sample1 = [
+  {
+    question: "What is JSX?",
+    options: [
+      "(a) JavaScript Extension",
+      "(b) JavaScript XML",
+      "(c) JavaScript Syntax",
+      "(d) JSON XML",
+    ],
+    answer: "(b) JavaScript XML",
+    topic: "core concepts",
+    know_more:
+      "Think of JSX as a way to write HTML-like code directly within your JavaScript. Instead of writing separate HTML files and then trying to manipulate them with JavaScript, JSX lets you create your UI structure right inside your JavaScript code. Behind the scenes, React takes this JSX and transforms it into regular JavaScript instructions that the browser understands to create the actual HTML elements on the page.",
+  },
+  {
+    question: "What are React Components?",
+    options: [
+      "(a) Reusable UI elements",
+      "(b) JavaScript functions",
+      "(c) HTML tags",
+      "(d) CSS selectors",
+    ],
+    answer: "(a) Reusable UI elements",
+    topic: "core concepts",
+    know_more:
+      "Imagine building with LEGO bricks. Each React component is like a LEGO brick – it's a self-contained piece of your UI that has its own look and behavior. You can use these components over and over again in different parts of your application, making your code more organized and easier to manage. They can be as small as a button or as large as an entire webpage section.",
+  },
+];
