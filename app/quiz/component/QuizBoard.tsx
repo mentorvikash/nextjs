@@ -86,17 +86,30 @@ function QuizBoard({
             <>
               <p className=" pt-3 px-3 text-green-600 font-semibold">
                 {que.answer}
-                {que.know_more && (
+                {knowMoreString?.length && selectedIndex === index ? (
                   <span
-                    className="text-red-900 hover:text-orange-400 "
-                    onClick={() => handleKnowMore(que.know_more, index)}
+                    className="text-red-900 hover:text-orange-400 pl-1 "
+                    onClick={closeKnowMore}
                   >
                     {" "}
-                    more...
+                    less... <br />
+                    <p className="text-gray-500 px-6 py-1 font-normal">
+                      {que.know_more}
+                    </p>
                   </span>
+                ) : (
+                  que.know_more && (
+                    <span
+                      className="text-red-900 hover:text-orange-400 pl-1 "
+                      onClick={() => handleKnowMore(que.know_more, index)}
+                    >
+                      {" "}
+                      more...
+                    </span>
+                  )
                 )}
               </p>
-              {knowMoreString?.length && selectedIndex === index ? (
+              {/* {knowMoreString?.length && selectedIndex === index ? (
                 <div id="  knowMore">
                   <p className="text-gray-500 px-8 pt-2">
                     {que.know_more}
@@ -108,7 +121,7 @@ function QuizBoard({
                     </span>
                   </p>
                 </div>
-              ) : null}
+              ) : null} */}
             </>
           )}
         </div>

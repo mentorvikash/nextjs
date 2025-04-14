@@ -1,13 +1,14 @@
 ------  Bug ----------
 - Align box and input (Done)
 - change score card poistion (Done)
+- instead of more and close =>  use more and less with same button (Done)
 
 ---------- Features ---------------
 - add timer as sticky elemit instea do fixed (done)
 - add 30 react question for interview prep (done)
-- add two more keys topic and descrition
-- if descrition avaliable, give a button to open modal of something to see more detail.
-- after submit, give an analysis of which segment is good and where need to workon
+- add two more keys topic and descrition (done)
+- if descrition avaliable, give a button to open modal of something to see more detail. (Done)
+- after submit, give an analysis of which segment is good and where need to workon (max 4 topic at once)
 - add login functionalty to give personlise experience
 - add dashboard to track the progess
 - save all question data in mongodb
