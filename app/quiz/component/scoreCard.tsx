@@ -9,8 +9,8 @@ const ScoreCard: React.FC<ScoreCardProps> = ({
 }) => {
   const style: React.CSSProperties = {
     position: "fixed",
-    top: "20px", // Adjust as needed
-    right: "45px", // Adjust as needed
+    top: "45px", // Adjust as needed
+    right: "36px", // Adjust as needed
     backgroundColor: "rgba(255, 255, 255, 0.8)", // Semi-transparent white
     padding: "10px 15px",
     borderRadius: "5px",

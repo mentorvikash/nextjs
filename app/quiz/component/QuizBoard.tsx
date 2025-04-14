@@ -93,9 +93,9 @@ function QuizBoard({
                   >
                     {" "}
                     less... <br />
-                    <p className="text-gray-500 px-6 py-1 font-normal">
+                    <span className=" block text-gray-500 px-6 py-1 font-normal">
                       {que.know_more}
-                    </p>
+                    </span>
                   </span>
                 ) : (
                   que.know_more && (
@@ -109,19 +109,6 @@ function QuizBoard({
                   )
                 )}
               </p>
-              {/* {knowMoreString?.length && selectedIndex === index ? (
-                <div id="  knowMore">
-                  <p className="text-gray-500 px-8 pt-2">
-                    {que.know_more}
-                    <span
-                      className=" ml-1 inline-block text-xs text-center p-1 bg-orange-200 hover:bg-orange-300  text-gray-500 hover:text-gray-600 border-1 rounded-md"
-                      onClick={closeKnowMore}
-                    >
-                      close
-                    </span>
-                  </p>
-                </div>
-              ) : null} */}
             </>
           )}
         </div>
