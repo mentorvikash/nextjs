@@ -2,6 +2,8 @@
 - Align box and input (Done)
 - change score card poistion (Done)
 - instead of more and close =>  use more and less with same button (Done)
+- fix position of score card (Done)
+- fix when re-selct new quiz go back to previous question number
 
 ---------- Features ---------------
 - add timer as sticky elemit instea do fixed (done)
@@ -15,4 +17,3 @@
 - create api to save new question in data base.
 - Create api to generaate random quetion on any topic
 - give abity to select no question in a quiz caped with max qustion that is 100 [10,30,50,80,100]
-

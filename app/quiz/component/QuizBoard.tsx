@@ -87,13 +87,15 @@ function QuizBoard({
               <p className=" pt-3 px-3 text-green-600 font-semibold">
                 {que.answer}
                 {knowMoreString?.length && selectedIndex === index ? (
-                  <span
-                    className="text-red-900 hover:text-orange-400 pl-1 "
-                    onClick={closeKnowMore}
-                  >
-                    {" "}
-                    less... <br />
-                    <span className=" block text-gray-500 px-6 py-1 font-normal">
+                  <span className=" pl-1 ">
+                    <span
+                      className="text-red-900 hover:text-red-400"
+                      onClick={closeKnowMore}
+                    >
+                      {" "}
+                      less... <br />
+                    </span>
+                    <span className=" block text-gray-500 px-6 py-1 font-semibold">
                       {que.know_more}
                     </span>
                   </span>
