@@ -14,8 +14,8 @@ const QuizSelector = ({
   useEffect(() => {
     const options = Object.values(questionType);
     setOptions(options);
-    const question: Quiz = getQuestion("");
-    setQuizQuestion(question);
+    // const question: Quiz = getQuestion("");
+    // setQuizQuestion(question);
   }, []);
 
   const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {

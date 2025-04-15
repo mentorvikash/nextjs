@@ -53,6 +53,15 @@ export default function Home() {
     };
     document.addEventListener("contextmenu", handleRightClick);
     window.addEventListener("keydown", handleKeyDown);
+
+    fetch("/api/quiz")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("received data", data);
+        setQuizQuestion(data);
+        // setLoading(false)
+      });
+
     return () => {
       clearInterval(intervalRef.current as NodeJS.Timeout);
       window.removeEventListener("keydown", handleKeyDown);
