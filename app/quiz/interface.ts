@@ -57,6 +57,7 @@ export type {
   QuizSelectorProps,
   ScoreCardProps,
   TimerCardProps,
+  Question,
   Quiz,
   Report,
   SelectedAnswers,
