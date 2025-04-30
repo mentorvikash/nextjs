@@ -12265,6 +12265,912 @@ const sahaJashSet2: Quiz = [
   },
 ];
 
+const mernSet1: Quiz = [
+  {
+    question: "What is JSX?",
+    options: [
+      "(a) JavaScript Extension",
+      "(b) JavaScript XML",
+      "(c) JavaScript Syntax",
+      "(d) JSON XML",
+    ],
+    answer: "(b) JavaScript XML",
+    topic: "core concepts",
+    know_more:
+      "Think of JSX as a way to write HTML-like code directly within your JavaScript. Instead of writing separate HTML files and then trying to manipulate them with JavaScript, JSX lets you create your UI structure right inside your JavaScript code. Behind the scenes, React takes this JSX and transforms it into regular JavaScript instructions that the browser understands to create the actual HTML elements on the page.",
+  },
+  {
+    question: "What are React Components?",
+    options: [
+      "(a) Reusable UI elements",
+      "(b) JavaScript functions",
+      "(c) HTML tags",
+      "(d) CSS selectors",
+    ],
+    answer: "(a) Reusable UI elements",
+    topic: "core concepts",
+    know_more:
+      "Imagine building with LEGO bricks. Each React component is like a LEGO brick – it's a self-contained piece of your UI that has its own look and behavior. You can use these components over and over again in different parts of your application, making your code more organized and easier to manage. They can be as small as a button or as large as an entire webpage section.",
+  },
+  {
+    question: "What is the use of useState in React?",
+    options: [
+      "(a) To fetch data",
+      "(b) To manage side-effects",
+      "(c) To manage component state",
+      "(d) To create routes",
+    ],
+    answer: "(c) To manage component state",
+    topic: "React Hooks",
+    know_more:
+      "useState is a Hook that lets you add state to functional components. Instead of writing class-based components to handle state, useState allows you to do the same thing using simple functions.",
+  },
+  {
+    question: "What is MongoDB?",
+    options: [
+      "(a) A relational database",
+      "(b) A NoSQL database",
+      "(c) A front-end framework",
+      "(d) A version control tool",
+    ],
+    answer: "(b) A NoSQL database",
+    topic: "MongoDB",
+    know_more:
+      "MongoDB is a NoSQL database that stores data in a flexible, JSON-like format called BSON. It allows for dynamic schemas and is optimized for scalability and performance.",
+  },
+  {
+    question: "What is Express.js used for?",
+    options: [
+      "(a) Managing React states",
+      "(b) Creating server-side logic",
+      "(c) Styling components",
+      "(d) Running database queries",
+    ],
+    answer: "(b) Creating server-side logic",
+    topic: "Express.js",
+    know_more:
+      "Express.js is a minimal and flexible Node.js web application framework that provides robust features to build APIs and web applications easily.",
+  },
+  {
+    question: "What is Node.js?",
+    options: [
+      "(a) A browser extension",
+      "(b) A JavaScript framework",
+      "(c) A JavaScript runtime",
+      "(d) A CSS preprocessor",
+    ],
+    answer: "(c) A JavaScript runtime",
+    topic: "Node.js",
+    know_more:
+      "Node.js allows developers to run JavaScript outside of a browser. It's used to build fast, scalable server-side and networking applications.",
+  },
+  {
+    question: "Which method is used to fetch data in React?",
+    options: ["(a) useState", "(b) useEffect", "(c) render", "(d) fetchData"],
+    answer: "(b) useEffect",
+    topic: "React Hooks",
+    know_more:
+      "useEffect allows you to perform side effects in functional components, such as fetching data, directly inside the component lifecycle.",
+  },
+  {
+    question: "Which command starts a MongoDB server locally?",
+    options: ["(a) mongo", "(b) mongod", "(c) mongodb", "(d) mongoinit"],
+    answer: "(b) mongod",
+    topic: "MongoDB",
+    know_more:
+      "To start the MongoDB server locally, the 'mongod' command is used. It runs the daemon process for MongoDB.",
+  },
+  {
+    question: "What does 'npm start' do in a React project?",
+    options: [
+      "(a) Runs unit tests",
+      "(b) Compiles the database",
+      "(c) Starts the development server",
+      "(d) Installs dependencies",
+    ],
+    answer: "(c) Starts the development server",
+    topic: "React",
+    know_more:
+      "'npm start' is the script defined in package.json that typically starts your development server so you can view your React app in the browser.",
+  },
+  {
+    question: "Which HTTP method is used to create data in REST API?",
+    options: ["(a) GET", "(b) POST", "(c) PUT", "(d) DELETE"],
+    answer: "(b) POST",
+    topic: "REST API",
+    know_more:
+      "The POST method is used to submit data to be processed to a specified resource, usually to create a new resource on the server.",
+  },
+  {
+    question: "What is a Middleware in Express.js?",
+    options: [
+      "(a) A database function",
+      "(b) A function that executes after the request",
+      "(c) A function that has access to request and response objects",
+      "(d) A routing component",
+    ],
+    answer: "(c) A function that has access to request and response objects",
+    topic: "Express.js",
+    know_more:
+      "Middleware functions can perform a variety of tasks such as modifying the request/response objects, ending the request-response cycle, or calling the next middleware in the stack.",
+  },
+  {
+    question: "What is the virtual DOM in React?",
+    options: [
+      "(a) A copy of the HTML DOM",
+      "(b) A programming concept in MongoDB",
+      "(c) An API service",
+      "(d) A CSS method",
+    ],
+    answer: "(a) A copy of the HTML DOM",
+    topic: "React",
+    know_more:
+      "The virtual DOM is a lightweight JavaScript representation of the actual DOM. React updates this virtual DOM first and compares it with a snapshot before applying changes to the real DOM, improving performance.",
+  },
+  {
+    question: "Which hook is used to handle side effects in React?",
+    options: ["(a) useRef", "(b) useState", "(c) useEffect", "(d) useMemo"],
+    answer: "(c) useEffect",
+    topic: "React Hooks",
+    know_more:
+      "useEffect is the correct hook to run code like fetching data or manually updating the DOM, which are considered side effects.",
+  },
+  {
+    question: "What does 'res.send()' do in Express.js?",
+    options: [
+      "(a) Sends a file to the client",
+      "(b) Sends a response body to the client",
+      "(c) Redirects the user",
+      "(d) Ends the request without sending a response",
+    ],
+    answer: "(b) Sends a response body to the client",
+    topic: "Express.js",
+    know_more:
+      "In Express.js, `res.send()` is used to send a response of various types (object, string, buffer, etc.) back to the client.",
+  },
+  {
+    question: "What is the role of Mongoose in a MERN application?",
+    options: [
+      "(a) Frontend library",
+      "(b) Authentication service",
+      "(c) ODM for MongoDB",
+      "(d) Database driver",
+    ],
+    answer: "(c) ODM for MongoDB",
+    topic: "MongoDB/Mongoose",
+    know_more:
+      "Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. It manages relationships between data, provides schema validation, and simplifies database operations.",
+  },
+  {
+    question: "Which hook is used to reference DOM elements in React?",
+    options: ["(a) useEffect", "(b) useRef", "(c) useMemo", "(d) useState"],
+    answer: "(b) useRef",
+    topic: "React Hooks",
+    know_more:
+      "The `useRef` hook lets you persist values across renders and directly reference a DOM element in a functional component.",
+  },
+  {
+    question: "How do you create a route in Express.js?",
+    options: [
+      "(a) app.render(path, callback)",
+      "(b) express.get(path, callback)",
+      "(c) app.get(path, callback)",
+      "(d) router.get(callback)",
+    ],
+    answer: "(c) app.get(path, callback)",
+    topic: "Express.js",
+    know_more:
+      "`app.get()` is used to define a GET route in Express.js, specifying the path and a callback to handle the request and response.",
+  },
+  {
+    question: "What does 'useEffect(() => {}, [])' mean?",
+    options: [
+      "(a) Executes on every render",
+      "(b) Executes after every state change",
+      "(c) Executes only once after initial render",
+      "(d) Executes before unmount",
+    ],
+    answer: "(c) Executes only once after initial render",
+    topic: "React Hooks",
+    know_more:
+      "When you pass an empty array `[]` as the dependency, `useEffect` runs only once—after the initial render, mimicking `componentDidMount` behavior.",
+  },
+  {
+    question: "What is the purpose of package.json?",
+    options: [
+      "(a) To configure MongoDB",
+      "(b) To list application dependencies",
+      "(c) To start the React server",
+      "(d) To define JSX rules",
+    ],
+    answer: "(b) To list application dependencies",
+    topic: "Node.js",
+    know_more:
+      "`package.json` contains metadata about the project, including dependencies, scripts, version, and other configuration options.",
+  },
+  {
+    question: "How do you connect MongoDB to a Node.js application?",
+    options: [
+      "(a) Using PostgreSQL driver",
+      "(b) Using fetch API",
+      "(c) Using Mongoose or native MongoDB driver",
+      "(d) Using Express middleware",
+    ],
+    answer: "(c) Using Mongoose or native MongoDB driver",
+    topic: "MongoDB",
+    know_more:
+      "MongoDB can be connected to a Node.js app using the native driver or through Mongoose, which simplifies interaction using schemas and models.",
+  },
+  {
+    question: "What is a prop in React?",
+    options: [
+      "(a) A special hook",
+      "(b) A lifecycle method",
+      "(c) A way to pass data to components",
+      "(d) A backend API",
+    ],
+    answer: "(c) A way to pass data to components",
+    topic: "React",
+    know_more:
+      "Props are inputs to React components that allow data to be passed from one component to another, usually from parent to child.",
+  },
+  {
+    question: "How can we handle forms in React?",
+    options: [
+      "(a) Using fetch API",
+      "(b) Using controlled components and event handlers",
+      "(c) Using Express.js",
+      "(d) Using database queries",
+    ],
+    answer: "(b) Using controlled components and event handlers",
+    topic: "React Forms",
+    know_more:
+      "Controlled components in React manage form elements' state via component state and handle input changes using event handlers.",
+  },
+  {
+    question: "Which command installs all dependencies in a Node.js project?",
+    options: [
+      "(a) npm init",
+      "(b) npm install",
+      "(c) npm run",
+      "(d) node start",
+    ],
+    answer: "(b) npm install",
+    topic: "Node.js",
+    know_more:
+      "`npm install` installs all dependencies listed in the `package.json` file.",
+  },
+  {
+    question: "Which MongoDB method is used to insert a document?",
+    options: ["(a) insert()", "(b) push()", "(c) add()", "(d) insertOne()"],
+    answer: "(d) insertOne()",
+    topic: "MongoDB",
+    know_more:
+      "`insertOne()` is used to add a single document to a MongoDB collection.",
+  },
+  {
+    question: "What is the default port of MongoDB?",
+    options: ["(a) 3000", "(b) 8080", "(c) 27017", "(d) 5432"],
+    answer: "(c) 27017",
+    topic: "MongoDB",
+    know_more:
+      "MongoDB listens on port `27017` by default, unless specified otherwise in its configuration.",
+  },
+  {
+    question: "How can we share data between components in React?",
+    options: [
+      "(a) Through routing",
+      "(b) Through props or context",
+      "(c) Through APIs",
+      "(d) Through database",
+    ],
+    answer: "(b) Through props or context",
+    topic: "React",
+    know_more:
+      "Data can be passed via props (parent to child) or using React Context for global state management across the component tree.",
+  },
+  {
+    question: "Which function is used to listen on a port in Express?",
+    options: [
+      "(a) app.use()",
+      "(b) app.get()",
+      "(c) app.listen()",
+      "(d) app.connect()",
+    ],
+    answer: "(c) app.listen()",
+    topic: "Express.js",
+    know_more:
+      "`app.listen()` is used to bind and listen for connections on the specified host and port.",
+  },
+  {
+    question: "What is the use of React Router?",
+    options: [
+      "(a) Data fetching",
+      "(b) Styling components",
+      "(c) Navigating between views",
+      "(d) Handling authentication",
+    ],
+    answer: "(c) Navigating between views",
+    topic: "React Router",
+    know_more:
+      "React Router enables navigation between different views or pages in a single-page application (SPA).",
+  },
+  {
+    question: "What is a REST API?",
+    options: [
+      "(a) An HTML rendering service",
+      "(b) A way to send emails",
+      "(c) An architectural style for building web services",
+      "(d) A tool to test UI",
+    ],
+    answer: "(c) An architectural style for building web services",
+    topic: "REST API",
+    know_more:
+      "REST (Representational State Transfer) is an architectural style that uses standard HTTP methods for CRUD operations on resources.",
+  },
+  {
+    question: "What is async/await used for in Node.js?",
+    options: [
+      "(a) Creating UI elements",
+      "(b) Making synchronous code asynchronous",
+      "(c) Routing requests",
+      "(d) Styling elements",
+    ],
+    answer: "(b) Making synchronous code asynchronous",
+    topic: "Node.js",
+    know_more:
+      "`async/await` is syntactic sugar over Promises that allows writing asynchronous code in a synchronous-like manner.",
+  },
+  {
+    question: "What does `res.json()` do in Express?",
+    options: [
+      "(a) Sends plain text",
+      "(b) Sends XML",
+      "(c) Sends JSON formatted response",
+      "(d) Parses HTML",
+    ],
+    answer: "(c) Sends JSON formatted response",
+    topic: "Express.js",
+    know_more:
+      "`res.json()` converts a JavaScript object or array into JSON and sends it as a response to the client.",
+  },
+  {
+    question: "What is the main difference between PUT and PATCH?",
+    options: [
+      "(a) PUT deletes data, PATCH updates it",
+      "(b) PUT replaces entire data, PATCH updates part of it",
+      "(c) They are the same",
+      "(d) PATCH only works in frontend",
+    ],
+    answer: "(b) PUT replaces entire data, PATCH updates part of it",
+    topic: "REST API",
+    know_more:
+      "`PUT` is generally used to replace a resource entirely, while `PATCH` is used for partial updates to a resource.",
+  },
+  {
+    question: "Which is used to protect routes in a MERN app?",
+    options: [
+      "(a) Routes folder",
+      "(b) Redux",
+      "(c) Authentication middleware",
+      "(d) GraphQL",
+    ],
+    answer: "(c) Authentication middleware",
+    topic: "Security",
+    know_more:
+      "Authentication middleware checks for valid credentials (e.g., JWT) before allowing access to protected routes.",
+  },
+];
+const mernSet2: Quiz = [
+  {
+    question: "What is Redux used for in a React application?",
+    options: [
+      "(a) Styling components",
+      "(b) Making HTTP requests",
+      "(c) Managing global state",
+      "(d) Handling routes",
+    ],
+    answer: "(c) Managing global state",
+    topic: "React - State Management",
+    know_more:
+      "Redux is a predictable state container for JavaScript apps, commonly used with React for managing application-wide state in a centralized store.",
+  },
+  {
+    question: "What does the 'key' prop do in React?",
+    options: [
+      "(a) Sets encryption keys",
+      "(b) Identifies elements in lists",
+      "(c) Initializes state",
+      "(d) Validates props",
+    ],
+    answer: "(b) Identifies elements in lists",
+    topic: "React - Lists & Keys",
+    know_more:
+      "The 'key' prop helps React identify which items have changed, been added, or removed in a list. It improves performance during re-rendering.",
+  },
+  {
+    question: "What is the purpose of 'useContext' in React?",
+    options: [
+      "(a) To style components",
+      "(b) To share state without props",
+      "(c) To handle forms",
+      "(d) To fetch data",
+    ],
+    answer: "(b) To share state without props",
+    topic: "React Hooks",
+    know_more:
+      "`useContext` allows components to access context data without explicitly passing props through every level of the component tree.",
+  },
+  {
+    question: "Which method is used to update a document in MongoDB?",
+    options: [
+      "(a) updateOne()",
+      "(b) modify()",
+      "(c) push()",
+      "(d) changeOne()",
+    ],
+    answer: "(a) updateOne()",
+    topic: "MongoDB",
+    know_more:
+      "`updateOne()` modifies a single document in a collection based on a given filter.",
+  },
+  {
+    question: "How can you make a POST request in React?",
+    options: [
+      "(a) With JSX",
+      "(b) Using useEffect only",
+      "(c) Using fetch or axios",
+      "(d) Using map()",
+    ],
+    answer: "(c) Using fetch or axios",
+    topic: "React - Networking",
+    know_more:
+      "To make HTTP requests like POST in React, you typically use the `fetch` API or a library like `axios`.",
+  },
+  {
+    question: "What is a model in Mongoose?",
+    options: [
+      "(a) A CSS class",
+      "(b) A route handler",
+      "(c) A wrapper for MongoDB documents",
+      "(d) A view component",
+    ],
+    answer: "(c) A wrapper for MongoDB documents",
+    topic: "Mongoose",
+    know_more:
+      "In Mongoose, a model is a class created from a schema and is used to interact with a specific MongoDB collection.",
+  },
+  {
+    question: "Which hook is used for performance optimization in React?",
+    options: ["(a) useRef", "(b) useCallback", "(c) useEffect", "(d) useForm"],
+    answer: "(b) useCallback",
+    topic: "React Performance",
+    know_more:
+      "`useCallback` memoizes a callback function so it doesn’t get recreated unless its dependencies change, improving performance in components with heavy rendering.",
+  },
+  {
+    question: "What is CORS in a MERN stack app?",
+    options: [
+      "(a) A React component",
+      "(b) A database schema",
+      "(c) A browser security feature",
+      "(d) A MongoDB collection",
+    ],
+    answer: "(c) A browser security feature",
+    topic: "Security",
+    know_more:
+      "CORS (Cross-Origin Resource Sharing) is a browser security feature that restricts web pages from making requests to a different domain than the one that served the web page.",
+  },
+  {
+    question: "What does 'res.status(404).send()' do?",
+    options: [
+      "(a) Sends HTML content",
+      "(b) Sets status code and sends response",
+      "(c) Closes the server",
+      "(d) Logs an error",
+    ],
+    answer: "(b) Sets status code and sends response",
+    topic: "Express.js",
+    know_more:
+      "This method sets the HTTP status to 404 (Not Found) and sends a response to the client, typically indicating that the resource was not found.",
+  },
+  {
+    question: "How do you define a schema in Mongoose?",
+    options: [
+      "(a) mongoose.model()",
+      "(b) mongoose.connect()",
+      "(c) mongoose.Schema()",
+      "(d) mongoose.database()",
+    ],
+    answer: "(c) mongoose.Schema()",
+    topic: "Mongoose",
+    know_more:
+      "`mongoose.Schema()` is used to define the structure of documents within a collection in MongoDB, including field types and validations.",
+  },
+  {
+    question: "Which of the following is a valid MongoDB data type?",
+    options: ["(a) float", "(b) string", "(c) array", "(d) All of the above"],
+    answer: "(d) All of the above",
+    topic: "MongoDB",
+    know_more:
+      "MongoDB supports multiple data types such as strings, numbers (including float), arrays, objects, dates, and more.",
+  },
+  {
+    question: "What is the purpose of 'next()' in Express middleware?",
+    options: [
+      "(a) It calls the next route handler",
+      "(b) It restarts the app",
+      "(c) It ends the response",
+      "(d) It connects to MongoDB",
+    ],
+    answer: "(a) It calls the next route handler",
+    topic: "Express.js",
+    know_more:
+      "`next()` is a function passed to middleware to pass control to the next middleware function or route handler in the chain.",
+  },
+  {
+    question: "What is the use of useMemo in React?",
+    options: [
+      "(a) To fetch data",
+      "(b) To memoize expensive calculations",
+      "(c) To create DOM elements",
+      "(d) To update state",
+    ],
+    answer: "(b) To memoize expensive calculations",
+    topic: "React Hooks",
+    know_more:
+      "`useMemo` memorizes the result of a calculation and only recalculates it when its dependencies change, useful for performance optimization.",
+  },
+  {
+    question: "Which Express method is used to handle PUT requests?",
+    options: [
+      "(a) app.put()",
+      "(b) app.handlePut()",
+      "(c) app.edit()",
+      "(d) app.modify()",
+    ],
+    answer: "(a) app.put()",
+    topic: "Express.js",
+    know_more:
+      "`app.put()` handles HTTP PUT requests, commonly used to update resources on the server.",
+  },
+  {
+    question: "What does 'npm run build' do in a React app?",
+    options: [
+      "(a) Starts a dev server",
+      "(b) Builds a production-ready app",
+      "(c) Installs dependencies",
+      "(d) Cleans node_modules",
+    ],
+    answer: "(b) Builds a production-ready app",
+    topic: "React",
+    know_more:
+      "`npm run build` compiles the React app into static files (HTML, CSS, JS) optimized for production deployment.",
+  },
+  {
+    question: "How do you define environment variables in a Node.js project?",
+    options: [
+      "(a) .config file",
+      "(b) .env file",
+      "(c) .node file",
+      "(d) .server file",
+    ],
+    answer: "(b) .env file",
+    topic: "Node.js",
+    know_more:
+      "Environment variables are typically stored in a `.env` file and accessed in Node.js using `process.env.VARIABLE_NAME`.",
+  },
+  {
+    question: "How do you perform routing in React?",
+    options: [
+      "(a) Using useState",
+      "(b) Using react-router-dom",
+      "(c) Using fetch API",
+      "(d) Using context",
+    ],
+    answer: "(b) Using react-router-dom",
+    topic: "React Routing",
+    know_more:
+      "`react-router-dom` provides components like `<Route>`, `<Link>`, and `<BrowserRouter>` for client-side routing in React applications.",
+  },
+  {
+    question: "Which method is used to delete a document in MongoDB?",
+    options: [
+      "(a) delete()",
+      "(b) removeOne()",
+      "(c) deleteOne()",
+      "(d) drop()",
+    ],
+    answer: "(c) deleteOne()",
+    topic: "MongoDB",
+    know_more:
+      "`deleteOne()` removes the first document that matches a given filter from a MongoDB collection.",
+  },
+  {
+    question: "What is the difference between local state and global state?",
+    options: [
+      "(a) No difference",
+      "(b) Global state is shared, local is specific",
+      "(c) Local state uses Redux",
+      "(d) Global state is faster",
+    ],
+    answer: "(b) Global state is shared, local is specific",
+    topic: "React State Management",
+    know_more:
+      "Local state is component-specific, managed using `useState`, while global state is shared across components and usually managed with Context or Redux.",
+  },
+  {
+    question: "What is the purpose of 'mongoose.connect()'?",
+    options: [
+      "(a) To start Express server",
+      "(b) To create a new model",
+      "(c) To connect to MongoDB database",
+      "(d) To run a query",
+    ],
+    answer: "(c) To connect to MongoDB database",
+    topic: "Mongoose",
+    know_more:
+      "`mongoose.connect()` is used to establish a connection between your Node.js app and your MongoDB database using Mongoose.",
+  },
+  {
+    question: "What does the 'default' keyword do in ES6 modules?",
+    options: [
+      "(a) Defines a global variable",
+      "(b) Specifies a default export from a file",
+      "(c) Imports everything from another file",
+      "(d) Creates a default route",
+    ],
+    answer: "(b) Specifies a default export from a file",
+    topic: "JavaScript Modules",
+    know_more:
+      "The `default` keyword is used to export a single value or function from a module, allowing it to be imported with any name in another file.",
+  },
+  {
+    question: "Which method is used to parse JSON in JavaScript?",
+    options: [
+      "(a) JSON.parse()",
+      "(b) parseJSON()",
+      "(c) JSON.stringify()",
+      "(d) toJSON()",
+    ],
+    answer: "(a) JSON.parse()",
+    topic: "JavaScript",
+    know_more:
+      "`JSON.parse()` is used to convert a JSON-formatted string into a JavaScript object.",
+  },
+  {
+    question: "What is the purpose of 'useReducer' in React?",
+    options: [
+      "(a) Routing",
+      "(b) Managing form input",
+      "(c) Complex state management",
+      "(d) Fetching API data",
+    ],
+    answer: "(c) Complex state management",
+    topic: "React Hooks",
+    know_more:
+      "`useReducer` is a React hook for managing more complex state logic in components. It's similar to Redux-style state updates within a single component.",
+  },
+  {
+    question: "How do you create a virtual environment for Node.js?",
+    options: [
+      "(a) Using virtualenv",
+      "(b) Using nvm",
+      "(c) Using npm install",
+      "(d) Using yarn",
+    ],
+    answer: "(b) Using nvm",
+    topic: "Node.js",
+    know_more:
+      "`nvm` (Node Version Manager) allows you to install and switch between multiple Node.js versions, effectively creating isolated environments.",
+  },
+  {
+    question: "Which lifecycle method is replaced by useEffect?",
+    options: [
+      "(a) componentWillUpdate",
+      "(b) componentDidMount",
+      "(c) componentWillReceiveProps",
+      "(d) shouldComponentUpdate",
+    ],
+    answer: "(b) componentDidMount",
+    topic: "React Hooks",
+    know_more:
+      "`useEffect` with an empty dependency array (`[]`) mimics the behavior of `componentDidMount` by running once after the component renders.",
+  },
+  {
+    question: "What is the role of 'Router' in Express.js?",
+    options: [
+      "(a) To create database models",
+      "(b) To group routes",
+      "(c) To manage React state",
+      "(d) To create MongoDB collections",
+    ],
+    answer: "(b) To group routes",
+    topic: "Express.js",
+    know_more:
+      "`express.Router()` is used to create modular route handlers that can be mounted to the main app for better code organization.",
+  },
+  {
+    question: "What is the use of 'prop-types' in React?",
+    options: [
+      "(a) For styling components",
+      "(b) For testing React apps",
+      "(c) For type-checking props",
+      "(d) For setting state",
+    ],
+    answer: "(c) For type-checking props",
+    topic: "React",
+    know_more:
+      "`prop-types` is a library used in React to enforce type-checking on component props at runtime.",
+  },
+  {
+    question: "How do you handle 404 errors in Express?",
+    options: [
+      "(a) Using res.redirect()",
+      "(b) Using middleware placed at the end",
+      "(c) Using app.listen()",
+      "(d) Using app.useStatic()",
+    ],
+    answer: "(b) Using middleware placed at the end",
+    topic: "Express.js",
+    know_more:
+      "To handle 404s, Express uses a middleware at the end of all route definitions that checks if the route was matched and sends a 404 error otherwise.",
+  },
+  {
+    question: "What is the purpose of 'strict' mode in JavaScript?",
+    options: [
+      "(a) Enables automatic memory management",
+      "(b) Prevents using undeclared variables",
+      "(c) Enables JSX parsing",
+      "(d) Disables async operations",
+    ],
+    answer: "(b) Prevents using undeclared variables",
+    topic: "JavaScript",
+    know_more:
+      "Strict mode (`'use strict'`) makes JavaScript code more secure by throwing errors for unsafe actions such as using undeclared variables.",
+  },
+  {
+    question: "Which tool is commonly used for testing React components?",
+    options: ["(a) Mocha", "(b) Jest", "(c) Express", "(d) MongoDB Compass"],
+    answer: "(b) Jest",
+    topic: "Testing",
+    know_more:
+      "`Jest` is a testing framework developed by Facebook and is commonly used with React for unit and integration testing.",
+  },
+  {
+    question: "What does 'npm init' do?",
+    options: [
+      "(a) Starts a new project and creates package.json",
+      "(b) Installs all dependencies",
+      "(c) Starts the React server",
+      "(d) Runs a script",
+    ],
+    answer: "(a) Starts a new project and creates package.json",
+    topic: "Node.js",
+    know_more:
+      "`npm init` helps create a `package.json` file by prompting the user for inputs like project name, version, and dependencies.",
+  },
+  {
+    question: "How do you create nested routes in React Router?",
+    options: [
+      "(a) By wrapping routes in BrowserRouter",
+      "(b) By using <Outlet /> and child route definitions",
+      "(c) By using useState",
+      "(d) By calling nestedRoute()",
+    ],
+    answer: "(b) By using <Outlet /> and child route definitions",
+    topic: "React Router",
+    know_more:
+      "Nested routes in React Router v6 are created by defining child routes in the route configuration and rendering them using `<Outlet />`.",
+  },
+  {
+    question: "What is a collection in MongoDB?",
+    options: [
+      "(a) A group of databases",
+      "(b) A schema definition",
+      "(c) A group of documents",
+      "(d) A middleware",
+    ],
+    answer: "(c) A group of documents",
+    topic: "MongoDB",
+    know_more:
+      "A collection in MongoDB is a container for documents. It's similar to a table in relational databases but without a fixed schema.",
+  },
+  {
+    question: "What does the 'map()' function do in JavaScript?",
+    options: [
+      "(a) Filters an array",
+      "(b) Maps one array to another by transformation",
+      "(c) Deletes array elements",
+      "(d) Joins arrays",
+    ],
+    answer: "(b) Maps one array to another by transformation",
+    topic: "JavaScript",
+    know_more:
+      "`map()` creates a new array populated with the results of calling a provided function on every element in the calling array.",
+  },
+  {
+    question: "How do you serve static files in Express?",
+    options: [
+      "(a) app.use(express.static('folder'))",
+      "(b) app.get('/static')",
+      "(c) app.sendFile()",
+      "(d) app.download()",
+    ],
+    answer: "(a) app.use(express.static('folder'))",
+    topic: "Express.js",
+    know_more:
+      "`express.static()` middleware is used to serve static files such as HTML, CSS, JS, images, etc., from a directory.",
+  },
+  {
+    question: "What is a use case for useRef in React?",
+    options: [
+      "(a) Handling API calls",
+      "(b) Referring to DOM elements",
+      "(c) Setting up routing",
+      "(d) Managing form state",
+    ],
+    answer: "(b) Referring to DOM elements",
+    topic: "React Hooks",
+    know_more:
+      "`useRef` provides a way to reference DOM nodes directly or persist values without triggering re-renders in functional components.",
+  },
+  {
+    question: "How do you update state based on previous state in React?",
+    options: [
+      "(a) setState(newValue)",
+      "(b) setState(() => newValue)",
+      "(c) setState(prev => ...)",
+      "(d) useEffect()",
+    ],
+    answer: "(c) setState(prev => ...)",
+    topic: "React",
+    know_more:
+      "When updating state based on the previous value, pass a function to `setState` that takes the previous state as an argument.",
+  },
+  {
+    question: "Which method creates a server in Node.js without Express?",
+    options: [
+      "(a) http.get()",
+      "(b) server.create()",
+      "(c) http.createServer()",
+      "(d) node.listen()",
+    ],
+    answer: "(c) http.createServer()",
+    topic: "Node.js",
+    know_more:
+      "`http.createServer()` is part of Node.js's built-in 'http' module and is used to create a basic web server.",
+  },
+  {
+    question: "How can you secure sensitive keys in a MERN app?",
+    options: [
+      "(a) Hardcode them in the code",
+      "(b) Use localStorage",
+      "(c) Store them in .env files",
+      "(d) Store them in cookies",
+    ],
+    answer: "(c) Store them in .env files",
+    topic: "Security",
+    know_more:
+      "Sensitive data like API keys and DB passwords should be stored in `.env` files and accessed via environment variables to avoid exposing them in code.",
+  },
+  {
+    question: "What is the difference between '==' and '===' in JavaScript?",
+    options: [
+      "(a) No difference",
+      "(b) '==' compares value, '===' compares value and type",
+      "(c) '==' is faster",
+      "(d) '===' is for numbers only",
+    ],
+    answer: "(b) '==' compares value, '===' compares value and type",
+    topic: "JavaScript",
+    know_more:
+      "`==` performs type coercion before comparing values, while `===` (strict equality) compares both type and value.",
+  },
+];
+const mernSet3: Quiz = [];
+const mernSet4: Quiz = [];
+
 export type QuestionType =
   //   | "GULAM_WANS"
   //   | "TUGLAK_WANS"
@@ -12285,7 +13191,11 @@ export type QuestionType =
   | "COMMUNICABLE_DISEASES_SET_1"
   | "COMMUNICABLE_DISEASES_SET_2"
   | "SAHJAHA_SET_1"
-  | "SAHJAHA_SET_2";
+  | "SAHJAHA_SET_2"
+  | "MERN_SET_1"
+  | "MERN_SET_2"
+  | "MERN_SET_3"
+  | "MERN_SET_4";
 
 const questionType: Record<QuestionType, string> = {
   //   GULAM_WANS: "Gulam Wans",
@@ -12308,6 +13218,10 @@ const questionType: Record<QuestionType, string> = {
   COMMUNICABLE_DISEASES_SET_2: "Communicable Diseases Set 2",
   SAHJAHA_SET_1: "Sahjaha Set 1",
   SAHJAHA_SET_2: "Sahjaha Set 2",
+  MERN_SET_1: "MERN Set 1",
+  MERN_SET_2: "MERN Set 2",
+  MERN_SET_3: "MERN Set 3",
+  MERN_SET_4: "MERN Set 4",
 };
 
 //jahangirQuestions => JASHANGIR
@@ -12327,6 +13241,10 @@ const questionData: Record<string, Quiz> = {
   [questionType.COMMUNICABLE_DISEASES_SET_2]: communicableDiseasesPart2,
   [questionType.SAHJAHA_SET_1]: sahaJashSet1,
   [questionType.SAHJAHA_SET_2]: sahaJashSet2,
+  [questionType.MERN_SET_1]: mernSet1,
+  [questionType.MERN_SET_2]: mernSet2,
+  [questionType.MERN_SET_3]: mernSet3,
+  [questionType.MERN_SET_4]: mernSet4,
 };
 
 const getQuestion = (selectedOption: string): Quiz => {
@@ -12371,35 +13289,35 @@ const sample1 = [
 
 export { getQuestion, questionType };
 
-const reactBroadCategory = [
-  "Core Concepts",
-  "Components (Functional & Class)",
-  "Props",
-  "State Management (useState, Class State)",
-  "Lifecycle Methods (Class Components)",
-  "Hooks (useState, useEffect, useContext, useReducer, useCallback, useMemo, useRef, Custom Hooks)",
-  "Event Handling",
-  "Conditional Rendering",
-  "Lists and Keys",
-  "Forms (Controlled & Uncontrolled Components)",
-  "Refs",
-  "Routing (React Router)",
-  "State Management Libraries (Redux, Zustand, Recoil, Context API)",
-  "Asynchronous Operations (Promises, Async/Await)",
-  "API Calls (Fetch, Axios)",
-  "Component Composition",
-  "Higher-Order Components (HOCs)",
-  "Render Props",
-  "Error Handling (Error Boundaries)",
-  "Performance Optimization (Memoization, Lazy Loading, Code Splitting)",
-  "Styling (CSS Modules, Styled Components, Emotion, Tailwind CSS, Material UI, Chakra UI)",
-  "Testing (Unit, Integration, E2E with Jest, React Testing Library, Cypress)",
-  "Deployment",
-  "Server-Side Rendering (SSR) / Next.js",
-  "Static Site Generation (SSG) / Next.js",
-  "TypeScript with React",
-  "Accessibility (A11y)",
-  "Security in React",
-  "Build Tools (Webpack, Parcel, Vite)",
-  "State Persistence (Local Storage, Session Storage)",
-];
+// const reactBroadCategory = [
+//   "Core Concepts",
+//   "Components (Functional & Class)",
+//   "Props",
+//   "State Management (useState, Class State)",
+//   "Lifecycle Methods (Class Components)",
+//   "Hooks (useState, useEffect, useContext, useReducer, useCallback, useMemo, useRef, Custom Hooks)",
+//   "Event Handling",
+//   "Conditional Rendering",
+//   "Lists and Keys",
+//   "Forms (Controlled & Uncontrolled Components)",
+//   "Refs",
+//   "Routing (React Router)",
+//   "State Management Libraries (Redux, Zustand, Recoil, Context API)",
+//   "Asynchronous Operations (Promises, Async/Await)",
+//   "API Calls (Fetch, Axios)",
+//   "Component Composition",
+//   "Higher-Order Components (HOCs)",
+//   "Render Props",
+//   "Error Handling (Error Boundaries)",
+//   "Performance Optimization (Memoization, Lazy Loading, Code Splitting)",
+//   "Styling (CSS Modules, Styled Components, Emotion, Tailwind CSS, Material UI, Chakra UI)",
+//   "Testing (Unit, Integration, E2E with Jest, React Testing Library, Cypress)",
+//   "Deployment",
+//   "Server-Side Rendering (SSR) / Next.js",
+//   "Static Site Generation (SSG) / Next.js",
+//   "TypeScript with React",
+//   "Accessibility (A11y)",
+//   "Security in React",
+//   "Build Tools (Webpack, Parcel, Vite)",
+//   "State Persistence (Local Storage, Session Storage)",
+// ];
