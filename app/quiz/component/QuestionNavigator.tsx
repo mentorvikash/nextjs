@@ -1,6 +1,7 @@
 import { QuestionNavigatorProps } from "../interface";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useRef } from "react";
+import { Link, Element } from "react-scroll";
 
 const QuestionNavigator: React.FC<QuestionNavigatorProps> = ({
   totalQuestion,
@@ -53,6 +54,34 @@ const QuestionNavigator: React.FC<QuestionNavigatorProps> = ({
     // based on the style's scrollBehavior.
   };
 
+  // const ScrollBar = () => {
+  //   const questions = [];
+  //   for (let i = 1; i <= totalQuestion; i++) {
+  //     questions.push(i);
+  //   }
+  //   return questions.map((que, index) => (
+  //     <li
+  //       className={`  border-2 text-center align-middle rounded-full ${
+  //         selectedAnswers[`Q${index}`] ? "bg-green-600" : "bg-black"
+  //       } ${
+  //         finalResult.length && finalResult[index] === "W"
+  //           ? "bg-red-600"
+  //           : finalResult[index] === "R"
+  //           ? "bg-sky-600"
+  //           : "bg-black"
+  //       } `}
+  //       key={index}
+  //     >
+  //       <button
+  //         className={` text-white `}
+  //         onClick={() => handleNavLinkClick(`que${index}`)}
+  //       >
+  //         {que}
+  //       </button>
+  //     </li>
+  //   ));
+  // };
+
   const ScrollBar = () => {
     const questions = [];
     for (let i = 1; i <= totalQuestion; i++) {
@@ -71,12 +100,15 @@ const QuestionNavigator: React.FC<QuestionNavigatorProps> = ({
         } `}
         key={index}
       >
-        <button
+        <Link to={`que${index}`} smooth={true} duration={500} offset={-50}>
+          {que}
+        </Link>
+        {/* <button
           className={` text-white `}
           onClick={() => handleNavLinkClick(`que${index}`)}
         >
           {que}
-        </button>
+        </button> */}
       </li>
     ));
   };

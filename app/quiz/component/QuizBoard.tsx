@@ -2,6 +2,7 @@ import { ChangeEvent, useState } from "react";
 import { Quiz } from "../interface";
 import { SelectedAnswers } from "../interface";
 import TimerCard from "./timerCard";
+import { Link, Element } from "react-scroll";
 
 interface QuizBoardProps {
   quizQuestion: Quiz;
@@ -59,7 +60,7 @@ function QuizBoard({
             {que.options.map((option, i) => (
               <div
                 key={`${index}Opt${i}`}
-                className=" p-3  border-1 border-gray-400 rounded-md bg-white  "
+                className=" p-3  border-1 border-gray-400 rounded-md bg-white  flex "
               >
                 <input
                   type="checkbox"
@@ -74,7 +75,7 @@ function QuizBoard({
                   }
                 />
                 <label
-                  className=" text-gray-700 text-md align-middle"
+                  className=" text-gray-700 text-md align-middle py-1 inline-block w-full"
                   htmlFor={option}
                 >
                   {option}
