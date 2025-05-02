@@ -3,7 +3,10 @@
 - change score card poistion (Done)
 - instead of more and close =>  use more and less with same button (Done)
 - fix position of score card (Done)
-- fix when re-selct new quiz go back to previous question number
+- fix when re-selct new quiz go back to previous question number (Done)
+- fix bug to move to top side nav bar once selected any number our of current window (Done)
+- fix smooth scroll issue (Done)
+- Fix scroll movement, if select less no -> scroll toward up, and if more, scroll toward down. (Done)
 
 ---------- Features ---------------
 - add timer as sticky elemit instea do fixed (done)
@@ -17,3 +20,12 @@
 - create api to save new question in data base.
 - Create api to generaate random quetion on any topic
 - give abity to select no question in a quiz caped with max qustion that is 100 [10,30,50,80,100]
+- Work on text to speech feature
+- Add ablilty to upload query by array of json or csv file
+- after submit create animation to show scroll card as big, once close scroll to bottom right.
+
+
+// Few text to speech decument
+https://edvins.io/react-text-to-speech
+https://www.npmjs.com/package/react-text-to-speech/v/0.19.3
+https://www.npmjs.com/package/react-speech
