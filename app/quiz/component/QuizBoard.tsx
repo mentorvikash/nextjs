@@ -58,9 +58,9 @@ function QuizBoard({
           <hr className="border-gray-400 border-0.5 my-3.5 " />
           <ol className="flex flex-col gap-2.5 mx-4">
             {que.options.map((option, i) => (
-              <div
-                key={`${index}Opt${i}`}
-                className=" p-3  border-1 border-gray-400 rounded-md bg-white  flex "
+              <Element
+                name={`${index}Opt${i}`}
+                className=" px-3  border-1 border-gray-400 rounded-md bg-white  flex "
               >
                 <input
                   type="checkbox"
@@ -75,12 +75,12 @@ function QuizBoard({
                   }
                 />
                 <label
-                  className=" text-gray-700 text-md align-middle py-1 inline-block w-full"
+                  className=" text-gray-700 text-md align-middle py-3 inline-block w-full"
                   htmlFor={option}
                 >
                   {option}
                 </label>
-              </div>
+              </Element>
             ))}
           </ol>
           {isSubmit && (
