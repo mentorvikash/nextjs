@@ -13170,6 +13170,2537 @@ const mernSet2: Quiz = [
 ];
 const mernSet3: Quiz = [];
 const mernSet4: Quiz = [];
+const mernSet5: Quiz = [];
+const mernSet6: Quiz = [];
+const mernSet7: Quiz = [];
+const mernSet8: Quiz = [];
+const mernSet9: Quiz = [];
+const mernSet10: Quiz = [];
+const nodeSet1: Quiz = [
+  {
+    question: "What is Node.js?",
+    options: [
+      "(a) A frontend JavaScript framework",
+      "(b) A JavaScript runtime built on Chrome's V8 JavaScript engine",
+      "(c) A database management system",
+      "(d) A markup language",
+    ],
+    answer: "(b) A JavaScript runtime built on Chrome's V8 JavaScript engine",
+    topic: "Fundamentals and Core Concepts",
+    know_more:
+      "Node.js allows you to run JavaScript code outside of a web browser, making it suitable for server-side development. It uses an event-driven, non-blocking I/O model that makes it efficient for handling concurrent requests.",
+  },
+  {
+    question: "Is Node.js single-threaded or multi-threaded?",
+    options: [
+      "(a) Multi-threaded",
+      "(b) Single-threaded with an event loop for non-blocking I/O",
+      "(c) Depends on the operating system",
+      "(d) Neither",
+    ],
+    answer: "(b) Single-threaded with an event loop for non-blocking I/O",
+    topic: "Event Loop and Concurrency",
+    know_more:
+      "Node.js operates on a single thread for executing JavaScript code. However, it achieves concurrency through its event loop and non-blocking I/O operations, allowing it to handle multiple requests efficiently without creating multiple threads for each connection.",
+  },
+  {
+    question: "What is npm?",
+    options: [
+      "(a) A JavaScript library",
+      "(b) Node Package Manager, a package manager for JavaScript",
+      "(c) A web server",
+      "(d) A testing framework",
+    ],
+    answer: "(b) Node Package Manager, a package manager for JavaScript",
+    topic: "Modules and Package Management (npm/yarn)",
+    know_more:
+      "npm is the default package manager for Node.js. It allows you to easily install, manage, and share JavaScript packages (libraries and tools) for your projects.",
+  },
+  {
+    question: "How do you run a Node.js file named `app.js`?",
+    options: [
+      "(a) `run app.js`",
+      "(b) `execute app.js`",
+      "(c) `node app.js`",
+      "(d) `javascript app.js`",
+    ],
+    answer: "(c) `node app.js`",
+    topic: "Fundamentals and Core Concepts",
+    know_more:
+      "You use the `node` command followed by the filename in your terminal to execute a Node.js script.",
+  },
+  {
+    question: "What is the `require()` function used for in Node.js?",
+    options: [
+      "(a) To define a new variable",
+      "(b) To import modules or libraries into your code",
+      "(c) To print output to the console",
+      "(d) To define a function",
+    ],
+    answer: "(b) To import modules or libraries into your code",
+    topic: "Modules and Package Management (npm/yarn)",
+    know_more:
+      "`require()` is the way Node.js implements the CommonJS module system, allowing you to include and use code from other files or installed packages.",
+  },
+  {
+    question: "What is the global object in Node.js?",
+    options: ["(a) `window`", "(b) `document`", "(c) `global`", "(d) `this`"],
+    answer: "(c) `global`",
+    topic: "Fundamentals and Core Concepts",
+    know_more:
+      "The `global` object in Node.js provides access to global variables and functions that are available throughout your application, similar to the `window` object in web browsers.",
+  },
+  {
+    question: "What is the purpose of `package.json`?",
+    options: [
+      "(a) To store the main application code",
+      "(b) To hold metadata about the project, including dependencies and scripts",
+      "(c) To define the user interface of the application",
+      "(d) To store environment variables",
+    ],
+    answer:
+      "(b) To hold metadata about the project, including dependencies and scripts",
+    topic: "Modules and Package Management (npm/yarn)",
+    know_more:
+      "`package.json` is a configuration file that keeps track of your project's name, version, dependencies (the npm packages your project uses), scripts for running tasks, and other important information.",
+  },
+  {
+    question: "What is a module in Node.js?",
+    options: [
+      "(a) A single line of JavaScript code",
+      "(b) A reusable block of code that can be exported and imported",
+      "(c) A type of variable",
+      "(d) A built-in function",
+    ],
+    answer: "(b) A reusable block of code that can be exported and imported",
+    topic: "Modules and Package Management (npm/yarn)",
+    know_more:
+      "Modules in Node.js help organize code into logical units, making it more maintainable and reusable. You can create your own modules or use modules installed from npm.",
+  },
+  {
+    question:
+      "In simple terms, what is the event loop in Node.js responsible for?",
+    options: [
+      "(a) Managing CPU usage",
+      "(b) Handling asynchronous operations in a non-blocking way",
+      "(c) Rendering HTML on the server-side",
+      "(d) Managing network connections",
+    ],
+    answer: "(b) Handling asynchronous operations in a non-blocking way",
+    topic: "Event Loop and Concurrency",
+    know_more:
+      "The event loop is the heart of Node.js's non-blocking I/O model. It continuously checks for events and executes their associated callbacks, allowing Node.js to handle many concurrent operations efficiently.",
+  },
+  {
+    question: "Name one popular web framework for Node.js.",
+    options: ["(a) React", "(b) Angular", "(c) Express.js", "(d) Vue.js"],
+    answer: "(c) Express.js",
+    topic: "Frameworks and Libraries (Express.js, NestJS, etc.)",
+    know_more:
+      "Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for building web and API applications.",
+  },
+  {
+    question: "What does 'asynchronous programming' mean?",
+    options: [
+      "(a) Code that runs in a specific order",
+      "(b) Code that allows operations to run without blocking the main thread",
+      "(c) Code that only executes after a certain delay",
+      "(d) Code that runs simultaneously on multiple threads",
+    ],
+    answer:
+      "(b) Code that allows operations to run without blocking the main thread",
+    topic: "Asynchronous Programming",
+    know_more:
+      "Asynchronous programming enables your application to continue processing other tasks while waiting for a long-running operation (like reading a file or making a network request) to complete.",
+  },
+  {
+    question: "What is a callback function?",
+    options: [
+      "(a) A function that is called repeatedly",
+      "(b) A function passed as an argument to another function, to be executed later",
+      "(c) A function that is always executed first",
+      "(d) A function that handles errors",
+    ],
+    answer:
+      "(b) A function passed as an argument to another function, to be executed later",
+    topic: "Asynchronous Programming",
+    know_more:
+      "Callbacks are a common way to handle the results of asynchronous operations in JavaScript and Node.js. You provide a function that will be executed once the asynchronous task is finished.",
+  },
+  {
+    question: "Which of the following is a common use case for Node.js?",
+    options: [
+      "(a) Building complex user interfaces in web browsers",
+      "(b) Developing server-side applications and APIs",
+      "(c) Creating mobile applications",
+      "(d) Designing website layouts",
+    ],
+    answer: "(b) Developing server-side applications and APIs",
+    topic: "Fundamentals and Core Concepts",
+    know_more:
+      "Node.js is widely used for building scalable and efficient backend services, APIs, and real-time applications.",
+  },
+  {
+    question:
+      "What is the key difference between synchronous and asynchronous operations?",
+    options: [
+      "(a) Synchronous operations are faster",
+      "(b) Synchronous operations block the execution of the next task until they complete, while asynchronous operations do not",
+      "(c) Asynchronous operations always involve network requests",
+      "(d) There is no significant difference",
+    ],
+    answer:
+      "(b) Synchronous operations block the execution of the next task until they complete, while asynchronous operations do not",
+    topic: "Asynchronous Programming",
+    know_more:
+      "Understanding this difference is fundamental to working with Node.js's non-blocking I/O model. Asynchronous operations are crucial for building performant server-side applications.",
+  },
+  {
+    question: "How do you install a specific version of an npm package?",
+    options: [
+      "(a) `npm install package@latest`",
+      "(b) `npm install package@version`",
+      "(c) `npm get package --version`",
+      "(d) `npm update package --version`",
+    ],
+    answer: "(b) `npm install package@version`",
+    topic: "Modules and Package Management (npm/yarn)",
+    know_more:
+      "You can specify a particular version of a package during installation using the `@` symbol followed by the desired version number (e.g., `npm install express@4.17.1`).",
+  },
+  {
+    question: "What is the `module.exports` object used for in Node.js?",
+    options: [
+      "(a) To define environment variables",
+      "(b) To expose functionality from a module so it can be used in other files",
+      "(c) To install npm packages",
+      "(d) To handle errors in a module",
+    ],
+    answer:
+      "(b) To expose functionality from a module so it can be used in other files",
+    topic: "Modules and Package Management (npm/yarn)",
+    know_more:
+      "`module.exports` is the object that Node.js uses to determine what a module makes available to other parts of your application when it's imported using `require()`.",
+  },
+  {
+    question: "What is the purpose of the `__dirname` variable in Node.js?",
+    options: [
+      "(a) It returns the current working directory of the process.",
+      "(b) It returns the directory name of the current module.",
+      "(c) It returns the full path to the Node.js executable.",
+      "(d) It returns the path to the `node_modules` folder.",
+    ],
+    answer: "(b) It returns the directory name of the current module.",
+    topic: "Fundamentals and Core Concepts",
+    know_more:
+      "`__dirname` is a special variable in Node.js that always resolves to the absolute path of the directory containing the currently executing JavaScript file.",
+  },
+  {
+    question: "What is a Promise in JavaScript?",
+    options: [
+      "(a) A value that is immediately available",
+      "(b) An object representing the eventual completion (or failure) of an asynchronous operation",
+      "(c) A way to define synchronous functions",
+      "(d) A type of loop in JavaScript",
+    ],
+    answer:
+      "(b) An object representing the eventual completion (or failure) of an asynchronous operation",
+    topic: "Asynchronous Programming",
+    know_more:
+      "Promises provide a more structured way to handle asynchronous code compared to callbacks, making it easier to manage the results of asynchronous operations and avoid callback hell.",
+  },
+  {
+    question: "What are the three states of a Promise?",
+    options: [
+      "(a) Started, Running, Finished",
+      "(b) Pending, Fulfilled, Rejected",
+      "(c) Loading, Success, Error",
+      "(d) Created, Processing, Completed",
+    ],
+    answer: "(b) Pending, Fulfilled, Rejected",
+    topic: "Asynchronous Programming",
+    know_more:
+      "A Promise starts in a pending state, then transitions to either a fulfilled state (indicating successful completion) or a rejected state (indicating an error).",
+  },
+  {
+    question:
+      "What is the purpose of the `async` and `await` keywords in JavaScript?",
+    options: [
+      "(a) To define synchronous functions",
+      "(b) To make asynchronous code look and behave a bit more like synchronous code, making it easier to read and write",
+      "(c) To declare variables",
+      "(d) To handle errors in synchronous code",
+    ],
+    answer:
+      "(b) To make asynchronous code look and behave a bit more like synchronous code, making it easier to read and write",
+    topic: "Asynchronous Programming",
+    know_more:
+      "`async` is used to define an asynchronous function, and `await` is used inside an `async` function to pause its execution until a Promise settles (either fulfilled or rejected).",
+  },
+  {
+    question:
+      "What is the difference between `const`, `let`, and `var` in JavaScript?",
+    options: [
+      "(a) They are all interchangeable ways to declare variables",
+      "(b) `var` is function-scoped, `let` and `const` are block-scoped. `const` also cannot be reassigned after declaration.",
+      "(c) `const` is used for numbers, `let` for strings, and `var` for booleans",
+      "(d) `let` is used for constants, `const` for variables",
+    ],
+    answer:
+      "(b) `var` is function-scoped, `let` and `const` are block-scoped. `const` also cannot be reassigned after declaration.",
+    topic: "Fundamentals and Core Concepts",
+    know_more:
+      "`var` has been the traditional way to declare variables in JavaScript. Its scope is the function in which it is declared (or global if declared outside any function). `let` and `const` were introduced in ES6 and provide block-level scope, meaning their scope is limited to the block of code (e.g., inside an `if` statement or a loop) where they are defined. Additionally, variables declared with `const` cannot be reassigned after their initial declaration, although their properties (if they are objects or arrays) can be modified. `let` variables can be reassigned.",
+  },
+  {
+    question: "What is the purpose of middleware in Express.js?",
+    options: [
+      "(a) To define routes",
+      "(b) Functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle",
+      "(c) To handle database interactions",
+      "(d) To render HTML templates",
+    ],
+    answer:
+      "(b) Functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle",
+    topic: "Frameworks and Libraries (Express.js, NestJS, etc.)",
+    know_more:
+      "Middleware functions in Express.js can perform various tasks like logging, authentication, and data validation before the route handler is executed.",
+  },
+  {
+    question:
+      "How do you define a basic route in Express.js to handle a GET request to `/users`?",
+    options: [
+      "(a) `app.route('/users').get(...)`",
+      "(b) `app.get('/users', function(req, res) { ... });`",
+      "(c) `app.use('/users', function(req, res) { ... });`",
+      "(d) `app.post('/users', function(req, res) { ... });`",
+    ],
+    answer: "(b) `app.get('/users', function(req, res) { ... });`",
+    topic: "Frameworks and Libraries (Express.js, NestJS, etc.)",
+    know_more:
+      "The `app.get()` method is used to define a route that handles HTTP GET requests to a specific path.",
+  },
+  {
+    question: "What is the `res.send()` method used for in Express.js?",
+    options: [
+      "(a) To redirect the user to another page",
+      "(b) To send a response back to the client",
+      "(c) To read data from the request body",
+      "(d) To set HTTP headers",
+    ],
+    answer: "(b) To send a response back to the client",
+    topic: "Frameworks and Libraries (Express.js, NestJS, etc.)",
+    know_more:
+      "`res.send()` is a fundamental method in Express.js for sending various types of responses back to the client, including strings, HTML, and objects (which will be automatically converted to JSON).",
+  },
+  {
+    question: "What is the `req.body` object in Express.js used for?",
+    options: [
+      "(a) To access query parameters in the URL",
+      "(b) To access data sent in the request body (typically for POST, PUT, PATCH requests)",
+      "(c) To access HTTP headers",
+      "(d) To send data back to the client",
+    ],
+    answer:
+      "(b) To access data sent in the request body (typically for POST, PUT, PATCH requests)",
+    topic: "Frameworks and Libraries (Express.js, NestJS, etc.)",
+    know_more:
+      "To access `req.body`, you usually need to use middleware like `express.json()` or `express.urlencoded()` to parse the request body.",
+  },
+  {
+    question: "What are query parameters?",
+    options: [
+      "(a) Data sent in the request body",
+      "(b) Key-value pairs appended to the URL after a question mark (`?`)",
+      "(c) HTTP headers",
+      "(d) Part of the URL path",
+    ],
+    answer:
+      "(b) Key-value pairs appended to the URL after a question mark (`?`)",
+    topic: "Networking (HTTP, TCP, UDP)",
+    know_more:
+      "Query parameters are used to send data to the server along with a GET request. They are often used for filtering, sorting, or paginating data. Each parameter consists of a key and a value, separated by an equals sign (`=`), and multiple parameters are separated by ampersands (`&`). For example, in the URL `/users?page=2&limit=10`, `page` and `limit` are query parameter keys with values `2` and `10` respectively.",
+  },
+  {
+    question: "How do you access query parameters in Express.js?",
+    options: [
+      "(a) `req.body`",
+      "(b) `req.params`",
+      "(c) `req.query`",
+      "(d) `req.headers`",
+    ],
+    answer: "(c) `req.query`",
+    topic: "Frameworks and Libraries (Express.js, NestJS, etc.)",
+    know_more:
+      "The `req.query` object in Express.js is used to access the key-value pairs in the URL's query string.",
+  },
+  {
+    question: "What is an HTTP status code?",
+    options: [
+      "(a) A way to define CSS styles",
+      "(b) A standard response code given by web servers indicating the status of a request",
+      "(c) A type of JavaScript variable",
+      "(d) A way to encrypt data",
+    ],
+    answer:
+      "(b) A standard response code given by web servers indicating the status of a request",
+    topic: "Networking (HTTP, TCP, UDP)",
+    know_more:
+      "HTTP status codes are three-digit numbers that web servers send back in response to requests from clients (like web browsers). These codes provide information about the outcome of the request, telling the client whether it was successful, encountered an error, or requires further action. They are grouped into five classes, indicated by the first digit: 1xx (Informational), 2xx (Success), 3xx (Redirection), 4xx (Client Error), and 5xx (Server Error).",
+  },
+  {
+    question: "Name a common HTTP status code indicating success.",
+    options: [
+      "(a) 404 Not Found",
+      "(b) 500 Internal Server Error",
+      "(c) 200 OK",
+      "(d) 302 Found",
+    ],
+    answer: "(c) 200 OK",
+    topic: "Networking (HTTP, TCP, UDP)",
+    know_more:
+      "The `200 OK` status code is a standard HTTP response indicating that the client's request was successful. The specific meaning of 'success' depends on the HTTP method used. For a GET request, it means the resource has been retrieved and transmitted in the response body. For a POST request, it typically indicates that the data sent in the request has been successfully received and processed by the server.",
+  },
+  {
+    question: "Name a common HTTP status code indicating a client-side error.",
+    options: [
+      "(a) 200 OK",
+      "(b) 500 Internal Server Error",
+      "(c) 404 Not Found",
+      "(d) 301 Moved Permanently",
+    ],
+    answer: "(c) 404 Not Found",
+    topic: "Networking (HTTP, TCP, UDP)",
+    know_more:
+      "The `404 Not Found` status code indicates that the server could not find the requested resource. This could mean that the URL was mistyped, the resource has been moved or deleted, or the server is intentionally refusing to fulfill the request for that specific resource. It's a common error that clients encounter when navigating the web.",
+  },
+  {
+    question:
+      "What is the purpose of the `next()` function in Express.js middleware?",
+    options: [
+      "(a) To send a response to the client",
+      "(b) To pass control to the next middleware function in the stack",
+      "(c) To define a new route",
+      "(d) To handle errors",
+    ],
+    answer: "(b) To pass control to the next middleware function in the stack",
+    topic: "Frameworks and Libraries (Express.js, NestJS, etc.)",
+    know_more:
+      "When a middleware function finishes its task, it typically calls `next()` to hand over the request and response objects to the subsequent middleware in the chain or the final route handler.",
+  },
+  {
+    question: "What is the difference between `GET` and `POST` HTTP methods?",
+    options: [
+      "(a) `GET` is used to send data to the server, and `POST` is used to retrieve data.",
+      "(b) `GET` requests retrieve data from the server, and `POST` requests typically send data to the server to create or update resources.",
+      "(c) There is no functional difference between them.",
+      "(d) `POST` requests are used for static files, and `GET` for dynamic content.",
+    ],
+    answer:
+      "(b) `GET` requests retrieve data from the server, and `POST` requests typically send data to the server to create or update resources.",
+    topic: "Networking (HTTP, TCP, UDP)",
+    know_more:
+      "`GET` requests are idempotent and their data is usually sent in the URL, while `POST` requests can have a request body and are not necessarily idempotent.",
+  },
+  {
+    question: "What are HTTP headers?",
+    options: [
+      "(a) The main content of an HTTP request or response",
+      "(b) Key-value pairs that provide additional information about the HTTP request or response",
+      "(c) Part of the URL that specifies the path to a resource",
+      "(d) Used for defining the structure of HTML documents",
+    ],
+    answer:
+      "(b) Key-value pairs that provide additional information about the HTTP request or response",
+    topic: "Networking (HTTP, TCP, UDP)",
+    know_more:
+      "HTTP headers can include information about the client, the server, the content type, caching directives, and more.",
+  },
+  {
+    question: "How can you access HTTP headers in Express.js?",
+    options: [
+      "(a) `req.body.headers`",
+      "(b) `req.query.headers`",
+      "(c) `req.headers`",
+      "(d) `res.headers`",
+    ],
+    answer: "(c) `req.headers`",
+    topic: "Frameworks and Libraries (Express.js, NestJS, etc.)",
+    know_more:
+      "The `req.headers` object in Express.js provides access to all the HTTP headers sent by the client in the request.",
+  },
+  {
+    question: "What is JSON?",
+    options: [
+      "(a) A programming language",
+      "(b) JavaScript Object Notation, a lightweight data-interchange format",
+      "(c) A type of database",
+      "(d) A way to style web pages",
+    ],
+    answer:
+      "(b) JavaScript Object Notation, a lightweight data-interchange format",
+    topic: "Fundamentals and Core Concepts",
+    know_more:
+      "JSON is commonly used for transmitting data in web applications, including APIs built with Node.js and Express.js.",
+  },
+  {
+    question: "How do you send a JSON response in Express.js?",
+    options: [
+      "(a) `res.send(JSON.stringify({ message: 'Hello' }))`",
+      "(b) `res.json({ message: 'Hello' })`",
+      "(c) `res.body({ message: 'Hello' })`",
+      "(d) `res.write({ message: 'Hello' })`",
+    ],
+    answer: "(b) `res.json({ message: 'Hello' })`",
+    topic: "Frameworks and Libraries (Express.js, NestJS, etc.)",
+    know_more:
+      "The `res.json()` method in Express.js automatically sets the `Content-Type` header to `application/json` and sends the provided JavaScript object as a JSON string.",
+  },
+  {
+    question: "What is the purpose of environment variables?",
+    options: [
+      "(a) To define the styling of a web application",
+      "(b) To configure application settings outside of the code, often used for sensitive information or environment-specific configurations",
+      "(c) To store temporary data during the execution of a program",
+      "(d) To define the structure of a database",
+    ],
+    answer:
+      "(b) To configure application settings outside of the code, often used for sensitive information or environment-specific configurations",
+    topic: "Fundamentals and Core Concepts",
+    know_more:
+      "Environment variables are a common way to manage configuration for different environments (development, testing, production) without hardcoding values in the application.",
+  },
+  {
+    question: "How do you typically access environment variables in Node.js?",
+    options: [
+      "(a) `process.env()`",
+      "(b) `environment.get()`",
+      "(c) `global.env`",
+      "(d) `process.env.VARIABLE_NAME`",
+    ],
+    answer: "(d) `process.env.VARIABLE_NAME`",
+    topic: "Fundamentals and Core Concepts",
+    know_more:
+      "The `process.env` object in Node.js provides access to all the environment variables set for the current process.",
+  },
+  {
+    question:
+      "What is the purpose of the `.gitignore` file in a Node.js project?",
+    options: [
+      "(a) To list the project's dependencies",
+      "(b) To specify files and directories that should be excluded from version control (e.g., `node_modules`)",
+      "(c) To define the project's license",
+      "(d) To store environment variables",
+    ],
+    answer:
+      "(b) To specify files and directories that should be excluded from version control (e.g., `node_modules`)",
+    topic: "Fundamentals and Core Concepts",
+    know_more:
+      "The `.gitignore` file helps keep your Git repository clean by preventing unnecessary or sensitive files from being committed.",
+  },
+  {
+    question: "What is the `node_modules` directory?",
+    options: [
+      "(a) The directory containing the main application code",
+      "(b) The directory where npm installs project dependencies",
+      "(c) A built-in module in Node.js",
+      "(d) A directory for storing static assets",
+    ],
+    answer: "(b) The directory where npm installs project dependencies",
+    topic: "Modules and Package Management (npm/yarn)",
+    know_more:
+      "The `node_modules` directory can become quite large as it contains all the packages and their dependencies installed for your project.",
+  },
+];
+const nodeSet2: Quiz = [
+  {
+    question:
+      "Explain the concept of middleware chaining in Express.js. How does the `next()` function play a role?",
+    options: [
+      "(a) It's a way to define routes in a specific order.",
+      "(b) Middleware chaining allows multiple middleware functions to execute sequentially during a request-response cycle. `next()` passes control to the next middleware in the chain.",
+      "(c) It's a mechanism for handling database transactions.",
+      "(d) It's used for rendering different views based on the request.",
+    ],
+    answer:
+      "(b) Middleware chaining allows multiple middleware functions to execute sequentially during a request-response cycle. `next()` passes control to the next middleware in the chain.",
+    topic: "Frameworks and Libraries (Express.js, NestJS, etc.)",
+    know_more:
+      "Middleware functions in Express.js form a pipeline. Each middleware can perform an operation on the request and response objects and then either send a response or pass control to the next middleware using `next()`. This allows for modular and reusable request processing logic.",
+  },
+  {
+    question:
+      "How do you handle errors in asynchronous Node.js code using Promises and Async/Await?",
+    options: [
+      "(a) Only using try...catch blocks.",
+      "(b) With Promises, you use `.catch()` after the `.then()` chain. With Async/Await, you typically use `try...catch` blocks to handle potential rejections.",
+      "(c) Errors are automatically handled by the event loop.",
+      "(d) Asynchronous errors cannot be caught.",
+    ],
+    answer:
+      "(b) With Promises, you use `.catch()` after the `.then()` chain. With Async/Await, you typically use `try...catch` blocks to handle potential rejections.",
+    topic: "Error Handling",
+    know_more:
+      "Proper error handling is crucial for preventing unhandled exceptions from crashing your application. Promises provide a structured way to handle errors with `.catch()`, while Async/Await simplifies this with familiar `try...catch` syntax.",
+  },
+  {
+    question:
+      "What are Streams in Node.js, and why are they more efficient for handling large files compared to reading the entire file at once?",
+    options: [
+      "(a) Streams are only for network communication.",
+      "(b) Streams allow you to process data in chunks as it becomes available, reducing memory consumption and improving performance when dealing with large datasets that don't fit entirely in memory.",
+      "(c) Reading the entire file at once is always faster.",
+      "(d) Streams are primarily for synchronous operations.",
+    ],
+    answer:
+      "(b) Streams allow you to process data in chunks as it becomes available, reducing memory consumption and improving performance when dealing with large datasets that don't fit entirely in memory.",
+    topic: "Streams and Buffers",
+    know_more:
+      "Instead of loading a massive file into memory, streams enable you to process it piece by piece, making your application more memory-efficient and responsive, especially for tasks like file uploads, video processing, and large data transformations.",
+  },
+  {
+    question:
+      "Explain the fundamental differences between Readable, Writable, Duplex, and Transform streams with examples of their use cases.",
+    options: [
+      "(a) They all do the same thing but with different syntax.",
+      "(b) Readable streams are for reading data (e.g., `fs.createReadStream`), Writable streams are for writing data (e.g., `fs.createWriteStream`), Duplex streams are both readable and writable (e.g., `net.Socket`), and Transform streams modify data as it passes through (e.g., `zlib.createGzip`).",
+      "(c) These are only relevant for network programming.",
+      "(d) They represent different states of a single stream.",
+    ],
+    answer:
+      "(b) Readable streams are for reading data (e.g., `fs.createReadStream`), Writable streams are for writing data (e.g., `fs.createWriteStream`), Duplex streams are both readable and writable (e.g., `net.Socket`), and Transform streams modify data as it passes through (e.g., `zlib.createGzip`).",
+    topic: "Streams and Buffers",
+    know_more:
+      "Understanding these stream types allows you to effectively handle various data processing scenarios in Node.js, from file manipulation to network communication and data transformations.",
+  },
+  {
+    question:
+      "How do you work with Buffers in Node.js? What are they used for, and how do they relate to character encodings?",
+    options: [
+      "(a) Buffers are used for handling text data only.",
+      "(b) Buffers are used to represent raw binary data in memory. They are essential for handling file I/O, network protocols, and other binary data. Character encodings (like UTF-8) define how text is converted to and from these binary representations in Buffers.",
+      "(c) Buffers are the same as JavaScript strings.",
+      "(d) Buffers are only used in frontend JavaScript for image manipulation.",
+    ],
+    answer:
+      "(b) Buffers are used to represent raw binary data in memory. They are essential for handling file I/O, network protocols, and other binary data. Character encodings (like UTF-8) define how text is converted to and from these binary representations in Buffers.",
+    topic: "Streams and Buffers",
+    know_more:
+      "When dealing with files or network data, you often encounter binary data. Buffers provide a way to manipulate this data directly. Understanding character encodings is crucial for correctly interpreting text data stored in Buffers.",
+  },
+  {
+    question:
+      "Describe the key principles of RESTful API design, such as statelessness, resource identification, and the use of HTTP methods.",
+    options: [
+      "(a) REST APIs are stateful and rely heavily on sessions.",
+      "(b) RESTful APIs should be stateless (each request from a client contains all the information needed to understand the request), identify resources using URIs, and leverage HTTP methods (GET, POST, PUT, DELETE) for specific actions on those resources.",
+      "(c) REST APIs only use the GET and POST methods.",
+      "(d) REST APIs require a specific data format like XML.",
+    ],
+    answer:
+      "(b) RESTful APIs should be stateless (each request from a client contains all the information needed to understand the request), identify resources using URIs, and leverage HTTP methods (GET, POST, PUT, DELETE) for specific actions on those resources.",
+    topic: "API Development (RESTful, GraphQL)",
+    know_more:
+      "Adhering to RESTful principles leads to scalable, maintainable, and easy-to-understand APIs. Statelessness simplifies server-side implementation and scaling, while the consistent use of HTTP methods provides a predictable interface.",
+  },
+  {
+    question:
+      "Explain how you would handle different HTTP methods (GET, POST, PUT, DELETE) for a `/users` resource in an Express.js application, outlining the typical logic for each.",
+    options: [
+      "(a) All methods are handled by the same route handler.",
+      "(b) `app.get('/users', ...)` for retrieving users, `app.post('/users', ...)` for creating users, `app.put('/users/:id', ...)` for updating a user, and `app.delete('/users/:id', ...)` for deleting a user.",
+      "(c) Only `GET` and `POST` are relevant for this resource.",
+      "(d) The HTTP method is determined by the client and cannot be controlled on the server.",
+    ],
+    answer:
+      "(b) `app.get('/users', ...)` for retrieving users, `app.post('/users', ...)` for creating users, `app.put('/users/:id', ...)` for updating a user, and `app.delete('/users/:id', ...)` for deleting a user.",
+    topic: "Frameworks and Libraries (Express.js, NestJS, etc.)",
+    know_more:
+      "Mapping HTTP methods to specific actions on resources is a core aspect of RESTful API design. Express.js provides convenient methods like `app.get()`, `app.post()`, `app.put()`, and `app.delete()` to define route handlers for each method.",
+  },
+  {
+    question:
+      "Describe a basic implementation of authentication in an Express.js API using middleware and a simple username/password check.",
+    options: [
+      "(a) Authentication is handled automatically by Express.js.",
+      "(b) You would create a middleware function that checks for authorization headers or cookies, verifies the credentials against stored user data (potentially hashed), and either allows the request to proceed or returns an error.",
+      "(c) You should always store passwords in plain text.",
+      "(d) Basic authentication is inherently secure and requires no special handling.",
+    ],
+    answer:
+      "(b) You would create a middleware function that checks for authorization headers or cookies, verifies the credentials against stored user data (potentially hashed), and either allows the request to proceed or returns an error.",
+    topic: "Security Best Practices",
+    know_more:
+      "A common approach to authentication involves middleware that intercepts requests, extracts credentials, compares them against stored, securely hashed credentials, and sets a user identity on the request object if authentication is successful.",
+  },
+  {
+    question:
+      "Explain how cookies and sessions work for managing user authentication in a Node.js web application. What are their key differences and trade-offs?",
+    options: [
+      "(a) Cookies and sessions are the same thing.",
+      "(b) Cookies are small pieces of data stored on the client's browser, while sessions store user data on the server, typically identified by a session ID stored in a cookie. Cookies have limited storage and are sent with every request, while sessions can store more data but require server-side storage.",
+      "(c) Sessions are stored on the client, and cookies are stored on the server.",
+      "(d) Authentication can only be managed using JWTs, not cookies or sessions.",
+    ],
+    answer:
+      "(b) Cookies are small pieces of data stored on the client's browser, while sessions store user data on the server, typically identified by a session ID stored in a cookie. Cookies have limited storage and are sent with every request, while sessions can store more data but require server-side storage.",
+    topic: "Security Best Practices",
+    know_more:
+      "Cookies are client-side storage, useful for small amounts of data like session IDs. Sessions provide a more secure way to store user-specific data on the server, reducing the amount of sensitive information exposed to the client.",
+  },
+  {
+    question:
+      "Describe the process of connecting to a MongoDB database and performing basic CRUD (Create, Read, Update, Delete) operations from a Node.js application using a library like Mongoose.",
+    options: [
+      "(a) Node.js can directly interact with MongoDB without any libraries.",
+      "(b) You would use Mongoose to define schemas, connect to the database using a connection string, create models based on the schemas, and then use these models to perform CRUD operations using methods like `create()`, `find()`, `findById()`, `updateOne()`, and `deleteOne()`.",
+      "(c) CRUD operations are handled automatically by the MongoDB driver.",
+      "(d) Mongoose is only used for schema validation, not data manipulation.",
+    ],
+    answer:
+      "(b) You would use Mongoose to define schemas, connect to the database using a connection string, create models based on the schemas, and then use these models to perform CRUD operations using methods like `create()`, `find()`, `findById()`, `updateOne()`, and `deleteOne()`.",
+    topic: "Databases (Relational & NoSQL)",
+    know_more:
+      "Mongoose provides an elegant and structured way to interact with MongoDB, offering schema definition, validation, and model-based querying, simplifying database operations in your Node.js application.",
+  },
+  {
+    question:
+      "Compare and contrast SQL and NoSQL databases in terms of their data models, scalability, consistency, and typical use cases in a Node.js backend.",
+    options: [
+      "(a) They are interchangeable and have the same characteristics.",
+      "(b) SQL databases (like PostgreSQL, MySQL) use structured, relational data with schemas, offer strong consistency, and scale vertically. NoSQL databases (like MongoDB, Cassandra) have flexible, non-relational data models, often provide better horizontal scalability and eventual consistency, and are suitable for different types of data and use cases.",
+      "(c) NoSQL databases are always faster and more reliable than SQL databases.",
+      "(d) SQL databases are easier to scale horizontally.",
+    ],
+    answer:
+      "(b) SQL databases (like PostgreSQL, MySQL) use structured, relational data with schemas, offer strong consistency, and scale vertically. NoSQL databases (like MongoDB, Cassandra) have flexible, non-relational data models, often provide better horizontal scalability and eventual consistency, and are suitable for different types of data and use cases.",
+    topic: "Databases (Relational & NoSQL)",
+    know_more:
+      "Choosing the right type of database depends on your application's specific requirements regarding data structure, scalability needs, consistency requirements, and query patterns.",
+  },
+  {
+    question:
+      "Explain the different phases of the Node.js event loop (Timers, Pending callbacks, Idle/Prepare, Poll, Check, Close callbacks). Why is understanding this important?",
+    options: [
+      "(a) These phases are only relevant for internal Node.js development.",
+      "(b) Understanding the event loop phases helps you reason about the timing of asynchronous operations, identify potential bottlenecks, and write more efficient and predictable code.",
+      "(c) The event loop has only two phases: synchronous and asynchronous.",
+      "(d) The order of these phases is arbitrary and doesn't affect execution.",
+    ],
+    answer:
+      "(b) Understanding the event loop phases helps you reason about the timing of asynchronous operations, identify potential bottlenecks, and write more efficient and predictable code.",
+    topic: "Event Loop and Concurrency",
+    know_more:
+      "A deeper understanding of how the event loop processes tasks allows you to optimize your code and avoid common pitfalls related to asynchronous execution and I/O operations.",
+  },
+  {
+    question:
+      "Describe different strategies for handling concurrent requests in a Node.js application to ensure it remains responsive under load.",
+    options: [
+      "(a) Blocking all subsequent requests until the current one is finished.",
+      "(b) Leveraging Node.js's non-blocking I/O and event loop, using worker threads for CPU-bound tasks, and potentially scaling horizontally with tools like the `cluster` module or load balancers.",
+      "(c) Increasing the server's CPU and RAM is the only way to handle more concurrent requests.",
+      "(d) Node.js cannot handle multiple concurrent requests efficiently.",
+    ],
+    answer:
+      "(b) Leveraging Node.js's non-blocking I/O and event loop, using worker threads for CPU-bound tasks, and potentially scaling horizontally with tools like the `cluster` module or load balancers.",
+    topic: "Event Loop and Concurrency",
+    know_more:
+      "Node.js's architecture is designed for handling many concurrent I/O-bound operations efficiently. For CPU-intensive tasks that can block the event loop, worker threads provide a way to offload work to separate threads.",
+  },
+  {
+    question:
+      "What are some common approaches for managing configuration in a Node.js application across different environments (development, testing, production)?",
+    options: [
+      "(a) Hardcoding all configuration directly in the code.",
+      "(b) Using environment variables, separate configuration files (e.g., JSON, YAML) loaded based on the environment, and dedicated configuration management libraries like `config`.",
+      "(c) Relying solely on the operating system's configuration settings.",
+      "(d) There's no need to manage different configurations for different environments.",
+    ],
+    answer:
+      "(b) Using environment variables, separate configuration files (e.g., JSON, YAML) loaded based on the environment, and dedicated configuration management libraries like `config`.",
+    topic: "Fundamentals and Core Concepts",
+    know_more:
+      "Proper configuration management ensures that your application behaves correctly in different deployment stages, allowing you to easily switch between development settings, testing databases, and production API keys without modifying the core codebase.",
+  },
+  {
+    question:
+      "Describe how you would implement input validation for a POST request in an Express.js application to ensure data integrity and prevent security vulnerabilities.",
+    options: [
+      "(a) Only basic type checking within the route handler.",
+      "(b) Using middleware (e.g., with libraries like `express-validator` or Joi) to define schemas, validate the request body against those schemas, and return appropriate error responses if validation fails.",
+      "(c) Relying solely on frontend validation.",
+      "(d) Not performing any validation to improve performance.",
+    ],
+    answer:
+      "(b) Using middleware (e.g., with libraries like `express-validator` or Joi) to define schemas, validate the request body against those schemas, and return appropriate error responses if validation fails.",
+    topic: "Security Best Practices",
+    know_more:
+      "Robust input validation is crucial for preventing bad data from entering your application and for mitigating security risks like injection attacks. Middleware provides a clean and reusable way to implement validation logic.",
+  },
+  {
+    question:
+      "What are the benefits of using a module bundler like Webpack with a Node.js backend application?",
+    options: [
+      "(a) It's primarily for frontend asset management and has no use in the backend.",
+      "(b) While less common than in frontend, Webpack can be used for backend applications to bundle modules, optimize assets (if serving any), and potentially transpile code. It can also help with features like hot module replacement during development.",
+      "(c) It's required for running any Node.js application.",
+      "(d) It's only used for deploying Node.js applications to the cloud.",
+    ],
+    answer:
+      "(b) While less common than in frontend, Webpack can be used for backend applications to bundle modules, optimize assets (if serving any), and potentially transpile code. It can also help with features like hot module replacement during development.",
+    topic: "Build Tools and Transpilers (Webpack, Babel, TypeScript)",
+    know_more:
+      "Although Node.js has its own module system, bundlers like Webpack can offer advantages in specific scenarios, such as when dealing with non-JavaScript assets or requiring advanced build-time optimizations.",
+  },
+  {
+    question:
+      "Describe a strategy for implementing logging in a Node.js application. What are some considerations for different environments (development vs. production)?",
+    options: [
+      "(a) Simply using `console.log` for all logging needs.",
+      "(b) A good strategy involves using a dedicated logging library (e.g., Winston, Morgan), configuring different log levels (e.g., debug, info, warn, error), formatting log messages consistently, and potentially writing logs to different outputs (console, files, external services). In development, more verbose logging might be acceptable, while production environments often require more structured and less noisy logging.",
+      "(c) Logging should only be enabled in production to avoid performance overhead.",
+      "(d) Browsers handle all backend logging.",
+    ],
+    answer:
+      "(b) A good strategy involves using a dedicated logging library (e.g., Winston, Morgan), configuring different log levels (e.g., debug, info, warn, error), formatting log messages consistently, and potentially writing logs to different outputs (console, files, external services). In development, more verbose logging might be acceptable, while production environments often require more structured and less noisy logging.",
+    topic: "Error Handling",
+    know_more:
+      "Effective logging is essential for debugging, monitoring application health, and auditing events. Using a robust logging library provides more control and flexibility than basic `console.log` statements.",
+  },
+  {
+    question:
+      "What are some common security vulnerabilities in Node.js applications that you should be aware of, and what are general strategies to prevent them?",
+    options: [
+      "(a) Node.js applications are inherently secure.",
+      "(b) Common vulnerabilities include SQL injection (if using SQL databases), cross-site scripting (XSS) if rendering dynamic content, and insecure dependencies. Prevention strategies include input validation and sanitization, using parameterized queries or ORMs, keeping dependencies up-to-date, and implementing proper authentication and authorization.",
+      "(c) Firewalls are the only security measure needed.",
+      "(d) Security is the sole responsibility of the hosting provider.",
+    ],
+    answer:
+      "(b) Common vulnerabilities include SQL injection (if using SQL databases), cross-site scripting (XSS) if rendering dynamic content, and insecure dependencies. Prevention strategies include input validation and sanitization, using parameterized queries or ORMs, keeping dependencies up-to-date, and implementing proper authentication and authorization.",
+    topic: "Security Best Practices",
+    know_more:
+      "Security should be a primary concern throughout the development lifecycle. Understanding common vulnerabilities and implementing preventative measures is crucial for building robust and secure Node.js applications.",
+  },
+  {
+    question:
+      "Describe how you would write unit tests for a Node.js backend application. What are some advantages of unit testing, and name a popular testing framework for Node.js.",
+    options: [
+      "(a) Unit tests are not necessary for backend applications.",
+      "(b) Unit tests involve testing individual components or functions in isolation. Advantages include catching bugs early, improving code quality, and facilitating refactoring. Popular frameworks include Jest and Mocha.",
+      "(c) You should only write end-to-end tests.",
+      "(d) Testing is the responsibility of the QA team after development is complete.",
+    ],
+    answer:
+      "(b) Unit tests involve testing individual components or functions in isolation. Advantages include catching bugs early, improving code quality, and facilitating refactoring. Popular frameworks include Jest and Mocha.",
+    topic: "Testing (Unit, Integration, E2E)",
+    know_more:
+      "Unit testing is a fundamental practice for ensuring the reliability and correctness of your code. Writing effective unit tests helps you build more maintainable and robust applications.",
+  },
+  {
+    question:
+      "Explain the purpose and common use cases of the `process` object in Node.js.",
+    options: [
+      "(a) It's used for manipulating files and directories.",
+      "(b) The `process` object provides information about and control over the current Node.js process. Common use cases include accessing environment variables (`process.env`), handling signals (`process.on('SIGINT', ...)`), and exiting the process (`process.exit()`).",
+      "(c) It's used for handling HTTP requests and responses.",
+      "(d) It's a global object that provides information about the operating system.",
+    ],
+    answer:
+      "(b) The `process` object provides information about and control over the current Node.js process. Common use cases include accessing environment variables (`process.env`), handling signals (`process.on('SIGINT', ...)`), and exiting the process (`process.exit()`).",
+    topic: "Fundamentals and Core Concepts",
+    know_more:
+      "The `process` object is a crucial part of the Node.js runtime environment, providing access to various aspects of the current process and its interaction with the operating system.",
+  },
+  {
+    question:
+      "What is the difference between `process.nextTick()` and `setImmediate()` in Node.js? When might you use each?",
+    options: [
+      "(a) They are aliases for the same function.",
+      "(b) `process.nextTick()` schedules a callback to be executed in the current phase of the event loop, right after the current operation completes, while `setImmediate()` schedules a callback to be executed in the 'check' phase of the next event loop iteration. `nextTick()` is often used for callbacks that need to run before any I/O events, while `setImmediate()` is used to yield to the event loop and allow I/O events to be processed.",
+      "(c) `setImmediate()` has higher priority than `process.nextTick()`. ",
+      "(d) They are only used for error handling.",
+    ],
+    answer:
+      "(b) `process.nextTick()` schedules a callback to be executed in the current phase of the event loop, right after the current operation completes, while `setImmediate()` schedules a callback to be executed in the 'check' phase of the next event loop iteration. `nextTick()` is often used for callbacks that need to run before any I/O events, while `setImmediate()` is used to yield to the event loop and allow I/O events to be processed.",
+    topic: "Event Loop and Concurrency",
+    know_more:
+      "Understanding the subtle differences between these two functions is important for fine-tuning the execution order of asynchronous tasks within the Node.js event loop.",
+  },
+  {
+    question:
+      "Explain the concept of containerization (e.g., using Docker) and its benefits for deploying Node.js backend applications.",
+    options: [
+      "(a) It's only relevant for frontend deployments.",
+      "(b) Containerization packages an application and its dependencies into a portable container image, ensuring consistent execution across different environments. Benefits include simplified deployment, improved scalability, and better resource management.",
+      "(c) It slows down application performance.",
+      "(d) It's a complex process that offers no real advantages.",
+    ],
+    answer:
+      "(b) Containerization packages an application and its dependencies into a portable container image, ensuring consistent execution across different environments. Benefits include simplified deployment, improved scalability, and better resource management.",
+    topic: "Process Management and Deployment",
+    know_more:
+      "Docker and other containerization technologies have become essential tools for modern application deployment, providing consistency and isolation across the software development lifecycle.",
+  },
+  {
+    question:
+      "What are some strategies for scaling a Node.js backend application horizontally?",
+    options: [
+      "(a) Only vertical scaling (increasing server resources) is effective for Node.js.",
+      "(b) Horizontal scaling involves distributing the application across multiple instances or containers. Strategies include using load balancers to distribute traffic, stateless application design, and potentially using message queues for inter-service communication.",
+      "(c) Scaling is automatically handled by Node.js.",
+      "(d) Horizontal scaling is only necessary for very large monolithic applications.",
+    ],
+    answer:
+      "(b) Horizontal scaling involves distributing the application across multiple instances or containers. Strategies include using load balancers to distribute traffic, stateless application design, and potentially using message queues for inter-service communication.",
+    topic: "Process Management and Deployment",
+    know_more:
+      "Horizontal scaling is often necessary to handle increasing traffic and ensure the availability and resilience of your application. Designing for statelessness is a key prerequisite for effective horizontal scaling.",
+  },
+  {
+    question:
+      "Explain the purpose and benefits of using a reverse proxy (e.g., Nginx) in front of a Node.js application in a production environment.",
+    options: [
+      "(a) It's only needed for serving static files.",
+      "(b) A reverse proxy acts as an intermediary between clients and your Node.js application. Benefits include load balancing, SSL termination, caching, security (e.g., protection against DDoS attacks), and serving static content more efficiently.",
+      "(c) It adds unnecessary complexity and overhead.",
+      "(d) Node.js is capable of handling all these tasks efficiently on its own.",
+    ],
+    answer:
+      "(b) A reverse proxy acts as an intermediary between clients and your Node.js application. Benefits include load balancing, SSL termination, caching, security (e.g., protection against DDoS attacks), and serving static content more efficiently.",
+    topic: "Process Management and Deployment",
+    know_more:
+      "Reverse proxies are a common and recommended component of production deployments for Node.js applications, providing significant benefits in terms of performance, security, and scalability.",
+  },
+  {
+    question:
+      "What are WebSockets, and when would you choose to use them instead of traditional HTTP requests in a Node.js backend?",
+    options: [
+      "(a) WebSockets are used for standard request-response communication, just like HTTP.",
+      "(b) WebSockets provide a full-duplex communication channel over a single, long-lived connection. They are suitable for real-time applications where bidirectional and low-latency communication is required, such as chat applications, live dashboards, and online games.",
+      "(c) WebSockets are less efficient than HTTP for real-time applications.",
+      "(d) Node.js does not support WebSockets.",
+    ],
+    answer:
+      "(b) WebSockets provide a full-duplex communication channel over a single, long-lived connection. They are suitable for real-time applications where bidirectional and low-latency communication is required, such as chat applications, live dashboards, and online games.",
+    topic: "Networking (HTTP, TCP, UDP)",
+    know_more:
+      "While HTTP is request-response based, WebSockets allow for persistent, two-way communication, making them ideal for scenarios requiring continuous data exchange between the client and server.",
+  },
+  {
+    question:
+      "Explain the concept of 'callback hell' (or the 'pyramid of doom') in asynchronous JavaScript. How can Promises and Async/Await help mitigate this issue?",
+    options: [
+      "(a) It's a term for deeply nested synchronous code.",
+      "(b) Callback hell refers to deeply nested and hard-to-manage asynchronous code using callbacks. Promises provide a more linear structure with `.then()` and `.catch()`, while Async/Await further simplifies asynchronous code to resemble synchronous code, making it easier to read and maintain.",
+      "(c) Promises and Async/Await introduce more nesting.",
+      "(d) Callback hell is a myth and not a real problem.",
+    ],
+    answer:
+      "(b) Callback hell refers to deeply nested and hard-to-manage asynchronous code using callbacks. Promises provide a more linear structure with `.then()` and `.catch()`, while Async/Await further simplifies asynchronous code to resemble synchronous code, making it easier to read and maintain.",
+    topic: "Asynchronous Programming",
+    know_more:
+      "Managing complex asynchronous flows with nested callbacks can become difficult to read, understand, and debug. Promises and Async/Await offer cleaner and more manageable alternatives.",
+  },
+  {
+    question:
+      "What are the key differences between `fork()` and `spawn()` methods in Node.js for creating child processes?",
+    options: [
+      "(a) They are identical in functionality.",
+      "(b) `fork()` is a special case of `spawn()` specifically for creating new Node.js processes. It establishes a communication channel (IPC) automatically, allowing parent and child to exchange messages easily. `spawn()` is more general and can be used to execute any command-line executable without built-in IPC.",
+      "(c) `spawn()` is only for Windows, and `fork()` is only for Linux.",
+      "(d) `fork()` is synchronous, and `spawn()` is asynchronous.",
+    ],
+    answer:
+      "(b) `fork()` is a special case of `spawn()` specifically for creating new Node.js processes. It establishes a communication channel (IPC) automatically, allowing parent and child to exchange messages easily. `spawn()` is more general and can be used to execute any command-line executable without built-in IPC.",
+    topic: "Process Management and Deployment",
+    know_more:
+      "Choosing between `fork()` and `spawn()` depends on whether you need to run another Node.js script with built-in communication or an arbitrary executable.",
+  },
+  {
+    question:
+      "Explain the concept of 'graceful shutdown' for a Node.js application. Why is it important, and how might you implement it?",
+    options: [
+      "(a) It's the same as forcefully terminating the process.",
+      "(b) Graceful shutdown involves allowing the application to finish processing in-flight requests and clean up resources (e.g., database connections, open files) before exiting. It's important for preventing data loss and ensuring a smoother user experience. Implementation often involves listening for signals like `SIGINT` and `SIGTERM` and performing cleanup tasks before calling `process.exit()`.",
+      "(c) Graceful shutdown is automatically handled by the operating system.",
+      "(d) It's only relevant for applications with a GUI.",
+    ],
+    answer:
+      "(b) Graceful shutdown involves allowing the application to finish processing in-flight requests and clean up resources (e.g., database connections, open files) before exiting. It's important for preventing data loss and ensuring a smoother user experience. Implementation often involves listening for signals like `SIGINT` and `SIGTERM` and performing cleanup tasks before calling `process.exit()`.",
+    topic: "Process Management and Deployment",
+    know_more:
+      "Implementing graceful shutdown is a best practice for production applications to ensure reliability and prevent disruptions during restarts or termination.",
+  },
+  {
+    question:
+      "What are the differences between CommonJS and ECMAScript Modules (ESM) in Node.js? How do you enable ESM in a Node.js project?",
+    options: [
+      "(a) They are just different syntax for the same module system.",
+      "(b) CommonJS uses `require()` for importing and `module.exports` for exporting, while ESM uses `import` and `export`. To enable ESM, you can either use the `.mjs` file extension or set type: module in your `package.json`.",
+      "(c) ESM is only for frontend JavaScript.",
+      "(d) Node.js only supports CommonJS.",
+    ],
+    answer:
+      "(b) CommonJS uses `require()` for importing and `module.exports` for exporting, while ESM uses `import` and `export`. To enable ESM, you can either use the `.mjs` file extension or set type: module in your `package.json`.",
+    topic: "Modules and Package Management (npm/yarn)",
+    know_more:
+      "Node.js has been transitioning to support the standardized ECMAScript Modules system alongside the traditional CommonJS format. Understanding the differences and how to enable ESM is important for modern Node.js development.",
+  },
+  {
+    question:
+      "Explain the concept of 'event-driven architecture' and how Node.js's event loop makes it well-suited for this paradigm.",
+    options: [
+      "(a) It's an architecture where components communicate synchronously.",
+      "(b) Event-driven architecture involves components reacting to events. Node.js's single-threaded, non-blocking event loop allows it to efficiently handle numerous concurrent events without blocking, making it ideal for building applications that respond in real-time to various triggers.",
+      "(c) Node.js is not suitable for event-driven architectures.",
+      "(d) It's an architecture primarily used for GUI applications.",
+    ],
+    answer:
+      "(b) Event-driven architecture involves components reacting to events. Node.js's single-threaded, non-blocking event loop allows it to efficiently handle numerous concurrent events without blocking, making it ideal for building applications that respond in real-time to various triggers.",
+    topic: "Event Loop and Concurrency",
+    know_more:
+      "Node.js's core design, centered around the event loop and asynchronous I/O, naturally aligns with the principles of event-driven architecture, enabling the development of highly scalable and responsive applications.",
+  },
+  {
+    question:
+      "What are some common performance optimization techniques for a Node.js backend application?",
+    options: [
+      "(a) Blocking the event loop with synchronous operations is the most efficient approach.",
+      "(b) Techniques include avoiding blocking I/O, optimizing database queries, using caching mechanisms (e.g., Redis, Memcached), implementing compression (e.g., gzip), and profiling your code to identify bottlenecks.",
+      "(c) Simply increasing server resources is the only way to improve performance.",
+      "(d) Performance optimization is usually not necessary for Node.js applications.",
+    ],
+    answer:
+      "(b) Techniques include avoiding blocking I/O, optimizing database queries, using caching mechanisms (e.g., Redis, Memcached), implementing compression (e.g., gzip), and profiling your code to identify bottlenecks.",
+    topic: "Performance Optimization",
+    know_more:
+      "Optimizing your Node.js application involves understanding its architecture and applying strategies to minimize latency, reduce resource consumption, and improve overall throughput.",
+  },
+  {
+    question:
+      "Explain the purpose and benefits of using a message queue (e.g., RabbitMQ, Kafka) in a microservices architecture involving Node.js services.",
+    options: [
+      "(a) Message queues are only for monolithic applications.",
+      "(b) Message queues enable asynchronous communication between services, improving resilience (decoupling services), scalability (allowing independent scaling), and reliability (message persistence and delivery guarantees).",
+      "(c) They introduce unnecessary complexity and latency.",
+      "(d) Direct HTTP communication is always preferable in microservices.",
+    ],
+    answer:
+      "(b) Message queues enable asynchronous communication between services, improving resilience (decoupling services), scalability (allowing independent scaling), and reliability (message persistence and delivery guarantees).",
+    topic: "Microservices and Architecture",
+    know_more:
+      "In a microservices environment, message queues play a crucial role in facilitating communication between independent services in a decoupled and reliable manner.",
+  },
+  {
+    question:
+      "What are some common strategies for handling API versioning in a Node.js backend? What are the trade-offs of each approach?",
+    options: [
+      "(a) You should never version your API.",
+      "(b) Common strategies include URI versioning (e.g., `/api/v1/users`), header-based versioning (using custom headers), and content negotiation (Accept header). URI versioning is straightforward but can lead to URL changes. Header-based versioning keeps URLs cleaner but might be less discoverable. Content negotiation can be complex to implement consistently.",
+      "(c) Only major version updates require API versioning.",
+      "(d) API versioning is handled automatically by web frameworks.",
+    ],
+    answer:
+      "(b) Common strategies include URI versioning (e.g., `/api/v1/users`), header-based versioning (using custom headers), and content negotiation (Accept header). URI versioning is straightforward but can lead to URL changes. Header-based versioning keeps URLs cleaner but might be less discoverable. Content negotiation can be complex to implement consistently.",
+    topic: "API Development (RESTful, GraphQL)",
+    know_more:
+      "Choosing an API versioning strategy depends on factors like the expected frequency of changes, the need for discoverability, and the preferences of API consumers.",
+  },
+  {
+    question:
+      "Explain the core concepts of GraphQL and how it differs from RESTful APIs in the context of a Node.js backend.",
+    options: [
+      "(a) GraphQL is just a different way of structuring URLs.",
+      "(b) GraphQL is a query language for your API that allows clients to request only the data they need, reducing over-fetching and under-fetching. Unlike REST, which typically exposes multiple endpoints for different resources, GraphQL exposes a single endpoint and uses a schema to define the available data and operations.",
+      "(c) GraphQL is only suitable for frontend data fetching.",
+      "(d) REST APIs are always more efficient than GraphQL APIs.",
+    ],
+    answer:
+      "(b) GraphQL is a query language for your API that allows clients to request only the data they need, reducing over-fetching and under-fetching. Unlike REST, which typically exposes multiple endpoints for different resources, GraphQL exposes a single endpoint and uses a schema to define the available data and operations.",
+    topic: "API Development (RESTful, GraphQL)",
+    know_more:
+      "GraphQL offers more flexibility and efficiency in data fetching compared to traditional REST APIs, but it also comes with its own complexities and considerations.",
+  },
+  {
+    question:
+      "What are some common tools and techniques for monitoring and tracing a Node.js application in a production environment?",
+    options: [
+      "(a) Relying solely on server logs.",
+      "(b) Tools and techniques include using APM (Application Performance Monitoring) tools (e.g., New Relic, Datadog), setting up centralized logging, implementing health checks, and using distributed tracing systems to follow requests across multiple services.",
+      "(c) Monitoring and tracing are only necessary for very large applications.",
+      "(d) Node.js provides built-in monitoring tools that are sufficient for all needs.",
+    ],
+    answer:
+      "(b) Tools and techniques include using APM (Application Performance Monitoring) tools (e.g., New Relic, Datadog), setting up centralized logging, implementing health checks, and using distributed tracing systems to follow requests across multiple services.",
+    topic: "Process Management and Deployment",
+    know_more:
+      "Effective monitoring and tracing are crucial for understanding application performance, identifying issues, and ensuring the stability and reliability of your Node.js backend in production.",
+  },
+];
+const nodeSet3: Quiz = [
+  {
+    question:
+      "Explain the concept of 'reactive programming' and how libraries like RxJS can be used in a Node.js backend to handle asynchronous data streams and events.",
+    options: [
+      "(a) Reactive programming is only for frontend development.",
+      "(b) Reactive programming is a declarative paradigm for working with asynchronous data streams. RxJS provides powerful operators for creating, transforming, filtering, and combining these streams, making it useful for handling complex asynchronous logic in Node.js backends, such as real-time data processing or handling multiple concurrent events.",
+      "(c) RxJS makes asynchronous code more complicated.",
+      "(d) Node.js has built-in reactive programming capabilities.",
+    ],
+    answer:
+      "(b) Reactive programming is a declarative paradigm for working with asynchronous data streams. RxJS provides powerful operators for creating, transforming, filtering, and combining these streams, making it useful for handling complex asynchronous logic in Node.js backends, such as real-time data processing or handling multiple concurrent events.",
+    level: 3,
+    topic: "Asynchronous Programming",
+    know_more:
+      "RxJS offers a powerful abstraction for managing asynchronous operations and can lead to more maintainable and expressive code when dealing with complex event-driven scenarios.",
+  },
+  {
+    question:
+      "Discuss the challenges and strategies for implementing background job processing in a Node.js application, especially in a distributed environment. Consider aspects like job queuing, persistence, and error handling.",
+    options: [
+      "(a) Background jobs should always be processed inline with the main request.",
+      "(b) Challenges include ensuring jobs are processed reliably (even with failures), managing concurrency, and monitoring job status. Strategies involve using job queue systems (e.g., Bull, RabbitMQ with a worker service), persisting job state in a database, and implementing robust error handling and retry mechanisms.",
+      "(c) Node.js is not suitable for background job processing.",
+      "(d) You should rely on the operating system's task scheduler for background jobs.",
+    ],
+    answer:
+      "(b) Challenges include ensuring jobs are processed reliably (even with failures), managing concurrency, and monitoring job status. Strategies involve using job queue systems (e.g., Bull, RabbitMQ with a worker service), persisting job state in a database, and implementing robust error handling and retry mechanisms.",
+    level: 3,
+    topic: "Process Management and Deployment",
+    know_more:
+      "Offloading long-running or non-critical tasks to background jobs improves the responsiveness and scalability of your main application.",
+  },
+  {
+    question:
+      "Explain the concept of 'serverless containers' (e.g., AWS Fargate, Google Cloud Run) in the context of deploying Node.js applications. How do they differ from traditional serverless functions and container orchestration?",
+    options: [
+      "(a) Serverless containers are the same as serverless functions.",
+      "(b) Serverless containers allow you to run containerized applications without managing the underlying infrastructure, offering more flexibility and control than serverless functions (which have more strict limitations) but less operational overhead than fully managed container orchestration platforms like Kubernetes.",
+      "(c) They offer no benefits over traditional VMs.",
+      "(d) They are only suitable for stateless applications.",
+    ],
+    answer:
+      "(b) Serverless containers allow you to run containerized applications without managing the underlying infrastructure, offering more flexibility and control than serverless functions (which have more strict limitations) but less operational overhead than fully managed container orchestration platforms like Kubernetes.",
+    level: 3,
+    topic: "Containerization (Docker, Kubernetes)",
+    know_more:
+      "Serverless containers provide a middle ground for deploying containerized Node.js applications with reduced operational burden.",
+  },
+  {
+    question:
+      "Discuss advanced techniques for optimizing the cold start time of Node.js serverless functions.",
+    options: [
+      "(a) Cold starts are unavoidable and cannot be optimized.",
+      "(b) Techniques include minimizing the function's bundle size, avoiding unnecessary dependencies, using lazy loading, keeping global variables outside the handler, and potentially using provisioned concurrency (if the platform supports it).",
+      "(c) Increasing the allocated memory always reduces cold start time.",
+      "(d) You should always run serverless functions with the maximum allowed resources.",
+    ],
+    answer:
+      "(b) Techniques include minimizing the function's bundle size, avoiding unnecessary dependencies, using lazy loading, keeping global variables outside the handler, and potentially using provisioned concurrency (if the platform supports it).",
+    level: 3,
+    topic: "Microservices and Serverless Architectures",
+    know_more:
+      "Optimizing cold start times is crucial for improving the responsiveness and user experience of serverless applications.",
+  },
+  {
+    question:
+      "Explain the concept of 'domain-driven design' (DDD) and how its principles can be applied to structure a complex Node.js backend application.",
+    options: [
+      "(a) DDD is only relevant for object-oriented languages.",
+      "(b) DDD focuses on modeling the software based on the business domain. Key principles include understanding the domain through collaboration with domain experts, using a ubiquitous language, and organizing the code into entities, value objects, aggregates, and services that reflect the domain model. This can lead to more maintainable and business-aligned applications.",
+      "(c) DDD makes applications more difficult to develop.",
+      "(d) You should always use a purely technical structure for your backend.",
+    ],
+    answer:
+      "(b) DDD focuses on modeling the software based on the business domain. Key principles include understanding the domain through collaboration with domain experts, using a ubiquitous language, and organizing the code into entities, value objects, aggregates, and services that reflect the domain model. This can lead to more maintainable and business-aligned applications.",
+    level: 3,
+    topic: "Software Design Patterns",
+    know_more:
+      "Applying DDD principles can help manage the complexity of large backend applications by focusing on the core business logic.",
+  },
+  {
+    question:
+      "Discuss advanced strategies for handling real-time data synchronization across multiple clients in a distributed Node.js application using WebSockets or other real-time communication technologies.",
+    options: [
+      "(a) Broadcasting messages to all clients is always the best approach.",
+      "(b) Strategies include using techniques like operational transformation (OT) or conflict-free replicated data types (CRDTs) to handle concurrent updates from multiple clients while maintaining consistency. These approaches allow clients to update their local state optimistically, with changes being merged on the server and propagated to other clients.",
+      "(c) You should rely on the clients to resolve any data inconsistencies.",
+      "(d) Real-time data synchronization across multiple clients is an unsolvable problem.",
+    ],
+    answer:
+      "(b) Strategies include using techniques like operational transformation (OT) or conflict-free replicated data types (CRDTs) to handle concurrent updates from multiple clients while maintaining consistency. These approaches allow clients to update their local state optimistically, with changes being merged on the server and propagated to other clients.",
+    level: 3,
+    topic: "Networking (HTTP, TCP, UDP)",
+    know_more:
+      "Ensuring consistent real-time data across multiple clients in a distributed system requires careful consideration of concurrency and conflict resolution.",
+  },
+  {
+    question:
+      "Explain the concept of 'event sourcing' and its potential benefits and drawbacks for a complex Node.js backend application that requires a detailed audit log or temporal queries.",
+    options: [
+      "(a) Event sourcing is just another way to store data in a database.",
+      "(b) Event sourcing involves storing the history of state-changing events rather than just the current state. Benefits include a detailed audit log, the ability to perform temporal queries (going back in time), and improved debugging. Drawbacks can include increased complexity in querying and eventual consistency challenges.",
+      "(c) You should always store only the current state of your application.",
+      "(d) Event sourcing is only suitable for financial applications.",
+    ],
+    answer:
+      "(b) Event sourcing involves storing the history of state-changing events rather than just the current state. Benefits include a detailed audit log, the ability to perform temporal queries (going back in time), and improved debugging. Drawbacks can include increased complexity in querying and eventual consistency challenges.",
+    level: 3,
+    topic: "Software Design Patterns",
+    know_more:
+      "Event sourcing can provide significant advantages for applications with specific auditing or historical data requirements, but it also introduces architectural complexity.",
+  },
+  {
+    question:
+      "Discuss advanced techniques for ensuring the security of a Node.js API that interacts with third-party services, including secure API key management, request signing, and response validation.",
+    options: [
+      "(a) Simply trusting third-party services is sufficient.",
+      "(b) Techniques include securely storing API keys (e.g., using secrets management), signing requests to prove their origin and integrity, and validating responses from third-party services to prevent data corruption or malicious content injection.",
+      "(c) You should always expose your third-party API keys directly to clients.",
+      "(d) Security when interacting with third-party services is the sole responsibility of the third party.",
+    ],
+    answer:
+      "(b) Techniques include securely storing API keys (e.g., using secrets management), signing requests to prove their origin and integrity, and validating responses from third-party services to prevent data corruption or malicious content injection.",
+    level: 3,
+    topic: "Security Best Practices",
+    know_more:
+      "Interacting securely with external services requires careful attention to authentication, authorization, and data integrity.",
+  },
+  {
+    question:
+      "Explain the concept of 'server-driven UI' in the context of a Node.js backend and frontend application. What are the potential benefits and drawbacks of this approach?",
+    options: [
+      "(a) Server-driven UI means the frontend has no logic.",
+      "(b) Server-driven UI involves the backend determining the structure and content of the user interface, with the frontend primarily responsible for rendering. Benefits can include greater flexibility in A/B testing and UI updates without client-side deployments. Drawbacks can include increased backend complexity and potentially larger response sizes.",
+      "(c) Frontend-driven UI is always better.",
+      "(d) Server-driven UI is only suitable for static websites.",
+    ],
+    answer:
+      "(b) Server-driven UI involves the backend determining the structure and content of the user interface, with the frontend primarily responsible for rendering. Benefits can include greater flexibility in A/B testing and UI updates without client-side deployments. Drawbacks can include increased backend complexity and potentially larger response sizes.",
+    level: 3,
+    topic: "Software Design Patterns",
+    know_more:
+      "Server-driven UI can be a powerful approach for certain types of applications, but it requires careful consideration of the trade-offs.",
+  },
+  {
+    question:
+      "Discuss advanced techniques for monitoring the health and performance of a distributed Node.js application, including synthetic monitoring, real user monitoring (RUM), and correlation of logs, metrics, and traces.",
+    options: [
+      "(a) Basic CPU and memory monitoring are sufficient for distributed systems.",
+      "(b) Advanced monitoring involves using synthetic monitoring (simulating user behavior), real user monitoring (collecting performance data from actual users), and correlating logs, metrics, and traces to gain a holistic view of system health and identify the root causes of issues.",
+      "(c) Monitoring distributed applications is too complex to be practical.",
+      "(d) You should only monitor individual services in isolation.",
+    ],
+    answer:
+      "(b) Advanced monitoring involves using synthetic monitoring (simulating user behavior), real user monitoring (collecting performance data from actual users), and correlating logs, metrics, and traces to gain a holistic view of system health and identify the root causes of issues.",
+    level: 3,
+    topic: "Process Management and Deployment",
+    know_more:
+      "Comprehensive monitoring is essential for operating and maintaining large-scale distributed applications effectively.",
+  },
+  {
+    question:
+      "Explain the concept of 'server-sent events' (SSE) in Node.js. How do they differ from WebSockets, and when might you choose SSE over WebSockets?",
+    options: [
+      "(a) SSE and WebSockets are identical.",
+      "(b) SSE is a unidirectional communication protocol where the server pushes updates to the client over an HTTP connection. WebSockets provide a full-duplex, bidirectional communication channel. SSE is simpler to implement for scenarios where only server-to-client updates are needed (e.g., live news feeds, progress bars), while WebSockets are better for bidirectional, real-time interactions (e.g., chat applications).",
+      "(c) WebSockets are simpler to implement than SSE.",
+      "(d) SSE is a proprietary technology and not widely supported.",
+    ],
+    answer:
+      "(b) SSE is a unidirectional communication protocol where the server pushes updates to the client over an HTTP connection. WebSockets provide a full-duplex, bidirectional communication channel. SSE is simpler to implement for scenarios where only server-to-client updates are needed (e.g., live news feeds, progress bars), while WebSockets are better for bidirectional, real-time interactions (e.g., chat applications).",
+    level: 3,
+    topic: "Networking (HTTP, TCP, UDP)",
+    know_more:
+      "Choosing between SSE and WebSockets depends on the specific real-time communication requirements of your application.",
+  },
+  {
+    question:
+      "Discuss the challenges and strategies for implementing rate limiting and throttling in a Node.js API to prevent abuse and ensure fair usage.",
+    options: [
+      "(a) Rate limiting is unnecessary for internal APIs.",
+      "(b) Challenges include identifying users, storing and incrementing request counts, and handling distributed environments. Strategies involve using middleware (e.g., `express-rate-limit`), in-memory stores (for single instances), or distributed stores like Redis for multiple instances. Throttling might involve more dynamic adjustments based on resource usage.",
+      "(c) Blocking all requests after a certain limit is the only way to handle abuse.",
+      "(d) Rate limiting should always be handled on the client-side.",
+    ],
+    answer:
+      "(b) Challenges include identifying users, storing and incrementing request counts, and handling distributed environments. Strategies involve using middleware (e.g., `express-rate-limit`), in-memory stores (for single instances), or distributed stores like Redis for multiple instances. Throttling might involve more dynamic adjustments based on resource usage.",
+    level: 3,
+    topic: "Security Best Practices",
+    know_more:
+      "Implementing effective rate limiting and throttling is crucial for protecting your API from malicious attacks and ensuring its availability for legitimate users.",
+  },
+  {
+    question:
+      "Explain the concept of 'API composition' or 'backends for frontends' (BFF) in the context of a complex application with multiple microservices and diverse clients. What are the benefits of this pattern?",
+    options: [
+      "(a) It's just another term for an API gateway.",
+      "(b) BFF involves creating separate backend services tailored to the specific needs of different frontend clients (e.g., web, mobile). Benefits include simplified client-side data fetching, reduced over-fetching, and better adaptation to different UI requirements.",
+      "(c) You should always expose the raw microservice APIs directly to all clients.",
+      "(d) BFF increases the complexity of the backend unnecessarily.",
+    ],
+    answer:
+      "(b) BFF involves creating separate backend services tailored to the specific needs of different frontend clients (e.g., web, mobile). Benefits include simplified client-side data fetching, reduced over-fetching, and better adaptation to different UI requirements.",
+    level: 3,
+    topic: "Microservices and Architecture",
+    know_more:
+      "The BFF pattern can help bridge the gap between the generic nature of microservices and the specific data needs of various frontend experiences.",
+  },
+  {
+    question:
+      "Discuss the challenges and strategies for ensuring data integrity and consistency when dealing with eventual consistency patterns in a distributed Node.js application.",
+    options: [
+      "(a) Eventual consistency guarantees immediate data consistency.",
+      "(b) Challenges include handling read-after-write inconsistencies and managing complex workflows involving multiple services. Strategies involve using techniques like idempotency, compensating transactions, and careful monitoring of state transitions.",
+      "(c) Strong consistency is always achievable in distributed systems.",
+      "(d) Data integrity is not a concern when using eventual consistency.",
+    ],
+    answer:
+      "(b) Challenges include handling read-after-write inconsistencies and managing complex workflows involving multiple services. Strategies involve using techniques like idempotency, compensating transactions, and careful monitoring of state transitions.",
+    level: 3,
+    topic: "Microservices and Architecture",
+    know_more:
+      "While eventual consistency offers scalability and availability benefits, it requires careful design and implementation to maintain acceptable levels of data integrity.",
+  },
+  {
+    question:
+      "Explain the concept of 'circuit breaker' in the context of microservices communication. How can it improve the resilience of a Node.js application in a distributed environment?",
+    options: [
+      "(a) It's a type of load balancer.",
+      "(b) A circuit breaker is a pattern that prevents a client from repeatedly trying to invoke a failing service. After a certain number of failures, the circuit 'opens,' and the client receives an immediate error (fallback) without attempting to call the service. This prevents cascading failures and gives the failing service time to recover.",
+      "(c) Circuit breakers make applications more prone to failures.",
+      "(d) Node.js has built-in circuit breaker functionality.",
+    ],
+    answer:
+      "(b) A circuit breaker is a pattern that prevents a client from repeatedly trying to invoke a failing service. After a certain number of failures, the circuit 'opens,' and the client receives an immediate error (fallback) without attempting to call the service. This prevents cascading failures and gives the failing service time to recover.",
+    level: 3,
+    topic: "Microservices and Architecture",
+    know_more:
+      "Implementing the circuit breaker pattern is a key aspect of building resilient and fault-tolerant distributed systems.",
+  },
+  {
+    question:
+      "Discuss the trade-offs between different types of NoSQL databases (e.g., document stores like MongoDB, key-value stores like Redis, graph databases like Neo4j) for specific use cases in a Node.js backend.",
+    options: [
+      "(a) All NoSQL databases are interchangeable.",
+      "(b) Document stores are good for flexible schemas and rich documents, key-value stores offer high performance for simple lookups, and graph databases are suitable for highly connected data. The choice depends on the application's data model and query patterns.",
+      "(c) Relational databases are always better than NoSQL databases.",
+      "(d) NoSQL databases lack the consistency and reliability of SQL databases.",
+    ],
+    answer:
+      "(b) Document stores are good for flexible schemas and rich documents, key-value stores offer high performance for simple lookups, and graph databases are suitable for highly connected data. The choice depends on the application's data model and query patterns.",
+    level: 3,
+    topic: "Databases (Relational & NoSQL)",
+    know_more:
+      "Understanding the strengths and weaknesses of different NoSQL database types is crucial for choosing the right one for your specific data storage and retrieval needs.",
+  },
+  {
+    question:
+      "Explain the challenges and strategies for performing database migrations and schema changes in a production Node.js application with minimal downtime.",
+    options: [
+      "(a) Database migrations always require significant downtime.",
+      "(b) Challenges include ensuring data integrity, handling concurrent access, and rolling back changes if necessary. Strategies involve using migration tools (e.g., Knex.js migrations, Flyway), performing blue/green deployments, or using techniques like online schema changes.",
+      "(c) You should always modify the database schema directly in production.",
+      "(d) Database migrations are only relevant for relational databases.",
+    ],
+    answer:
+      "(b) Challenges include ensuring data integrity, handling concurrent access, and rolling back changes if necessary. Strategies involve using migration tools (e.g., Knex.js migrations, Flyway), performing blue/green deployments, or using techniques like online schema changes.",
+    level: 3,
+    topic: "Databases (Relational & NoSQL)",
+    know_more:
+      "Planning and executing database migrations carefully is essential for maintaining the availability and stability of your application.",
+  },
+  {
+    question:
+      "Discuss advanced techniques for optimizing the performance of I/O-bound operations in a high-throughput Node.js application.",
+    options: [
+      "(a) Blocking I/O is the most performant approach.",
+      "(b) Techniques include using efficient data structures and algorithms, leveraging connection pooling for databases and network requests, optimizing file system operations, and potentially using asynchronous I/O with libraries like `async` or `p-limit` for concurrency control.",
+      "(c) You should always increase the number of threads to handle more I/O.",
+      "(d) Node.js is inherently slow for I/O-bound tasks.",
+    ],
+    answer:
+      "(b) Techniques include using efficient data structures and algorithms, leveraging connection pooling for databases and network requests, optimizing file system operations, and potentially using asynchronous I/O with libraries like `async` or `p-limit` for concurrency control.",
+    level: 3,
+    topic: "Performance Optimization",
+    know_more:
+      "Optimizing I/O performance in Node.js often involves careful management of asynchronous operations and efficient resource utilization.",
+  },
+  {
+    question:
+      "Explain the concept of 'code signing' for Node.js applications or modules. Why is it important, and how can it be implemented?",
+    options: [
+      "(a) Code signing is only relevant for desktop applications.",
+      "(b) Code signing involves digitally signing your code to verify its authenticity and integrity. It's important for ensuring that users can trust the source of the code and that it hasn't been tampered with. Implementation often involves using code signing certificates and tools to sign your packages or executables.",
+      "(c) npm automatically signs all packages.",
+      "(d) Code signing slows down the execution of Node.js applications.",
+    ],
+    answer:
+      "(b) Code signing involves digitally signing your code to verify its authenticity and integrity. It's important for ensuring that users can trust the source of the code and that it hasn't been tampered with. Implementation often involves using code signing certificates and tools to sign your packages or executables.",
+    level: 3,
+    topic: "Security Best Practices",
+    know_more:
+      "Code signing adds a layer of trust and security to the distribution of Node.js applications and modules.",
+  },
+  {
+    question:
+      "Discuss advanced techniques for debugging and profiling a production Node.js application to identify performance bottlenecks and runtime errors.",
+    options: [
+      "(a) You should never debug or profile production applications.",
+      "(b) Techniques include using profiling tools (e.g., Node.js Inspector, Clinic.js), setting up remote debugging sessions carefully, analyzing memory dumps, and using APM tools to identify slow requests and error patterns.",
+      "(c) `console.log` is sufficient for debugging in production.",
+      "(d) Only the hosting provider can debug production issues.",
+    ],
+    answer:
+      "(b) Techniques include using profiling tools (e.g., Node.js Inspector, Clinic.js), setting up remote debugging sessions carefully, analyzing memory dumps, and using APM tools to identify slow requests and error patterns.",
+    level: 3,
+    topic: "Error Handling",
+    know_more:
+      "Debugging and profiling production applications require caution and the use of specialized tools to avoid impacting performance and stability.",
+  },
+  {
+    question:
+      "Explain the concept of 'polyglot persistence' in a microservices architecture. When might you choose to use different types of databases for different services?",
+    options: [
+      "(a) All microservices should use the same database.",
+      "(b) Polyglot persistence involves using the database technology that is best suited for the specific data storage and retrieval needs of each microservice. For example, a service handling user sessions might use Redis (key-value store), while a service managing product catalogs might use PostgreSQL (relational database).",
+      "(c) Using multiple databases increases complexity unnecessarily.",
+      "(d) Only NoSQL databases should be used in a polyglot persistence strategy.",
+    ],
+    answer:
+      "(b) Polyglot persistence involves using the database technology that is best suited for the specific data storage and retrieval needs of each microservice. For example, a service handling user sessions might use Redis (key-value store), while a service managing product catalogs might use PostgreSQL (relational database).",
+    level: 3,
+    topic: "Microservices and Architecture",
+    know_more:
+      "Choosing the right database for each microservice can lead to better performance, scalability, and maintainability.",
+  },
+  {
+    question:
+      "Discuss the challenges and strategies for implementing robust caching mechanisms in a GraphQL API built with Node.js.",
+    options: [
+      "(a) GraphQL APIs cannot be cached effectively.",
+      "(b) Challenges include handling different query shapes, field-level invalidation, and normalized caching on the client. Strategies involve using server-side caching layers (e.g., Redis), implementing custom caching logic based on query parameters and user context, and leveraging client-side caching libraries.",
+      "(c) You should always disable caching in GraphQL APIs to ensure data freshness.",
+      "(d) GraphQL schemas automatically handle all caching concerns.",
+    ],
+    answer:
+      "(b) Challenges include handling different query shapes, field-level invalidation, and normalized caching on the client. Strategies involve using server-side caching layers (e.g., Redis), implementing custom caching logic based on query parameters and user context, and leveraging client-side caching libraries.",
+    level: 3,
+    topic: "API Development (RESTful, GraphQL)",
+    know_more:
+      "Caching GraphQL APIs effectively requires careful consideration of the flexible nature of GraphQL queries.",
+  },
+  {
+    question:
+      "Explain the concept of 'federated GraphQL' and its benefits for managing data across multiple microservices in a Node.js backend.",
+    options: [
+      "(a) Federated GraphQL is just a way to combine multiple GraphQL schemas into one.",
+      "(b) Federated GraphQL allows you to combine multiple GraphQL APIs from different microservices into a single, unified graph. This simplifies client-side data fetching and provides a consistent API interface across your entire application, while still allowing teams to manage their own data and schemas independently.",
+      "(c) GraphQL federation introduces significant performance overhead.",
+      "(d) You can achieve the same benefits with a single monolithic GraphQL API.",
+    ],
+    answer:
+      "(b) Federated GraphQL allows you to combine multiple GraphQL APIs from different microservices into a single, unified graph. This simplifies client-side data fetching and provides a consistent API interface across your entire application, while still allowing teams to manage their own data and schemas independently.",
+    level: 3,
+    topic: "API Development (RESTful, GraphQL)",
+    know_more:
+      "Federated GraphQL is a powerful pattern for building scalable and maintainable GraphQL APIs in a microservices environment.",
+  },
+  {
+    question:
+      "Discuss advanced security considerations for a Node.js API that handles sensitive user data, including encryption at rest and in transit, secure session management, and protection against common web vulnerabilities.",
+    options: [
+      "(a) Basic HTTPS is sufficient for securing sensitive data.",
+      "(b) Advanced security measures include using strong encryption algorithms for data at rest (e.g., AES-256) and in transit (TLS/SSL), implementing secure session management with appropriate cookie settings (e.g., HttpOnly, Secure), and employing defenses against common vulnerabilities like CSRF, XSS, and injection attacks through proper input validation and sanitization.",
+      "(c) Security is the sole responsibility of the network infrastructure.",
+      "(d) You should never store sensitive user data in your application.",
+    ],
+    answer:
+      "(b) Advanced security measures include using strong encryption algorithms for data at rest (e.g., AES-256) and in transit (TLS/SSL), implementing secure session management with appropriate cookie settings (e.g., HttpOnly, Secure), and employing defenses against common vulnerabilities like CSRF, XSS, and injection attacks through proper input validation and sanitization.",
+    level: 3,
+    topic: "Security Best Practices",
+    know_more:
+      "Securing sensitive user data requires a multi-layered approach that addresses various aspects of data protection throughout its lifecycle.",
+  },
+  {
+    question:
+      "Discuss the trade-offs between using a monolithic architecture versus a microservices architecture for a large Node.js backend application. When might you choose one over the other?",
+    options: [
+      "(a) Microservices are always better than monoliths.",
+      "(b) Monolithic architectures are simpler to develop and deploy initially but can become harder to scale and maintain over time. Microservices offer better scalability, fault isolation, and technology diversity but introduce complexity in deployment, communication, and management. The choice depends on factors like team size, application complexity, and scalability requirements.",
+      "(c) Monoliths scale better horizontally.",
+      "(d) Microservices are easier to debug.",
+    ],
+    answer:
+      "(b) Monolithic architectures are simpler to develop and deploy initially but can become harder to scale and maintain over time. Microservices offer better scalability, fault isolation, and technology diversity but introduce complexity in deployment, communication, and management. The choice depends on factors like team size, application complexity, and scalability requirements.",
+    level: 3,
+    topic: "Microservices and Architecture",
+    know_more:
+      "The decision between a monolith and microservices involves weighing the benefits of simplicity and initial speed against the long-term advantages of scalability, resilience, and independent deployments.",
+  },
+  {
+    question:
+      "Explain the challenges of distributed transactions in a microservices architecture involving Node.js services. What patterns or techniques can be used to handle data consistency across services?",
+    options: [
+      "(a) Distributed transactions are straightforward to implement.",
+      "(b) Ensuring data consistency across multiple independent services is challenging due to network latency and potential failures. Patterns like Saga (using local transactions and compensating transactions) or outbox pattern can be used to achieve eventual consistency.",
+      "(c) You should always use two-phase commits for distributed transactions.",
+      "(d) Data consistency is not important in microservices.",
+    ],
+    answer:
+      "(b) Ensuring data consistency across multiple independent services is challenging due to network latency and potential failures. Patterns like Saga (using local transactions and compensating transactions) or outbox pattern can be used to achieve eventual consistency.",
+    level: 3,
+    topic: "Microservices and Architecture",
+    know_more:
+      "Maintaining data integrity in a distributed system requires careful consideration of transaction management and the acceptance of eventual consistency in some scenarios.",
+  },
+  {
+    question:
+      "Discuss different strategies for handling authentication and authorization in a distributed system with multiple Node.js microservices. What are the pros and cons of each approach (e.g., JWT, OAuth 2.0, API gateways)?",
+    options: [
+      "(a) Each microservice should handle its own authentication and authorization independently.",
+      "(b) Common strategies include using JWTs (JSON Web Tokens) passed between services, implementing OAuth 2.0 for delegated authorization, and using an API gateway to handle authentication and route requests to appropriate services. Each has trade-offs in terms of complexity, security, and performance.",
+      "(c) Centralized authentication is the only secure approach.",
+      "(d) Authorization should always be handled on the client-side.",
+    ],
+    answer:
+      "(b) Common strategies include using JWTs (JSON Web Tokens) passed between services, implementing OAuth 2.0 for delegated authorization, and using an API gateway to handle authentication and route requests to appropriate services. Each has trade-offs in terms of complexity, security, and performance.",
+    level: 3,
+    topic: "Microservices and Architecture",
+    know_more:
+      "Choosing the right authentication and authorization strategy in a distributed system is critical for security and requires careful consideration of the application's specific needs.",
+  },
+  {
+    question:
+      "Explain the concept of 'backpressure' in the context of distributed systems and message queues. How can Node.js services handle backpressure when consuming messages?",
+    options: [
+      "(a) Backpressure is only a concern within a single Node.js process.",
+      "(b) In distributed systems, backpressure occurs when a consumer of data (e.g., a microservice consuming messages from a queue) cannot process data as fast as it's being produced. Node.js services can handle this by acknowledging messages only after successful processing, implementing rate limiting on consumption, or using flow control mechanisms provided by the message queue.",
+      "(c) Message queues automatically handle all backpressure issues.",
+      "(d) Increasing the consumer's processing power is the only solution to backpressure.",
+    ],
+    answer:
+      "(b) In distributed systems, backpressure occurs when a consumer of data (e.g., a microservice consuming messages from a queue) cannot process data as fast as it's being produced. Node.js services can handle this by acknowledging messages only after successful processing, implementing rate limiting on consumption, or using flow control mechanisms provided by the message queue.",
+    level: 3,
+    topic: "Microservices and Architecture",
+    know_more:
+      "Proper backpressure handling is essential for preventing system overload and ensuring the stability and reliability of distributed applications.",
+  },
+  {
+    question:
+      "Discuss different strategies for implementing caching in a distributed Node.js application. What are the considerations for cache invalidation and consistency across multiple instances?",
+    options: [
+      "(a) Caching is not effective in distributed systems.",
+      "(b) Strategies include using distributed caching systems like Redis or Memcached, implementing client-side caching, and using CDN for static assets. Cache invalidation and consistency across instances can be challenging and might involve techniques like time-to-live (TTL), write-through/write-back caches, or message-based invalidation.",
+      "(c) You should always rely on the database for all data retrieval.",
+      "(d) Cache invalidation is a solved problem with a single perfect solution.",
+    ],
+    answer:
+      "(b) Strategies include using distributed caching systems like Redis or Memcached, implementing client-side caching, and using CDN for static assets. Cache invalidation and consistency across instances can be challenging and might involve techniques like time-to-live (TTL), write-through/write-back caches, or message-based invalidation.",
+    level: 3,
+    topic: "Performance Optimization",
+    know_more:
+      "Caching is crucial for improving performance and reducing load on backend services in distributed applications, but maintaining cache consistency requires careful planning.",
+  },
+  {
+    question:
+      "Explain the challenges and strategies involved in deploying and managing a large-scale Node.js application using container orchestration platforms like Kubernetes.",
+    options: [
+      "(a) Kubernetes is too complex for Node.js applications.",
+      "(b) Challenges include configuring deployments, managing scaling, handling networking, ensuring high availability, and performing rolling updates. Strategies involve defining Kubernetes manifests, using deployment controllers, implementing health checks, and leveraging features like auto-scaling and service discovery.",
+      "(c) Docker alone is sufficient for managing large-scale applications.",
+      "(d) Deployment should always be done manually on individual servers.",
+    ],
+    answer:
+      "(b) Challenges include configuring deployments, managing scaling, handling networking, ensuring high availability, and performing rolling updates. Strategies involve defining Kubernetes manifests, using deployment controllers, implementing health checks, and leveraging features like auto-scaling and service discovery.",
+    level: 3,
+    topic: "Containerization (Docker, Kubernetes)",
+    know_more:
+      "Kubernetes provides a powerful platform for automating the deployment, scaling, and management of containerized Node.js applications in complex environments.",
+  },
+  {
+    question:
+      "Discuss different approaches to testing a microservices architecture involving Node.js services (e.g., contract testing, integration testing, end-to-end testing). What are the benefits and drawbacks of each?",
+    options: [
+      "(a) Only unit testing is necessary in microservices.",
+      "(b) Contract testing verifies the interactions between services, integration testing tests the communication between a set of services, and end-to-end testing validates the entire system flow. Each approach has different scopes, costs, and benefits in terms of confidence and complexity.",
+      "(c) End-to-end testing is always the most effective approach.",
+      "(d) Testing microservices is too difficult and not worth the effort.",
+    ],
+    answer:
+      "(b) Contract testing verifies the interactions between services, integration testing tests the communication between a set of services, and end-to-end testing validates the entire system flow. Each approach has different scopes, costs, and benefits in terms of confidence and complexity.",
+    level: 3,
+    topic: "Testing (Unit, Integration, E2E)",
+    know_more:
+      "A comprehensive testing strategy for microservices often involves a combination of different testing approaches to ensure the reliability and correctness of the entire system.",
+  },
+  {
+    question:
+      "Explain the concept of 'serverless' architecture in the context of Node.js (e.g., AWS Lambda, Google Cloud Functions). What are the advantages and disadvantages compared to traditional server-based architectures?",
+    options: [
+      "(a) Serverless means there are no servers involved.",
+      "(b) Serverless platforms allow you to run Node.js code without managing servers, offering benefits like automatic scaling and cost-efficiency. Disadvantages can include cold starts, vendor lock-in, and limitations in execution time and resources compared to traditional servers.",
+      "(c) Serverless is always the best choice for all applications.",
+      "(d) Serverless applications cannot handle complex tasks.",
+    ],
+    answer:
+      "(b) Serverless platforms allow you to run Node.js code without managing servers, offering benefits like automatic scaling and cost-efficiency. Disadvantages can include cold starts, vendor lock-in, and limitations in execution time and resources compared to traditional servers.",
+    level: 3,
+    topic: "Microservices and Serverless Architectures",
+    know_more:
+      "Serverless computing offers a different paradigm for deploying and running applications, with its own set of benefits and challenges that need to be considered based on the specific use case.",
+  },
+  {
+    question:
+      "Discuss the challenges and strategies for implementing real-time features (e.g., WebSockets) in a horizontally scaled Node.js application with multiple instances.",
+    options: [
+      "(a) WebSockets work seamlessly across multiple instances without any special handling.",
+      "(b) Challenges include managing persistent connections across instances and ensuring message consistency. Strategies involve using sticky sessions (routing a user's requests to the same instance), a centralized message broker (e.g., Redis Pub/Sub), or a dedicated WebSockets service.",
+      "(c) Real-time features are not feasible in horizontally scaled applications.",
+      "(d) You should only use long polling for real-time updates.",
+    ],
+    answer:
+      "(b) Challenges include managing persistent connections across instances and ensuring message consistency. Strategies involve using sticky sessions (routing a user's requests to the same instance), a centralized message broker (e.g., Redis Pub/Sub), or a dedicated WebSockets service.",
+    level: 3,
+    topic: "Networking (HTTP, TCP, UDP)",
+    know_more:
+      "Handling stateful connections like WebSockets in a stateless, horizontally scaled environment requires careful architectural considerations.",
+  },
+  {
+    question:
+      "Explain the concept of 'API Gateway' in a microservices architecture. What are its responsibilities and benefits?",
+    options: [
+      "(a) It's just a load balancer.",
+      "(b) An API gateway acts as a single entry point for all client requests, routing them to the appropriate microservices. Its responsibilities can include request routing, authentication, rate limiting, request transformation, and response aggregation. Benefits include simplified client interaction, improved security, and better observability.",
+      "(c) It introduces a single point of failure.",
+      "(d) Each microservice should expose its own API directly to clients.",
+    ],
+    answer:
+      "(b) An API gateway acts as a single entry point for all client requests, routing them to the appropriate microservices. Its responsibilities can include request routing, authentication, rate limiting, request transformation, and response aggregation. Benefits include simplified client interaction, improved security, and better observability.",
+    level: 3,
+    topic: "Microservices and Architecture",
+    know_more:
+      "An API gateway can significantly simplify the client-side integration with a microservices backend and provide a centralized point for managing cross-cutting concerns.",
+  },
+  {
+    question:
+      "Discuss different strategies for handling secrets management in a cloud-native Node.js application deployed with Kubernetes. What are the security implications of each approach?",
+    options: [
+      "(a) Hardcoding secrets in environment variables is the standard approach.",
+      "(b) Strategies include using Kubernetes Secrets, cloud provider secret management services (e.g., AWS Secrets Manager, Azure Key Vault), and external secret management tools. Each has different security implications regarding storage, access control, and rotation.",
+      "(c) Secrets should be stored directly in the application code for easy access.",
+      "(d) Kubernetes automatically encrypts all secrets, so no further action is needed.",
+    ],
+    answer:
+      "(b) Strategies include using Kubernetes Secrets, cloud provider secret management services (e.g., AWS Secrets Manager, Azure Key Vault), and external secret management tools. Each has different security implications regarding storage, access control, and rotation.",
+    level: 3,
+    topic: "Security Best Practices",
+    know_more:
+      "Securely managing sensitive information in a cloud-native environment is crucial, and choosing the right secrets management strategy is essential for minimizing security risks.",
+  },
+  {
+    question:
+      "Explain the concept of 'observability' in a distributed Node.js application. What are the three pillars of observability, and how can you implement them?",
+    options: [
+      "(a) Observability is the same as monitoring.",
+      "(b) Observability goes beyond monitoring by providing insights into the internal state of a system based on its outputs. The three pillars are logs, metrics, and traces. Implementation involves using logging libraries, collecting and visualizing metrics (e.g., with Prometheus and Grafana), and implementing distributed tracing (e.g., with Jaeger or Zipkin).",
+      "(c) Observability is only relevant for very complex systems.",
+      "(d) You can achieve full observability just by looking at CPU and memory usage.",
+    ],
+    answer:
+      "(b) Observability goes beyond monitoring by providing insights into the internal state of a system based on its outputs. The three pillars are logs, metrics, and traces. Implementation involves using logging libraries, collecting and visualizing metrics (e.g., with Prometheus and Grafana), and implementing distributed tracing (e.g., with Jaeger or Zipkin).",
+    level: 3,
+    topic: "Process Management and Deployment",
+    know_more:
+      "In distributed systems, observability is crucial for understanding system behavior, diagnosing issues, and proactively identifying potential problems.",
+  },
+  {
+    question:
+      "Discuss the trade-offs between using RESTful APIs and GraphQL for client-server communication in a complex Node.js backend. When might GraphQL be a better choice?",
+    options: [
+      "(a) REST is always simpler and better.",
+      "(b) REST is simpler for basic CRUD operations, while GraphQL excels in scenarios with complex data requirements, multiple related resources, and the need to avoid over-fetching or under-fetching data. GraphQL requires a schema definition and a GraphQL server implementation.",
+      "(c) GraphQL is only suitable for frontend developers.",
+      "(d) They are essentially the same thing.",
+    ],
+    answer:
+      "(b) REST is simpler for basic CRUD operations, while GraphQL excels in scenarios with complex data requirements, multiple related resources, and the need to avoid over-fetching or under-fetching data. GraphQL requires a schema definition and a GraphQL server implementation.",
+    level: 3,
+    topic: "API Development (RESTful, GraphQL)",
+    know_more:
+      "The choice between REST and GraphQL depends on the specific needs of your application and its clients regarding data fetching efficiency and API flexibility.",
+  },
+  {
+    question:
+      "Explain the challenges and potential solutions for ensuring data consistency when using caching layers (e.g., Redis) in front of a primary database in a Node.js application.",
+    options: [
+      "(a) Caching always guarantees data consistency.",
+      "(b) Challenges include ensuring that the cached data reflects the latest state in the database. Solutions involve strategies like write-through (updating the cache when writing to the database), write-back (updating the cache and asynchronously updating the database), and cache invalidation based on events or TTL.",
+      "(c) You should never cache data that changes frequently.",
+      "(d) The database handles all caching consistency issues.",
+    ],
+    answer:
+      "(b) Challenges include ensuring that the cached data reflects the latest state in the database. Solutions involve strategies like write-through (updating the cache when writing to the database), write-back (updating the cache and asynchronously updating the database), and cache invalidation based on events or TTL.",
+    level: 3,
+    topic: "Performance Optimization",
+    know_more:
+      "Maintaining data consistency between the cache and the primary data store is a critical aspect of effective caching strategies.",
+  },
+  {
+    question:
+      "Discuss advanced error handling strategies in a Node.js backend, including centralized error logging, error tracking services (e.g., Sentry), and differentiating between operational and programmer errors.",
+    options: [
+      "(a) Simply throwing errors is sufficient for error handling.",
+      "(b) Advanced error handling involves not only logging errors but also using error tracking services to aggregate and monitor errors in production. Differentiating between operational errors (expected issues like network problems) and programmer errors (bugs in the code) helps in prioritizing fixes and improving application stability.",
+      "(c) All errors should be treated the same way.",
+      "(d) Error handling should be done only on the client-side.",
+    ],
+    answer:
+      "(b) Advanced error handling involves not only logging errors but also using error tracking services to aggregate and monitor errors in production. Differentiating between operational errors (expected issues like network problems) and programmer errors (bugs in the code) helps in prioritizing fixes and improving application stability.",
+    level: 3,
+    topic: "Error Handling",
+    know_more:
+      "A robust error handling strategy is essential for maintaining the stability and reliability of a production application and for providing developers with the insights needed to address issues effectively.",
+  },
+];
+const nodeSet4: Quiz = [];
+const nodeSet5: Quiz = [];
+const nodeSet6: Quiz = [];
+const nodeSet7: Quiz = [];
+const nodeSet8: Quiz = [];
+const nodeSet9: Quiz = [];
+const nodeSet10: Quiz = [
+  {
+    question:
+      "Explain the concept of 'Backpressure' in the context of Node.js Streams. How can you handle it?",
+    options: [
+      "(a) It's a feature that automatically compresses stream data.",
+      "(b) Backpressure occurs when a Readable stream is producing data faster than a Writable stream can consume it. You can handle it by using `pipe()` which automatically manages backpressure, or by manually checking the `writable.write()` return value and using `writable.drain` event.",
+      "(c) Backpressure only affects network streams.",
+      "(d) Node.js streams don't have a mechanism for handling backpressure.",
+    ],
+    answer:
+      "(b) Backpressure occurs when a Readable stream is producing data faster than a Writable stream can consume it. You can handle it by using `pipe()` which automatically manages backpressure, or by manually checking the `writable.write()` return value and using `writable.drain` event.",
+    topic: "Streams and Buffers",
+    know_more:
+      "Backpressure is a crucial concept for ensuring efficient data processing with streams. Without proper handling, it can lead to memory issues as the buffer of the Writable stream fills up. The `pipe()` method in Node.js streams intelligently manages the flow of data to prevent this.",
+  },
+  {
+    question: "What is the purpose of the `cluster` module in Node.js?",
+    options: [
+      "(a) It's used for managing environment variables.",
+      "(b) The `cluster` module allows you to create child processes (workers) that share server ports. This enables you to take advantage of multi-core systems to improve the performance and resilience of your Node.js application.",
+      "(c) It's a module for interacting with databases.",
+      "(d) It's used for bundling frontend assets.",
+    ],
+    answer:
+      "(b) The `cluster` module allows you to create child processes (workers) that share server ports. This enables you to take advantage of multi-core systems to improve the performance and resilience of your Node.js application.",
+    topic: "Process Management and Deployment",
+    know_more:
+      "Node.js's single-threaded nature can limit its ability to fully utilize multi-core processors. The `cluster` module provides a way to fork worker processes, allowing you to distribute the workload across multiple CPU cores, improving the application's throughput and making it more resistant to single-process failures.",
+  },
+  {
+    question:
+      "Explain the concept of 'Observables' and how they are used in frameworks like NestJS (with RxJS).",
+    options: [
+      "(a) They are the same as Promises.",
+      "(b) Observables are a fundamental concept in Reactive Programming. They represent a stream of data over time and provide powerful operators for transforming, filtering, and combining these streams. In NestJS, RxJS Observables are often used for handling asynchronous events, data streams, and reactive patterns.",
+      "(c) Observables are only used for handling user interface events.",
+      "(d) Node.js doesn't have built-in support for Observables.",
+    ],
+    answer:
+      "(b) Observables are a fundamental concept in Reactive Programming. They represent a stream of data over time and provide powerful operators for transforming, filtering, and combining these streams. In NestJS, RxJS Observables are often used for handling asynchronous events, data streams, and reactive patterns.",
+    topic: "Frameworks and Libraries (Express.js, NestJS, etc.)",
+    know_more:
+      "RxJS (Reactive Extensions for JavaScript) introduces the concept of Observables, which are more powerful than Promises for handling complex asynchronous operations and streams of events. NestJS, being an opinionated framework, often leverages RxJS to provide a reactive programming paradigm for building scalable and maintainable applications.",
+  },
+  {
+    question:
+      "What are some strategies for handling database migrations in a Node.js backend application?",
+    options: [
+      "(a) Manually altering the database schema.",
+      "(b) Using database migration tools like Sequelize CLI, Knex.js Migrations, or dedicated migration scripts to manage changes to the database schema in a controlled and versioned way.",
+      "(c) Recreating the database from scratch for every change.",
+      "(d) Database migrations are not necessary in modern development.",
+    ],
+    answer:
+      "(b) Using database migration tools like Sequelize CLI, Knex.js Migrations, or dedicated migration scripts to manage changes to the database schema in a controlled and versioned way.",
+    topic: "Databases (Relational & NoSQL)",
+    know_more:
+      "Database migrations are essential for managing changes to your database schema over time as your application evolves. Migration tools allow you to define these changes in code, apply them consistently across different environments, and track the history of schema modifications, making it easier to collaborate and roll back changes if necessary.",
+  },
+  {
+    question:
+      "Explain the concept of 'Code Splitting' in the context of a Node.js backend.",
+    options: [
+      "(a) It's a technique for making code harder to read.",
+      "(b) Code splitting in a Node.js backend involves breaking down your application code into smaller, more manageable chunks that can be loaded on demand. This can improve startup time and reduce memory consumption, especially for larger applications.",
+      "(c) It's only relevant for frontend applications to reduce bundle sizes.",
+      "(d) Node.js doesn't support code splitting.",
+    ],
+    answer:
+      "(b) Code splitting in a Node.js backend involves breaking down your application code into smaller, more manageable chunks that can be loaded on demand. This can improve startup time and reduce memory consumption, especially for larger applications.",
+    topic: "Performance Optimization",
+    know_more:
+      "While more commonly associated with frontend bundling, code splitting can also be beneficial for large Node.js backends. By strategically splitting code, you can reduce the initial load time of your application and only load necessary modules when they are actually needed.",
+  },
+  {
+    question:
+      "What are some common strategies for handling secrets management in a Node.js backend deployed to the cloud?",
+    options: [
+      "(a) Hardcoding secrets in environment variables directly within the deployment configuration.",
+      "(b) Using dedicated secrets management services provided by cloud platforms (e.g., AWS Secrets Manager, Google Cloud Secret Manager, Azure Key Vault) to securely store, access, and rotate sensitive information.",
+      "(c) Storing secrets in plain text files on the server.",
+      "(d) Relying solely on the cloud provider's default encryption for all data.",
+    ],
+    answer:
+      "(b) Using dedicated secrets management services provided by cloud platforms (e.g., AWS Secrets Manager, Google Cloud Secret Manager, Azure Key Vault) to securely store, access, and rotate sensitive information.",
+    topic: "Security Best Practices",
+    know_more:
+      "Cloud-based secrets management services offer a secure and scalable way to handle sensitive data. They provide features like encryption at rest and in transit, access control policies, audit logging, and automated secret rotation, significantly improving the security posture of your application compared to less secure methods like environment variables or configuration files.",
+  },
+  {
+    question:
+      "Explain the concept of 'Server-Sent Events' (SSE) and when you might use them in a Node.js application.",
+    options: [
+      "(a) It's a protocol for bidirectional communication between the client and server.",
+      "(b) Server-Sent Events (SSE) is a server-push technology that allows a server to send a stream of data to a client over an HTTP connection. It's useful for real-time updates where the client doesn't need to send data back to the server frequently, such as live feeds, notifications, and progress updates.",
+      "(c) SSE is only supported by older browsers.",
+      "(d) Node.js cannot implement SSE.",
+    ],
+    answer:
+      "(b) Server-Sent Events (SSE) is a server-push technology that allows a server to send a stream of data to a client over an HTTP connection. It's useful for real-time updates where the client doesn't need to send data back to the server frequently, such as live feeds, notifications, and progress updates.",
+    topic: "Networking (HTTP, TCP, UDP)",
+    know_more:
+      "SSE provides a simple and efficient way for servers to push real-time updates to web clients. Unlike WebSockets, it's unidirectional and relies on standard HTTP, making it easier to implement in some scenarios.",
+  },
+  {
+    question:
+      "What are some common performance bottlenecks you might encounter in a Node.js backend application, and how can you address them?",
+    options: [
+      "(a) Slow database queries, blocking I/O operations, excessive memory usage, and CPU-bound tasks. Addressing them involves optimizing database queries, using asynchronous operations, managing memory efficiently, and offloading CPU-intensive tasks to worker threads or separate services.",
+      "(b) Only network latency.",
+      "(c) Node.js applications are inherently performant and don't have bottlenecks.",
+      "(d) Performance issues can only be resolved by upgrading server hardware.",
+    ],
+    answer:
+      "(a) Slow database queries, blocking I/O operations, excessive memory usage, and CPU-bound tasks. Addressing them involves optimizing database queries, using asynchronous operations, managing memory efficiently, and offloading CPU-intensive tasks to worker threads or separate services.",
+    topic: "Performance Optimization",
+    know_more:
+      "Identifying and addressing performance bottlenecks is crucial for building responsive and scalable Node.js applications. Understanding common issues and applying appropriate optimization techniques can significantly improve the application's efficiency and user experience.",
+  },
+  {
+    question:
+      "Explain the concept of 'API Versioning' and why it's a good practice for backend APIs.",
+    options: [
+      "(a) It's a way to make your API run faster.",
+      "(b) API versioning involves maintaining multiple versions of your API to accommodate changes and avoid breaking existing clients. It's a good practice for providing a stable and predictable experience for API consumers while allowing for evolution and the introduction of new features.",
+      "(c) API versioning is only necessary for very large APIs.",
+      "(d) You should always aim to have only one, constantly updated version of your API.",
+    ],
+    answer:
+      "(b) API versioning involves maintaining multiple versions of your API to accommodate changes and avoid breaking existing clients. It's a good practice for providing a stable and predictable experience for API consumers while allowing for evolution and the introduction of new features.",
+    topic: "API Development (RESTful, GraphQL)",
+    know_more:
+      "API versioning allows you to make changes to your API without forcing all existing clients to update immediately. This provides a smoother transition and avoids disrupting integrations. Common versioning strategies include URI path versioning (`/v1/users`), header-based versioning, and query parameter versioning.",
+  },
+  {
+    question:
+      "What are some common tools and techniques for debugging a Node.js backend application?",
+    options: [
+      "(a) Only using `console.log` statements.",
+      "(b) Techniques include using the built-in Node.js debugger (with `node inspect` or `node --inspect-brk`), browser-based developer tools (when using `--inspect`), and dedicated IDE debugging features.",
+      "(c) Debugging is not a necessary skill for backend developers.",
+      "(d) You should always rely on production logs to diagnose issues.",
+    ],
+    answer:
+      "(b) Techniques include using the built-in Node.js debugger (with `node inspect` or `node --inspect-brk`), browser-based developer tools (when using `--inspect`), and dedicated IDE debugging features.",
+    topic: "Error Handling",
+    know_more:
+      "Effective debugging skills are crucial for identifying and resolving issues in your Node.js backend. The built-in debugger and IDE debugging tools provide powerful features like breakpoints, stepping through code, inspecting variables, and watching expressions, making the debugging process much more efficient than relying solely on logging.",
+  },
+  {
+    question:
+      "Explain the concept of 'Cross-Origin Resource Sharing' (CORS) and how you might configure it in a Node.js/Express.js application.",
+    options: [
+      "(a) It's a security feature that prevents all external websites from accessing your API.",
+      "(b) CORS is a browser security mechanism that restricts web pages from making requests to a different domain than the one that served the web page. In Express.js, you can configure CORS using middleware like the `cors` package to specify allowed origins, methods, and headers.",
+      "(c) CORS is only relevant for frontend development.",
+      "(d) CORS is automatically handled by Node.js and requires no configuration.",
+    ],
+    answer:
+      "(b) CORS is a browser security mechanism that restricts web pages from making requests to a different domain than the one that served the web page. In Express.js, you can configure CORS using middleware like the `cors` package to specify allowed origins, methods, and headers.",
+    topic: "Networking (HTTP, TCP, UDP)",
+    know_more:
+      "CORS is a critical security feature in modern web development. Browsers implement it to prevent malicious websites from making unauthorized requests to other domains. Backend applications need to explicitly configure CORS headers in their responses to allow legitimate cross-origin requests. The `cors` middleware in Express.js simplifies this configuration.",
+  },
+  {
+    question:
+      "What are some common techniques for data validation in a Node.js backend application?",
+    options: [
+      "(a) Relying solely on the database to enforce data integrity.",
+      "(b) Using libraries like Joi or express-validator to define schemas and validate incoming request data against those schemas.",
+      "(c) Only performing validation on the frontend.",
+      "(d) Not performing any data validation to improve performance.",
+    ],
+    answer:
+      "(b) Using libraries like Joi or express-validator to define schemas and validate incoming request data against those schemas.",
+    topic: "Security Best Practices",
+    know_more:
+      "Data validation is a crucial security and data integrity measure. It involves verifying that the data received by the backend application conforms to expected formats, types, and constraints. Libraries like Joi and express-validator provide a convenient way to define validation rules and middleware to automatically validate request bodies, query parameters, and headers.",
+  },
+  {
+    question:
+      "Explain the concept of 'Rate Limiting' and how you might implement it in a Node.js/Express.js API.",
+    options: [
+      "(a) It's a technique for making your API run faster.",
+      "(b) Rate limiting is a technique to control the number of requests that a client can make to an API within a specific time window. It helps prevent abuse, denial-of-service attacks, and ensures fair usage. In Express.js, middleware like `express-rate-limit` can be used to implement this.",
+      "(c) Rate limiting is a default feature of HTTP and doesn't need explicit implementation.",
+      "(d) Rate limiting should only be applied to authenticated users.",
+    ],
+    answer:
+      "(b) Rate limiting is a technique to control the number of requests that a client can make to an API within a specific time window. It helps prevent abuse, denial-of-service attacks, and ensures fair usage. In Express.js, middleware like `express-rate-limit` can be used to implement this.",
+    topic: "Security Best Practices",
+    know_more:
+      "Rate limiting is an important security measure for public-facing APIs. By limiting the number of requests from a single IP address or user within a given timeframe, you can protect your API infrastructure from being overwhelmed by excessive requests, whether malicious or accidental.",
+  },
+  {
+    question:
+      "What are some common caching strategies you might employ in a Node.js backend application to improve performance?",
+    options: [
+      "(a) Only caching on the client-side.",
+      "(b) Techniques include in-memory caching (e.g., using `Map` or libraries like `node-cache`), using a dedicated caching server (like Redis or Memcached), and HTTP caching headers.",
+      "(c) Caching always leads to inconsistent data.",
+      "(d) Node.js doesn't support caching.",
+    ],
+    answer:
+      "(b) Techniques include in-memory caching (e.g., using `Map` or libraries like `node-cache`), using a dedicated caching server (like Redis or Memcached), and HTTP caching headers.",
+    topic: "Performance Optimization",
+    know_more:
+      "Caching is a powerful technique for improving application performance by storing frequently accessed data closer to the application, reducing the need to fetch it from slower sources like databases. Different caching strategies offer varying levels of complexity and performance benefits.",
+  },
+  {
+    question:
+      "Explain the concept of 'Message Queues' (e.g., RabbitMQ, Kafka) and when you might use them in a Node.js backend architecture.",
+    options: [
+      "(a) They are used for storing session data.",
+      "(b) Message queues are services that allow different parts of an application (or different applications) to communicate asynchronously by sending and receiving messages. They are useful for decoupling services, handling background tasks, and improving resilience.",
+      "(c) They are primarily used for real-time communication like WebSockets.",
+      "(d) Node.js cannot interact with message queues.",
+    ],
+    answer:
+      "(b) Message queues are services that allow different parts of an application (or different applications) to communicate asynchronously by sending and receiving messages. They are useful for decoupling services, handling background tasks, and improving resilience.",
+    topic: "Microservices and Serverless Architectures",
+    know_more:
+      "Message queues play a vital role in microservices and distributed systems. They enable asynchronous communication, allowing services to operate independently and handle failures more gracefully. They are also useful for offloading long-running tasks from the main request-response cycle.",
+  },
+  {
+    question:
+      "What are some common ways to handle background jobs or scheduled tasks in a Node.js application?",
+    options: [
+      "(a) Only using `setTimeout` and `setInterval`.",
+      "(b) Techniques include using libraries like `node-cron` for cron-like scheduling, dedicated job queues like Bull or Kue for more robust background processing, and cloud-based scheduling services.",
+      "(c) Background jobs should always be executed synchronously within the main request flow.",
+      "(d) Node.js is not suitable for handling background tasks.",
+    ],
+    answer:
+      "(b) Techniques include using libraries like `node-cron` for cron-like scheduling, dedicated job queues like Bull or Kue for more robust background processing, and cloud-based scheduling services.",
+    topic: "Process Management and Deployment",
+    know_more:
+      "Handling background jobs and scheduled tasks is essential for many backend applications. Libraries like `node-cron` provide simple scheduling capabilities, while job queues like Bull and Kue offer more advanced features like job prioritization, retries, and concurrency control.",
+  },
+  {
+    question:
+      "Explain the concept of 'Container Orchestration' (e.g., Kubernetes) and its relevance to deploying and managing Node.js applications at scale.",
+    options: [
+      "(a) It's a tool for building Docker images.",
+      "(b) Container orchestration platforms like Kubernetes automate the deployment, scaling, and management of containerized applications. They provide features like automated rollouts and rollbacks, self-healing, and service discovery, which are crucial for managing Node.js microservices or large-scale deployments.",
+      "(c) Container orchestration is only necessary for very large companies.",
+      "(d) Docker alone is sufficient for managing any number of containers.",
+    ],
+    answer:
+      "(b) Container orchestration platforms like Kubernetes automate the deployment, scaling, and management of containerized applications. They provide features like automated rollouts and rollbacks, self-healing, and service discovery, which are crucial for managing Node.js microservices or large-scale deployments.",
+    topic: "Containerization (Docker, Kubernetes)",
+    know_more:
+      "Kubernetes provides a powerful framework for managing containerized applications in production. It simplifies tasks like scaling, deploying updates, and ensuring the availability and resilience of your Node.js applications, especially in complex microservices architectures.",
+  },
+  {
+    question:
+      "What are some common API testing tools you might use to test your Node.js backend?",
+    options: [
+      "(a) Only testing manually through the browser.",
+      "(b) Tools like Postman, Insomnia, Jest (with Supertest), and Chai are commonly used for sending requests to your API endpoints and asserting the responses.",
+      "(c) API testing is the responsibility of frontend developers.",
+      "(d) You don't need dedicated tools for API testing.",
+    ],
+    answer:
+      "(b) Tools like Postman, Insomnia, Jest (with Supertest), and Chai are commonly used for sending requests to your API endpoints and asserting the responses.",
+    topic: "Testing (Unit, Integration, E2E)",
+    know_more:
+      "Thorough API testing is crucial for ensuring the reliability and correctness of your backend. Tools like Postman and Insomnia provide a GUI for sending and inspecting HTTP requests. Testing frameworks like Jest, along with libraries like Supertest and Chai, allow you to write automated integration and end-to-end tests for your API endpoints.",
+  },
+  {
+    question:
+      "Explain the concept of 'Event-Driven Architecture' and how Node.js's event loop makes it well-suited for this paradigm.",
+    options: [
+      "(a) It's an architecture where components communicate synchronously.",
+      "(b) Event-Driven Architecture (EDA) is a design pattern where components communicate through events. Node.js's single-threaded, non-blocking event loop is inherently well-suited for EDA because it can efficiently handle a large number of concurrent connections and process events asynchronously.",
+      "(c) EDA is only relevant for frontend applications.",
+      "(d) Node.js's synchronous nature makes it unsuitable for EDA.",
+    ],
+    answer:
+      "(b) Event-Driven Architecture (EDA) is a design pattern where components communicate through events. Node.js's single-threaded, non-blocking event loop is inherently well-suited for EDA because it can efficiently handle a large number of concurrent connections and process events asynchronously.",
+    topic: "Fundamentals and Core Concepts",
+    know_more:
+      "EDA promotes loose coupling between services, as components react to events without needing to know the details of the event's source. Node.js's architecture, with its focus on asynchronous operations and event handling, naturally aligns with the principles of EDA, making it a popular choice for building real-time applications and microservices.",
+  },
+  {
+    question:
+      "What are some emerging trends in the Node.js ecosystem that you find interesting or relevant?",
+    options: [
+      "(a) Only the stability of older versions.",
+      "(b) Answers might include advancements in serverless functions, the increasing adoption of TypeScript, improvements in performance with new Node.js versions, and the evolution of full-stack frameworks built on Node.js.",
+      "(c) The Node.js ecosystem is no longer evolving.",
+      "(d) Only frontend-related trends are relevant for Node.js developers.",
+    ],
+    answer:
+      "(b) Answers might include advancements in serverless functions, the increasing adoption of TypeScript, improvements in performance with new Node.js versions, and the evolution of full-stack frameworks built on Node.js.",
+    topic: "Emerging Trends (WebAssembly, etc.)",
+    know_more:
+      "The Node.js ecosystem is constantly evolving. Staying updated with emerging trends can provide developers with new tools and approaches to build more efficient, scalable, and maintainable applications. This could include exploring new features in recent Node.js releases, adopting static typing with TypeScript, leveraging serverless architectures, or investigating new full-stack frameworks.",
+  },
+  {
+    question:
+      "What are environment variables, and how do you typically manage them in a Node.js application?",
+    options: [
+      "(a) They are variables defined within the application code.",
+      "(b) They are dynamic named values that can affect the way running processes will behave on a computer. In Node.js, they are often accessed using `process.env` and managed using `.env` files (with libraries like `dotenv`) or through the operating system or deployment platform.",
+      "(c) They are only used for storing database credentials directly in the code.",
+      "(d) They are automatically generated by Node.js and cannot be modified.",
+    ],
+    answer:
+      "(b) They are dynamic named values that can affect the way running processes will behave on a computer. In Node.js, they are often accessed using `process.env` and managed using `.env` files (with libraries like `dotenv`) or through the operating system or deployment platform.",
+    topic: "Fundamentals and Core Concepts",
+    know_more:
+      "Environment variables are crucial for configuring applications without hardcoding sensitive information or environment-specific settings directly into the code. Libraries like `dotenv` help load environment variables from a `.env` file into `process.env` during development. In production, these variables are often configured directly on the server or deployment platform for security and flexibility.",
+  },
+  {
+    question:
+      "Explain the concept of 'middleware' in the context of networking protocols like HTTP.",
+    options: [
+      "(a) It's the physical hardware that connects computers.",
+      "(b) In the context of HTTP, middleware refers to software components that sit between the client and the server (or between different servers) and can perform various functions on requests and responses, such as logging, authentication, caching, and load balancing.",
+      "(c) It's a specific type of HTTP request method.",
+      "(d) It's a tool for analyzing network traffic.",
+    ],
+    answer:
+      "(b) In the context of HTTP, middleware refers to software components that sit between the client and the server (or between different servers) and can perform various functions on requests and responses, such as logging, authentication, caching, and load balancing.",
+    topic: "Networking (HTTP, TCP, UDP)",
+    know_more:
+      "Middleware is a fundamental concept in building robust and scalable web applications. It allows for the separation of concerns and the implementation of cross-cutting functionalities in a modular and reusable way. In Node.js frameworks like Express.js and NestJS, middleware within the application handles requests before they reach the route handlers.",
+  },
+  {
+    question:
+      "What are some common logging libraries used in Node.js, and why is proper logging important?",
+    options: [
+      "(a) `console.log` is sufficient for all logging needs.",
+      "(b) Libraries like Winston and Morgan are commonly used. Proper logging is crucial for monitoring application health, debugging issues, security auditing, and gaining insights into application behavior.",
+      "(c) Logging is only important in development, not in production.",
+      "(d) Node.js doesn't have any dedicated logging libraries.",
+    ],
+    answer:
+      "(b) Libraries like Winston and Morgan are commonly used. Proper logging is crucial for monitoring application health, debugging issues, security auditing, and gaining insights into application behavior.",
+    topic: "Error Handling",
+    know_more:
+      "Effective logging is essential for maintaining and troubleshooting backend applications. Libraries like Winston provide features like different log levels, multiple transports (console, file, databases), and structured logging. Morgan is specifically designed for HTTP request logging. Good logging practices help in identifying and resolving errors, understanding user activity, and ensuring the security and stability of the application.",
+  },
+  {
+    question:
+      "Explain the concept of 'graceful shutdown' in a Node.js application. Why is it important?",
+    options: [
+      "(a) It's the same as forcefully terminating the process.",
+      "(b) Graceful shutdown involves allowing the application to finish processing in-flight requests, close database connections, and release resources before exiting. It's important to prevent data loss, ensure a smooth user experience, and avoid abrupt interruptions.",
+      "(c) Graceful shutdown is only relevant for frontend applications.",
+      "(d) Node.js applications automatically handle shutdowns gracefully.",
+    ],
+    answer:
+      "(b) Graceful shutdown involves allowing the application to finish processing in-flight requests, close database connections, and release resources before exiting. It's important to prevent data loss, ensure a smooth user experience, and avoid abrupt interruptions.",
+    topic: "Process Management and Deployment",
+    know_more:
+      "When a Node.js process needs to be stopped (e.g., during deployment or due to an error), a graceful shutdown ensures that the application handles the termination process cleanly. This typically involves listening for signals like `SIGINT` and `SIGTERM` and implementing logic to complete ongoing tasks and release resources before the process exits.",
+  },
+  {
+    question:
+      "What are some strategies for scaling a Node.js backend application horizontally?",
+    options: [
+      "(a) Only increasing the RAM and CPU of a single server.",
+      "(b) Strategies include load balancing across multiple instances of the application, using stateless application design, and scaling the database independently.",
+      "(c) Horizontal scaling is not possible with Node.js due to its single-threaded nature.",
+      "(d) Relying solely on the frontend to handle increased traffic.",
+    ],
+    answer:
+      "(b) Strategies include load balancing across multiple instances of the application, using stateless application design, and scaling the database independently.",
+    topic: "Performance Optimization",
+    know_more:
+      "Horizontal scaling involves distributing traffic and workload across multiple servers or instances. For Node.js, this typically involves using a load balancer to distribute incoming requests, ensuring that application instances are stateless (not storing session data locally), and scaling the database layer independently to handle increased data load.",
+  },
+  {
+    question:
+      "Explain the purpose and benefits of using a build tool like Webpack or Parcel in a Node.js backend project.",
+    options: [
+      "(a) They are only used for frontend development to bundle assets.",
+      "(b) While primarily used for frontend bundling, tools like Webpack can also be used in Node.js backend projects for tasks like bundling modules, transpiling code (e.g., TypeScript), and optimizing assets for deployment.",
+      "(c) Node.js doesn't require any build tools.",
+      "(d) They are used for database migrations.",
+    ],
+    answer:
+      "(b) While primarily used for frontend bundling, tools like Webpack can also be used in Node.js backend projects for tasks like bundling modules, transpiling code (e.g., TypeScript), and optimizing assets for deployment.",
+    topic: "Build Tools and Transpilers (Webpack, Babel, TypeScript)",
+    know_more:
+      "While Node.js has a built-in module system, build tools can offer benefits for backend projects, especially those using TypeScript or other languages that need to be transpiled to JavaScript. They can also help in creating optimized bundles for deployment and managing assets.",
+  },
+  {
+    question:
+      "What is TypeScript, and what are its advantages when used for Node.js backend development?",
+    options: [
+      "(a) It's a superset of JavaScript that adds optional static typing.",
+      "(b) It's a completely different language unrelated to JavaScript.",
+      "(c) It's a frontend framework.",
+      "(d) It makes code run slower.",
+    ],
+    answer:
+      "(a) It's a superset of JavaScript that adds optional static typing.",
+    topic: "Build Tools and Transpilers (Webpack, Babel, TypeScript)",
+    know_more:
+      "TypeScript enhances JavaScript by adding optional static typing. This provides benefits like improved code readability and maintainability, early error detection during development, better tooling support (intellisense, autocompletion), and enhanced collaboration among developers.",
+  },
+  {
+    question:
+      "What are some common design patterns used in Node.js backend development?",
+    options: [
+      "(a) Singleton, Factory, Observer, Module, Middleware, MVC (Model-View-Controller), Service-Oriented Architecture.",
+      "(b) Only object-oriented programming patterns.",
+      "(c) Design patterns are not relevant to Node.js.",
+      "(d) Only functional programming patterns.",
+    ],
+    answer:
+      "(a) Singleton, Factory, Observer, Module, Middleware, MVC (Model-View-Controller), Service-Oriented Architecture.",
+    topic: "Fundamentals and Core Concepts",
+    know_more:
+      "Design patterns are reusable solutions to common problems in software design. Several patterns are frequently used in Node.js backend development to structure code, improve maintainability, and solve specific architectural challenges. These include creational patterns (like Singleton and Factory), structural patterns (like Adapter), behavioral patterns (like Observer), and architectural patterns (like MVC and SOA).",
+  },
+  {
+    question:
+      "Explain the concept of 'Idempotency' in the context of API design. Why is it important?",
+    options: [
+      "(a) It means an API request can only be called once.",
+      "(b) Idempotency means that making multiple identical requests to an API endpoint should have the same effect as making a single request. It's important for handling network issues and ensuring data consistency, especially for operations like updates or payments.",
+      "(c) It refers to API requests that are always successful.",
+      "(d) It's a security feature that prevents unauthorized access.",
+    ],
+    answer:
+      "(b) Idempotency means that making multiple identical requests to an API endpoint should have the same effect as making a single request. It's important for handling network issues and ensuring data consistency, especially for operations like updates or payments.",
+    topic: "API Development (RESTful, GraphQL)",
+    know_more:
+      "Designing idempotent API endpoints is crucial for building reliable systems. If a client sends a request and doesn't receive a response (due to a network issue), they can safely retry the same request without causing unintended side effects, such as duplicate orders or multiple charges.",
+  },
+  {
+    question:
+      "What are some strategies for handling sensitive data (e.g., API keys, passwords) in a Node.js backend application?",
+    options: [
+      "(a) Hardcoding them directly in the code.",
+      "(b) Using environment variables (not committing them to version control), storing passwords securely using hashing algorithms (like bcrypt), and avoiding storing sensitive data in logs or client-side code.",
+      "(c) Storing them in plain text in a separate configuration file.",
+      "(d) Relying solely on the database to encrypt sensitive data.",
+    ],
+    answer:
+      "(b) Using environment variables (not committing them to version control), storing passwords securely using hashing algorithms (like bcrypt), and avoiding storing sensitive data in logs or client-side code.",
+    topic: "Security Best Practices",
+    know_more:
+      "Properly handling sensitive data is paramount for application security. Environment variables provide a way to configure sensitive information without embedding it in the codebase. Strong password hashing algorithms like bcrypt make it computationally infeasible to reverse the hashing process. It's also crucial to avoid exposing sensitive data in logs, error messages, or the frontend.",
+  },
+  {
+    question:
+      "What is serverless architecture, and what are some of its advantages and disadvantages in the context of Node.js?",
+    options: [
+      "(a) Serverless means there are no servers involved.",
+      "(b) Serverless is a cloud computing execution model where the cloud provider dynamically manages the allocation and provisioning of servers. Advantages include scalability and cost-efficiency; disadvantages can include cold starts and vendor lock-in.",
+      "(c) Serverless applications are always faster and more reliable.",
+      "(d) Serverless is only suitable for small, static websites.",
+    ],
+    answer:
+      "(b) Serverless is a cloud computing execution model where the cloud provider dynamically manages the allocation and provisioning of servers. Advantages include scalability and cost-efficiency; disadvantages can include cold starts and vendor lock-in.",
+    topic: "Microservices and Serverless Architectures",
+    know_more:
+      "Serverless platforms like AWS Lambda, Google Cloud Functions, and Azure Functions allow you to run Node.js code without managing servers. You pay only for the compute time you consume. While offering scalability and cost benefits, they can introduce challenges like cold starts (initial latency when a function hasn't been invoked recently) and dependency on a specific cloud provider.",
+  },
+  {
+    question:
+      "What is WebAssembly (Wasm), and how might it be relevant to Node.js development in the future?",
+    options: [
+      "(a) It's a new JavaScript framework.",
+      "(b) It's a binary instruction format for a stack-based virtual machine that can run in web browsers and other environments, including Node.js, potentially allowing for running code written in other languages with near-native performance.",
+      "(c) It's a database technology.",
+      "(d) It's a tool for frontend UI development only.",
+    ],
+    answer:
+      "(b) It's a binary instruction format for a stack-based virtual machine that can run in web browsers and other environments, including Node.js, potentially allowing for running code written in other languages with near-native performance.",
+    topic: "Emerging Trends (WebAssembly, etc.)",
+    know_more:
+      "WebAssembly offers the potential to bring performance-critical code written in languages like C++, Rust, or Go into the Node.js ecosystem. This could be beneficial for tasks like image processing, scientific computations, or game development within Node.js applications, leveraging existing libraries and expertise from other languages.",
+  },
+  {
+    question:
+      "Explain the concept of 'callback hell' in asynchronous JavaScript and how Promises and Async/Await help to mitigate it.",
+    options: [
+      "(a) Callback hell is a myth; callbacks are always the best way to handle asynchronicity.",
+      "(b) Callback hell refers to deeply nested and hard-to-manage callbacks, making code difficult to read and maintain. Promises provide a cleaner way to handle asynchronous operations with `.then()` and `.catch()`, while Async/Await offers a more synchronous-looking syntax on top of Promises.",
+      "(c) Promises and Async/Await introduce more complexity than callbacks.",
+      "(d) Callback hell only occurs in frontend JavaScript.",
+    ],
+    answer:
+      "(b) Callback hell refers to deeply nested and hard-to-manage callbacks, making code difficult to read and maintain. Promises provide a cleaner way to handle asynchronous operations with `.then()` and `.catch()`, while Async/Await offers a more synchronous-looking syntax on top of Promises.",
+    topic: "Asynchronous Programming",
+    know_more:
+      "Asynchronous operations often involve callbacks. When multiple asynchronous tasks depend on each other, it can lead to deeply nested callbacks, known as 'callback hell' or the 'pyramid of doom.' Promises provide a more structured way to chain asynchronous operations, and Async/Await simplifies this further by allowing you to write asynchronous code that looks and behaves more like synchronous code, making it easier to read and reason about.",
+  },
+  {
+    question: "What is the purpose of the `process` object in Node.js?",
+    options: [
+      "(a) It's used for manipulating files on the system.",
+      "(b) It provides information about and control over the current Node.js process, including environment variables, command-line arguments, standard input/output, and more.",
+      "(c) It's a module for handling HTTP requests.",
+      "(d) It's used for managing child processes.",
+    ],
+    answer:
+      "(b) It provides information about and control over the current Node.js process, including environment variables, command-line arguments, standard input/output, and more.",
+    topic: "Fundamentals and Core Concepts",
+    know_more:
+      "The `process` object is a global object in Node.js that provides a way to interact with the current Node.js process. It allows you to access environment variables (`process.env`), handle command-line arguments (`process.argv`), manage signals (`process.on('SIGINT', ...)`), control the process's exit code (`process.exit()`), and much more.",
+  },
+  {
+    question:
+      "Explain the difference between `child_process.fork()`, `child_process.spawn()`, and `child_process.exec()` in Node.js.",
+    options: [
+      "(a) They are all the same and can be used interchangeably.",
+      "(b) `fork()` creates a new Node.js process and has a built-in communication channel; `spawn()` launches a new process without any high-level wrapper; `exec()` runs a command in a shell and buffers the output.",
+      "(c) `exec()` is non-blocking, while `fork()` and `spawn()` are blocking.",
+      "(d) They are only used for interacting with the file system.",
+    ],
+    answer:
+      "(b) `fork()` creates a new Node.js process and has a built-in communication channel; `spawn()` launches a new process without any high-level wrapper; `exec()` runs a command in a shell and buffers the output.",
+    topic: "Process Management and Deployment",
+    know_more:
+      "Node.js provides modules for creating and managing child processes. `child_process.fork()` is a special case of `spawn()` specifically for creating new Node.js processes and establishes an IPC channel for communication. `child_process.spawn()` is a more general way to launch commands as separate processes. `child_process.exec()` runs a command in a shell and provides the output as a buffer, which can be less efficient for large outputs.",
+  },
+  {
+    question:
+      "What are some common npm or yarn commands you use in your development workflow?",
+    options: [
+      "(a) Only `install` and `uninstall`.",
+      "(b) `install`, `uninstall`, `start`, `build`, `test`, `publish`, `update`, `cache clean`.",
+      "(c) Only commands related to package publishing.",
+      "(d) Only commands for managing global packages.",
+    ],
+    answer:
+      "(b) `install`, `uninstall`, `start`, `build`, `test`, `publish`, `update`, `cache clean`.",
+    topic: "Modules and Package Management (npm/yarn)",
+    know_more:
+      "npm (Node Package Manager) and yarn are essential tools for managing dependencies in Node.js projects. Common commands include `npm install` or `yarn add` to install packages, `npm uninstall` or `yarn remove` to remove them, `npm start` or `yarn start` to run the application, `npm build` or `yarn build` for building, `npm test` or `yarn test` for running tests, `npm publish` or `yarn publish` for publishing packages, `npm update` or `yarn upgrade` to update dependencies, and `npm cache clean` or `yarn cache clean` to manage the package cache.",
+  },
+  {
+    question: "Explain the concept of middleware in NestJS.",
+    options: [
+      "(a) It's the same as middleware in Express.js.",
+      "(b) In NestJS, middleware are functions that are called before route handlers. They have access to the `request` and `response` objects, and the `next()` function, allowing you to perform actions before the final route handler is executed. NestJS provides a more structured way to implement middleware using classes and the `@Injectable()` decorator.",
+      "(c) Middleware in NestJS is only used for authentication.",
+      "(d) NestJS does not have the concept of middleware.",
+    ],
+    answer:
+      "(b) In NestJS, middleware are functions that are called before route handlers. They have access to the `request` and `response` objects, and the `next()` function, allowing you to perform actions before the final route handler is executed. NestJS provides a more structured way to implement middleware using classes and the `@Injectable()` decorator.",
+    topic: "Frameworks and Libraries (Express.js, NestJS, etc.)",
+    know_more:
+      "NestJS, built on top of Express.js (by default), also utilizes middleware. However, NestJS provides a more organized and type-safe way to implement middleware using classes decorated with `@Injectable()` and implementing the `NestMiddleware` interface. This allows for better dependency injection and overall application structure.",
+  },
+  {
+    question: "How do you interact with the file system in Node.js?",
+    options: [
+      "(a) Only using synchronous methods.",
+      "(b) Using the built-in `fs` (File System) module, which provides both synchronous (blocking) and asynchronous (non-blocking) methods for performing operations like reading, writing, deleting, and manipulating files and directories.",
+      "(c) By directly executing shell commands.",
+      "(d) Only through third-party libraries.",
+    ],
+    answer:
+      "(b) Using the built-in `fs` (File System) module, which provides both synchronous (blocking) and asynchronous (non-blocking) methods for performing operations like reading, writing, deleting, and manipulating files and directories.",
+    topic: "File System Operations",
+    know_more:
+      "Node.js's `fs` module offers a comprehensive set of APIs for interacting with the file system. It's important to understand the difference between the synchronous (e.g., `readFileSync`, `writeFileSync`) and asynchronous (e.g., `readFile`, `writeFile`) versions of these functions. Asynchronous methods are generally preferred in event-driven environments like Node.js to avoid blocking the event loop.",
+  },
+  {
+    question:
+      "What are the differences between HTTP, TCP, and UDP protocols, and when might you use each in a Node.js application?",
+    options: [
+      "(a) They are all the same and used interchangeably for web communication.",
+      "(b) HTTP is an application-level protocol for web communication (request-response); TCP is a connection-oriented, reliable transport layer protocol; UDP is a connectionless, unreliable transport layer protocol. Use HTTP for web APIs and serving web pages, TCP for reliable, ordered data transfer (like SSH), and UDP for real-time applications where some packet loss is acceptable (like video streaming or online gaming).",
+      "(c) TCP is faster than UDP, and HTTP is the underlying protocol for both.",
+      "(d) Node.js can only use HTTP for networking.",
+    ],
+    answer:
+      "(b) HTTP is an application-level protocol for web communication (request-response); TCP is a connection-oriented, reliable transport layer protocol; UDP is a connectionless, unreliable transport layer protocol. Use HTTP for web APIs and serving web pages, TCP for reliable, ordered data transfer (like SSH), and UDP for real-time applications where some packet loss is acceptable (like video streaming or online gaming).",
+    topic: "Networking (HTTP, TCP, UDP)",
+    know_more:
+      "Understanding these networking protocols is crucial for backend development. HTTP is the foundation of the web. TCP provides reliable, ordered delivery of data. UDP prioritizes speed over reliability. Node.js provides built-in modules like `http`, `net` (for TCP), and `dgram` (for UDP) to work with these protocols.",
+  },
+  {
+    question:
+      "What is the Node.js event loop, and how does it handle asynchronous operations?",
+    options: [
+      "(a) It's a multi-threaded execution model.",
+      "(b) It's a single-threaded, non-blocking I/O model.",
+      "(c) It uses callbacks exclusively for synchronous tasks.",
+      "(d) It's responsible for all CPU-bound operations.",
+    ],
+    answer: "(b) It's a single-threaded, non-blocking I/O model.",
+    topic: "Event Loop and Concurrency",
+    know_more:
+      "Node.js leverages an event loop to manage non-blocking I/O operations. When a non-blocking operation (like reading a file or making a network request) is initiated, Node.js registers a callback. The operation is then offloaded to the system kernel. When the operation completes, the kernel pushes an event onto the event queue, and the event loop eventually picks it up and executes the associated callback.",
+  },
+  {
+    question:
+      "Explain the difference between `require()` and `import` in Node.js.",
+    options: [
+      "(a) `require()` is for ES Modules, and `import` is for CommonJS.",
+      "(b) `require()` is synchronous, and `import` is asynchronous.",
+      "(c) They are interchangeable and have no functional difference.",
+      "(d) `import` is only used for importing built-in Node.js modules.",
+    ],
+    answer: "(b) `require()` is synchronous, and `import` is asynchronous.",
+    topic: "Modules and Package Management (npm/yarn)",
+    know_more:
+      "`require()` is the traditional way to import modules in CommonJS, which is the default module system in Node.js. It's synchronous, meaning the code execution pauses until the module is loaded. `import` is part of the ES Modules standard and is asynchronous, allowing for more efficient loading, especially for larger modules. Node.js has increasingly added support for ES Modules, often requiring specific configurations or file extensions (`.mjs`).",
+  },
+  {
+    question:
+      "What are Streams in Node.js, and what are the four fundamental types of streams?",
+    options: [
+      "(a) Streams are used for handling synchronous data; the types are Read, Write, Execute, Transform.",
+      "(b) Streams are used for handling asynchronous data; the types are Readable, Writable, Duplex, Transform.",
+      "(c) Streams are used for network requests only; the types are HTTP, TCP, UDP, Socket.",
+      "(d) Streams are a way to process data in memory; the types are Array, Object, String, Buffer.",
+    ],
+    answer:
+      "(b) Streams are used for handling asynchronous data; the types are Readable, Writable, Duplex, Transform.",
+    topic: "Streams and Buffers",
+    know_more:
+      "Streams in Node.js provide an efficient way to handle large amounts of data by processing it in chunks rather than loading the entire dataset into memory. The four fundamental types are: Readable (for reading data), Writable (for writing data), Duplex (both readable and writable), and Transform (duplex streams that modify or transform the data as it passes through).",
+  },
+  {
+    question: "Explain the concept of middleware in the context of Express.js.",
+    options: [
+      "(a) It's a function for defining routes.",
+      "(b) It's a function that has access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle.",
+      "(c) It's a module for database interaction.",
+      "(d) It's a tool for rendering HTML templates.",
+    ],
+    answer:
+      "(b) It's a function that has access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle.",
+    topic: "Frameworks and Libraries (Express.js, NestJS, etc.)",
+    know_more:
+      "Middleware functions in Express.js are a powerful mechanism for handling tasks at various stages of the request-response cycle. They can perform operations like logging, authentication, data validation, and modifying request or response objects before the final route handler is executed. The `next()` function is crucial for passing control to the subsequent middleware in the chain.",
+  },
+  {
+    question: "What are the key principles of RESTful API design?",
+    options: [
+      "(a) SOAP, WSDL, XML",
+      "(b) Statelessness, Client-Server, Cacheability, Layered System, Code on Demand (optional), Uniform Interface.",
+      "(c) GraphQL, Queries, Mutations, Subscriptions",
+      "(d) RPC, Function Calls, Arguments",
+    ],
+    answer:
+      "(b) Statelessness, Client-Server, Cacheability, Layered System, Code on Demand (optional), Uniform Interface.",
+    topic: "API Development (RESTful, GraphQL)",
+    know_more:
+      "REST (Representational State Transfer) is an architectural style for designing networked applications. Its key principles ensure scalability, flexibility, and ease of understanding. The Uniform Interface includes concepts like resources, representations, self-descriptive messages, and hypermedia as the engine of application state (HATEOAS).",
+  },
+  {
+    question:
+      "How can you implement authentication and authorization in a Node.js application?",
+    options: [
+      "(a) Only using built-in Node.js modules.",
+      "(b) Using libraries like Passport.js or JWT (JSON Web Tokens) for authentication and role-based access control for authorization.",
+      "(c) Relying solely on frontend frameworks for security.",
+      "(d) By directly querying the database for every request.",
+    ],
+    answer:
+      "(b) Using libraries like Passport.js or JWT (JSON Web Tokens) for authentication and role-based access control for authorization.",
+    topic: "Authentication and Authorization",
+    know_more:
+      "Authentication verifies the identity of a user, often using techniques like passwords, social logins, or multi-factor authentication. Libraries like Passport.js simplify this process. Authorization determines what an authenticated user is allowed to do, often implemented using role-based access control (RBAC) and can be managed using JWTs to carry user information and permissions.",
+  },
+  {
+    question:
+      "What are some common security best practices to follow when developing Node.js backend applications?",
+    options: [
+      "(a) Disabling all error logging in production.",
+      "(b) Input validation, output encoding, protection against SQL/NoSQL injection and XSS, rate limiting, and using HTTPS.",
+      "(c) Storing all sensitive data in plain text in environment variables.",
+      "(d) Running the Node.js process as root.",
+    ],
+    answer:
+      "(b) Input validation, output encoding, protection against SQL/NoSQL injection and XSS, rate limiting, and using HTTPS.",
+    topic: "Security Best Practices",
+    know_more:
+      "Secure Node.js development involves several practices to protect against common vulnerabilities. Input validation ensures that user-provided data is safe. Output encoding prevents malicious scripts from being injected into the response. Protection against injection flaws prevents unauthorized database access. Rate limiting mitigates brute-force attacks. Using HTTPS encrypts communication between the client and server.",
+  },
+  {
+    question:
+      "Explain the different types of testing you might perform on a Node.js backend application.",
+    options: [
+      "(a) Only manual testing.",
+      "(b) Unit testing (testing individual components), integration testing (testing interactions between components), and end-to-end (E2E) testing (testing the entire application flow).",
+      "(c) Just performance testing.",
+      "(d) Only frontend testing.",
+    ],
+    answer:
+      "(b) Unit testing (testing individual components), integration testing (testing interactions between components), and end-to-end (E2E) testing (testing the entire application flow).",
+    topic: "Testing (Unit, Integration, E2E)",
+    know_more:
+      "A comprehensive testing strategy for Node.js applications includes unit tests to verify the logic of individual functions or modules, integration tests to ensure that different parts of the application work correctly together, and E2E tests to validate the entire user experience from start to finish, often simulating user interactions in a browser.",
+  },
+  {
+    question: "How do you handle errors in a Node.js backend application?",
+    options: [
+      "(a) By ignoring all errors in production.",
+      "(b) Using `try...catch` blocks for synchronous code and `.catch()` for Promises, implementing centralized error handling middleware in frameworks like Express.js, and logging errors effectively.",
+      "(c) By crashing the application on every error.",
+      "(d) By sending generic 200 OK responses for all requests.",
+    ],
+    answer:
+      "(b) Using `try...catch` blocks for synchronous code and `.catch()` for Promises, implementing centralized error handling middleware in frameworks like Express.js, and logging errors effectively.",
+    topic: "Error Handling",
+    know_more:
+      "Robust error handling in Node.js involves catching errors at different levels of the application, using specific error handling mechanisms for synchronous and asynchronous code, implementing centralized error handlers (especially in frameworks), and logging errors with sufficient context for debugging and monitoring.",
+  },
+  {
+    question:
+      "What are some common ways to deploy a Node.js backend application to production?",
+    options: [
+      "(a) Directly running `node server.js` on a personal computer.",
+      "(b) Using process managers like PM2 or systemd, containerization with Docker, and serverless platforms like AWS Lambda or Google Cloud Functions.",
+      "(c) Only using FTP to upload files to a web server.",
+      "(d) Relying solely on frontend deployment services.",
+    ],
+    answer:
+      "(b) Using process managers like PM2 or systemd, containerization with Docker, and serverless platforms like AWS Lambda or Google Cloud Functions.",
+    topic: "Process Management and Deployment",
+    know_more:
+      "Production deployment of Node.js applications often involves using process managers like PM2 or systemd to ensure the application restarts automatically after crashes and can be managed effectively. Containerization with Docker provides a consistent environment across different stages. Serverless platforms offer scalability and reduced operational overhead.",
+  },
+  {
+    question:
+      "How can you monitor and optimize the performance of a Node.js backend application?",
+    options: [
+      "(a) By randomly restarting the server.",
+      "(b) Using tools for CPU profiling, memory analysis (heap dumps), monitoring event loop latency, and optimizing database queries and code.",
+      "(c) By adding more `console.log` statements.",
+      "(d) By ignoring performance issues until users complain.",
+    ],
+    answer:
+      "(b) Using tools for CPU profiling, memory analysis (heap dumps), monitoring event loop latency, and optimizing database queries and code.",
+    topic: "Performance Optimization",
+    know_more:
+      "Performance monitoring and optimization in Node.js involve identifying bottlenecks using profiling tools, analyzing memory usage to prevent leaks, understanding the event loop's health, and optimizing critical parts of the code, including database interactions and computationally intensive tasks.",
+  },
+  {
+    question:
+      "What is Docker, and how can it be used in the context of a Node.js application?",
+    options: [
+      "(a) It's a JavaScript framework.",
+      "(b) It's a platform for containerizing applications, allowing you to package your Node.js application and its dependencies into a portable container.",
+      "(c) It's a database management system.",
+      "(d) It's a cloud hosting provider.",
+    ],
+    answer:
+      "(b) It's a platform for containerizing applications, allowing you to package your Node.js application and its dependencies into a portable container.",
+    topic: "Containerization (Docker, Kubernetes)",
+    know_more:
+      "Docker enables you to create isolated environments called containers, which include your Node.js application, its dependencies, and runtime environment. This ensures consistency across development, testing, and production, simplifying deployment and management.",
+  },
+  {
+    question: "Explain the role of `package.json` in a Node.js project.",
+    options: [
+      "(a) It contains the main application code.",
+      "(b) It holds metadata about the project, including dependencies, scripts, and project name.",
+      "(c) It stores environment variables.",
+      "(d) It defines the routing structure of an Express.js application.",
+    ],
+    answer:
+      "(b) It holds metadata about the project, including dependencies, scripts, and project name.",
+    topic: "Modules and Package Management (npm/yarn)",
+    know_more:
+      "`package.json` is the heart of a Node.js project. It defines the project's name, version, dependencies (both production and development), scripts for running tasks, and other important metadata.",
+  },
+  {
+    question: "What are Buffers in Node.js, and when might you use them?",
+    options: [
+      "(a) Buffers are used for handling text data only.",
+      "(b) Buffers are used to represent fixed-size chunks of binary data in memory, often when dealing with file I/O or network streams.",
+      "(c) Buffers are the same as JavaScript strings.",
+      "(d) Buffers are only used in frontend JavaScript.",
+    ],
+    answer:
+      "(b) Buffers are used to represent fixed-size chunks of binary data in memory, often when dealing with file I/O or network streams.",
+    topic: "Streams and Buffers",
+    know_more:
+      "Buffers in Node.js provide a way to handle binary data, which is essential when working with operations like reading and writing files, handling network protocols, and processing images or other non-textual data.",
+  },
+  {
+    question:
+      "How does Node.js handle concurrency, given its single-threaded nature?",
+    options: [
+      "(a) It uses multiple threads for every request.",
+      "(b) It achieves concurrency through its non-blocking I/O operations and the event loop, allowing it to handle multiple requests without blocking the main thread.",
+      "(c) It relies on the operating system to manage threads.",
+      "(d) It can only handle one request at a time.",
+    ],
+    answer:
+      "(b) It achieves concurrency through its non-blocking I/O operations and the event loop, allowing it to handle multiple requests without blocking the main thread.",
+    topic: "Event Loop and Concurrency",
+    know_more:
+      "Node.js's single-threaded event loop enables concurrency by efficiently managing non-blocking I/O. When a long-running I/O operation is initiated, the event loop doesn't wait for it to complete. Instead, it moves on to handle other requests. When the I/O operation finishes, a callback is added to the event queue and eventually executed.",
+  },
+  {
+    question:
+      "What are some differences between relational databases (like PostgreSQL or MySQL) and NoSQL databases (like MongoDB or Cassandra)? When might you choose one over the other?",
+    options: [
+      "(a) Relational databases are schema-less; NoSQL databases have strict schemas.",
+      "(b) Relational databases use structured data with schemas and relationships; NoSQL databases offer more flexible data models. Choose relational for structured data and complex relationships; choose NoSQL for scalability and flexible schemas.",
+      "(c) They are functionally identical.",
+      "(d) NoSQL databases are always faster than relational databases.",
+    ],
+    answer:
+      "(b) Relational databases use structured data with schemas and relationships; NoSQL databases offer more flexible data models. Choose relational for structured data and complex relationships; choose NoSQL for scalability and flexible schemas.",
+    topic: "Databases (Relational & NoSQL)",
+    know_more:
+      "Relational databases organize data into tables with predefined schemas and enforce relationships between them using SQL. NoSQL databases offer various data models (document, key-value, graph, etc.) with more flexible schemas, often providing better horizontal scalability and handling of unstructured or rapidly changing data.",
+  },
+  {
+    question: "What is GraphQL, and how does it differ from REST?",
+    options: [
+      "(a) GraphQL is a database query language; REST is an architectural style for APIs.",
+      "(b) GraphQL is a query language for your API that allows clients to ask for exactly what they need, while REST typically involves fetching fixed data structures from specific endpoints.",
+      "(c) REST is newer and more efficient than GraphQL.",
+      "(d) GraphQL is only used for frontend data fetching.",
+    ],
+    answer:
+      "(b) GraphQL is a query language for your API that allows clients to ask for exactly what they need, while REST typically involves fetching fixed data structures from specific endpoints.",
+    topic: "API Development (RESTful, GraphQL)",
+    know_more:
+      "GraphQL provides a more efficient way for clients to fetch data by allowing them to specify the exact data they need in a single query, avoiding over-fetching or under-fetching. REST APIs typically expose multiple endpoints that return fixed sets of data.",
+  },
+];
 
 export type QuestionType =
   //   | "GULAM_WANS"
@@ -13194,8 +15725,11 @@ export type QuestionType =
   | "SAHJAHA_SET_2"
   | "MERN_SET_1"
   | "MERN_SET_2"
-  | "MERN_SET_3"
-  | "MERN_SET_4";
+  | "NODE_SET_1"
+  | "NODE_SET_2"
+  | "NODE_SET_3";
+// | "MERN_SET_3"
+// | "MERN_SET_4";
 
 const questionType: Record<QuestionType, string> = {
   //   GULAM_WANS: "Gulam Wans",
@@ -13220,8 +15754,11 @@ const questionType: Record<QuestionType, string> = {
   SAHJAHA_SET_2: "Sahjaha Set 2",
   MERN_SET_1: "MERN Set 1",
   MERN_SET_2: "MERN Set 2",
-  MERN_SET_3: "MERN Set 3",
-  MERN_SET_4: "MERN Set 4",
+  // MERN_SET_3: "MERN Set 3",
+  // MERN_SET_4: "MERN Set 4",
+  NODE_SET_1: "Node Set 1",
+  NODE_SET_2: "Node Set 2",
+  NODE_SET_3: "Node Set 3",
 };
 
 //jahangirQuestions => JASHANGIR
@@ -13243,8 +15780,11 @@ const questionData: Record<string, Quiz> = {
   [questionType.SAHJAHA_SET_2]: sahaJashSet2,
   [questionType.MERN_SET_1]: mernSet1,
   [questionType.MERN_SET_2]: mernSet2,
-  [questionType.MERN_SET_3]: mernSet3,
-  [questionType.MERN_SET_4]: mernSet4,
+  // [questionType.MERN_SET_3]: mernSet3,
+  // [questionType.MERN_SET_4]: mernSet4,
+  [questionType.NODE_SET_1]: nodeSet1,
+  [questionType.NODE_SET_2]: nodeSet2,
+  [questionType.NODE_SET_3]: nodeSet3,
 };
 
 const getQuestion = (selectedOption: string): Quiz => {
@@ -13257,6 +15797,29 @@ const getQuestion = (selectedOption: string): Quiz => {
 // Topic => infection and immunization
 // I am preparing for React Interview, give me 30 Question related to topic I mention, in given format (most asked interview question) (in English)
 // Topic => react frontend
+// As I'm preparing for a Node.js backend developer interview, please provide 20 commonly encountered interview questions. Aim for a mix of fundamental and more advanced topics, based on the subjects I will specify. Present each question clearly. (in English)
+const array = [
+  "Fundamentals and Core Concepts",
+  "Asynchronous Programming",
+  "Modules and Package Management (npm/yarn)",
+  "Event Loop and Concurrency",
+  "Streams and Buffers",
+  "File System Operations",
+  "Networking (HTTP, TCP, UDP)",
+  "Databases (Relational & NoSQL)",
+  "Frameworks and Libraries (Express.js, NestJS, etc.)",
+  "API Development (RESTful, GraphQL)",
+  "Authentication and Authorization",
+  "Security Best Practices",
+  "Testing (Unit, Integration, E2E)",
+  "Error Handling",
+  "Process Management and Deployment",
+  "Performance Optimization",
+  "Containerization (Docker, Kubernetes)",
+  "Build Tools and Transpilers (Webpack, Babel, TypeScript)",
+  "Microservices and Serverless Architectures",
+  "Emerging Trends (WebAssembly, etc.)",
+];
 
 const sample1 = [
   {
