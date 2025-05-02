@@ -2,7 +2,7 @@ import { ChangeEvent, useState } from "react";
 import { Quiz } from "../interface";
 import { SelectedAnswers } from "../interface";
 import TimerCard from "./timerCard";
-import { Link, Element } from "react-scroll";
+import { Element } from "react-scroll";
 
 interface QuizBoardProps {
   quizQuestion: Quiz;
@@ -59,6 +59,7 @@ function QuizBoard({
           <ol className="flex flex-col gap-2.5 mx-4">
             {que.options.map((option, i) => (
               <Element
+                key={`${index}Opt${i}`}
                 name={`${index}Opt${i}`}
                 className=" px-3  border-1 border-gray-400 rounded-md bg-white  flex "
               >

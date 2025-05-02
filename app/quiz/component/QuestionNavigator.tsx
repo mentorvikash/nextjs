@@ -1,18 +1,11 @@
 import { QuestionNavigatorProps } from "../interface";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { useEffect, useRef } from "react";
-import { Link, Element } from "react-scroll";
+import { Link } from "react-scroll";
 
 const QuestionNavigator: React.FC<QuestionNavigatorProps> = ({
   totalQuestion,
   selectedAnswers,
   finalResult,
 }) => {
-  const navigatorRef = useRef<HTMLDivElement>(null);
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
   const style: React.CSSProperties = {
     position: "fixed",
     top: "0", // Adjust as needed
@@ -29,58 +22,6 @@ const QuestionNavigator: React.FC<QuestionNavigatorProps> = ({
     scrollBehavior: "smooth",
     scrollbarWidth: "none",
   };
-
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const element = document.getElementById(hash.substring(1)); // Remove the '#'
-      if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "center", // Scroll to the center vertically
-          inline: "center", // Optional: Scroll to the center horizontally (if needed)
-        });
-      }
-    }
-  }, [pathname, searchParams]); // Re-run effect on path or query changes
-
-  const handleNavLinkClick = (id: string) => {
-    router.push(
-      `${pathname}${
-        searchParams.toString() ? `?${searchParams.toString()}` : ""
-      }#${id}`
-    );
-    // No need to manually scroll the navigator here, the browser will handle it
-    // based on the style's scrollBehavior.
-  };
-
-  // const ScrollBar = () => {
-  //   const questions = [];
-  //   for (let i = 1; i <= totalQuestion; i++) {
-  //     questions.push(i);
-  //   }
-  //   return questions.map((que, index) => (
-  //     <li
-  //       className={`  border-2 text-center align-middle rounded-full ${
-  //         selectedAnswers[`Q${index}`] ? "bg-green-600" : "bg-black"
-  //       } ${
-  //         finalResult.length && finalResult[index] === "W"
-  //           ? "bg-red-600"
-  //           : finalResult[index] === "R"
-  //           ? "bg-sky-600"
-  //           : "bg-black"
-  //       } `}
-  //       key={index}
-  //     >
-  //       <button
-  //         className={` text-white `}
-  //         onClick={() => handleNavLinkClick(`que${index}`)}
-  //       >
-  //         {que}
-  //       </button>
-  //     </li>
-  //   ));
-  // };
 
   const ScrollBar = () => {
     const questions = [];
@@ -103,19 +44,12 @@ const QuestionNavigator: React.FC<QuestionNavigatorProps> = ({
         <Link to={`que${index}`} smooth={true} duration={500} offset={-50}>
           {que}
         </Link>
-        {/* <button
-          className={` text-white `}
-          onClick={() => handleNavLinkClick(`que${index}`)}
-        >
-          {que}
-        </button> */}
       </li>
     ));
   };
-  // `que${index}`
 
   return (
-    <div style={style} ref={navigatorRef}>
+    <div style={style}>
       <ol className="flex flex-col gap-1 ">
         <ScrollBar />
       </ol>
